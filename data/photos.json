@@ -24,40 +24,22 @@
 "fecha": "2026-10-06"
 },
 "ev-apertura-cauterets-oco": {
-"img": "https://storage.googleapis.com/npy-website-media-prod/skieurs-la-pierre-saint-martin.webp?v=3",
-"src": "https://www.n-py.com/fr/sejour-pyrenees/stations-ski/dates-ouverture",
-"site": "n-py.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-apertura-grand-tourmalet-oco": {
-"img": "https://storage.googleapis.com/npy-website-media-prod/skieurs-la-pierre-saint-martin.webp?v=3",
-"src": "https://www.n-py.com/fr/sejour-pyrenees/stations-ski/dates-ouverture",
-"site": "n-py.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-apertura-luz-ardiden-oco": {
-"img": "https://storage.googleapis.com/npy-website-media-prod/skieurs-la-pierre-saint-martin.webp?v=3",
-"src": "https://www.n-py.com/fr/sejour-pyrenees/stations-ski/dates-ouverture",
-"site": "n-py.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-apertura-peyragudes-oco": {
-"img": "https://storage.googleapis.com/npy-website-media-prod/skieurs-la-pierre-saint-martin.webp?v=3",
-"src": "https://www.n-py.com/fr/sejour-pyrenees/stations-ski/dates-ouverture",
-"site": "n-py.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-apertura-piau-oco": {
-"img": "https://storage.googleapis.com/npy-website-media-prod/skieurs-la-pierre-saint-martin.webp?v=3",
-"src": "https://www.n-py.com/fr/sejour-pyrenees/stations-ski/dates-ouverture",
-"site": "n-py.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-apertura-pont-espagne-oco": {
-"img": "https://storage.googleapis.com/npy-website-media-prod/skieurs-la-pierre-saint-martin.webp?v=3",
-"src": "https://www.n-py.com/fr/sejour-pyrenees/stations-ski/dates-ouverture",
-"site": "n-py.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-apertura-saint-lary-oco": {
 "img": "https://www.saintlary.com/app/uploads/saintlary-tourisme/2022/04/thumbs/vincentfrasiak-ski-enfants-vallon-du-portet-06-fevrier-2022-dsc06776-web-1920x960.jpg",
@@ -72,10 +54,7 @@
 "fecha": "2026-10-06"
 },
 "ev-b-cambre-aze-apertura": {
-"img": "https://cdn.bfldr.com/WIENNW6Q/as/pc8wpc8vfn4rcsf6kxtrgfv/Les_Angles?auto=webp&format=png",
-"src": "https://www.skiinfo.fr/pyrenees-orientales/dates-ouverture-stations",
-"site": "skiinfo.fr",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-b-castanyera-begur": {
 "img": "https://visitbegur.cat/wp-content/uploads/2026/04/castanyera-bloc-home.png",
@@ -162,16 +141,10 @@
 "fecha": "2026-10-06"
 },
 "ev-b-font-romeu-apertura": {
-"img": "https://cdn.bfldr.com/WIENNW6Q/as/pc8wpc8vfn4rcsf6kxtrgfv/Les_Angles?auto=webp&format=png",
-"src": "https://www.skiinfo.fr/pyrenees-orientales/dates-ouverture-stations",
-"site": "skiinfo.fr",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-b-formigueres-apertura": {
-"img": "https://cdn.bfldr.com/WIENNW6Q/as/pc8wpc8vfn4rcsf6kxtrgfv/Les_Angles?auto=webp&format=png",
-"src": "https://www.skiinfo.fr/pyrenees-orientales/dates-ouverture-stations",
-"site": "skiinfo.fr",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-b-grandvalira-apertura": {
 "img": "https://www.grandvalira.com/themes/custom/grandvalira/images/bg-main-sponsors-desktop-1x.jpg",
@@ -192,10 +165,7 @@
 "fecha": "2026-10-06"
 },
 "ev-b-les-angles-apertura": {
-"img": "https://cdn.bfldr.com/WIENNW6Q/as/pc8wpc8vfn4rcsf6kxtrgfv/Les_Angles?auto=webp&format=png",
-"src": "https://www.skiinfo.fr/pyrenees-orientales/dates-ouverture-stations",
-"site": "skiinfo.fr",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-b-lucques-bize": {
 "img": "https://static.cotedumidi.com/wp-content/uploads/2023/10/visites-theatraliseesl-oulibo.jpg",
@@ -246,10 +216,7 @@
 "error": "sin-imagen"
 },
 "ev-b-porte-puymorens-apertura": {
-"img": "https://cdn.bfldr.com/WIENNW6Q/as/pc8wpc8vfn4rcsf6kxtrgfv/Les_Angles?auto=webp&format=png",
-"src": "https://www.skiinfo.fr/pyrenees-orientales/dates-ouverture-stations",
-"site": "skiinfo.fr",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-b-salon-agricultura-perpignan": {
 "img": "https://www.jds.fr/medias/image/salon-regional-de-l-agriculture-1050515-1200-630.webp",
@@ -306,10 +273,7 @@
 "fecha": "2026-10-06"
 },
 "ev-bolet-vilassar-dalt": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-bonbons-deveze-oce": {
 "img": "https://upload.onivapp.com/blog/heroes/halloween-2026-chasses-aux-bonbons.fc446249.webp?v=1791032406057",
@@ -336,40 +300,22 @@
 "fecha": "2026-10-06"
 },
 "ev-castagnade-antraigues-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castagnade-chalencon-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castagnade-crouvelus-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castagnade-desaignes-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castagnade-jaujac-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castagnade-joannas-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castagnade-joyeuse-oce": {
 "img": "https://www.cevennes-ardeche.com/app/uploads/2025/01/castagnades-joyeuse-2023-a-patrick-copetti-6-1.webp",
@@ -387,28 +333,16 @@
 "error": "sin-imagen"
 },
 "ev-castagnade-privas-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castagnade-saint-pierreville-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castagnade-st-laurent-bains-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castagnade-vesseaux-oce": {
-"img": "https://www.castagnades.fr/wp-content/uploads/sites/3/castagnades-2026.jpeg",
-"src": "https://www.castagnades.fr/castagnades/programme-des-fetes/",
-"site": "Monts d'Ardèche Castagnades",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-castanyada-halloween-seu-urgell": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/42332halloween-museu-cera-23.jpg",
@@ -447,10 +381,7 @@
 "fecha": "2026-10-06"
 },
 "ev-chateau-hante-bourg-oce": {
-"img": "https://www.gorges-ardeche-pontdarc.fr/content/uploads/2022/10/Halloween-Gorges-de-lArdeche.jpg",
-"src": "https://www.gorges-ardeche-pontdarc.fr/animations-monstrueuses-pour-halloween/",
-"site": "Gorges de l'Ardèche Pont-d'Arc",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-circa-auch-oco": {
 "img": "https://www.tourisme-gers.com/app/uploads/2026/02/festival-circa-a-collection-tourisme-gers-arnaud-spani-61.webp",
@@ -480,34 +411,19 @@
 "fecha": "2026-10-06"
 },
 "ev-diada-castellers-lleida": {
-"img": "https://castellscat.cat/images/footer/1742396975_284.jpg",
-"src": "https://castellscat.cat/en/schedule",
-"site": "castellscat.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-diada-castellers-sants": {
-"img": "https://castellscat.cat/images/footer/1742396975_284.jpg",
-"src": "https://castellscat.cat/en/schedule",
-"site": "castellscat.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-diada-del-roser-vilafranca": {
-"img": "https://castellscat.cat/images/footer/1742396975_284.jpg",
-"src": "https://castellscat.cat/en/schedule",
-"site": "castellscat.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-diada-moixiganguers-igualada": {
-"img": "https://castellscat.cat/images/footer/1742396975_284.jpg",
-"src": "https://castellscat.cat/en/schedule",
-"site": "castellscat.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-diada-santa-ursula-valls": {
-"img": "https://castellscat.cat/images/footer/1742396975_284.jpg",
-"src": "https://castellscat.cat/en/schedule",
-"site": "castellscat.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-diada-tots-sants-vilafranca": {
 "img": "https://revistacastells.cat/wp-content/uploads/2026/02/Concurs24_3-1024x461.jpg",
@@ -516,22 +432,13 @@
 "fecha": "2026-10-06"
 },
 "ev-diada-xiquets-reus": {
-"img": "https://castellscat.cat/images/footer/1742396975_284.jpg",
-"src": "https://castellscat.cat/en/schedule",
-"site": "castellscat.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-diba-animals-fantastics-montesquiu": {
-"img": "https://do.diba.cat/imgs/baner-do-petit.jpg",
-"src": "https://do.diba.cat/data/ds/actesparcs/graella",
-"site": "do.diba.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-diba-fageda-collformic": {
-"img": "https://do.diba.cat/imgs/baner-do-petit.jpg",
-"src": "https://do.diba.cat/data/ds/actesparcs/graella",
-"site": "do.diba.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-diba-masia-mariona": {
 "error": "sin-imagen"
@@ -543,16 +450,10 @@
 "error": "sin-imagen"
 },
 "ev-diba-tines-vall-flequer": {
-"img": "https://do.diba.cat/imgs/baner-do-petit.jpg",
-"src": "https://do.diba.cat/data/ds/actesparcs/graella",
-"site": "do.diba.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-elfinena-ontinena-ar": {
-"img": "https://www.ondacerocinca.es/wp-content/uploads/2026/01/ferieta.jpg",
-"src": "https://www.ondacerocinca.es/2026/01/18/aragon-incorpora-seis-nuevas-ferias-en-2026/",
-"site": "Onda Cero Cinca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-els-pallaresos-1900": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/18666festival-familiar-begur-indians-shutterstock1591358932.jpg",
@@ -567,16 +468,10 @@
 "fecha": "2026-10-06"
 },
 "ev-expo-guay-alcaniz-te": {
-"img": "https://ecodeteruel.tv/wp-content/uploads/2026/01/autoclassic-alcaniz-2023-visita-este-puente-un-centenar-de-vehiculos-historicos_2_790x454.jpeg",
-"src": "https://ecodeteruel.tv/ferias-teruel-2026-un-ano-de-ferias-con-sabor-a-trufa-jamon-y-motor/",
-"site": "Eco de Teruel",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-expocalamocha-te": {
-"img": "https://ecodeteruel.tv/wp-content/uploads/2026/01/autoclassic-alcaniz-2023-visita-este-puente-un-centenar-de-vehiculos-historicos_2_790x454.jpeg",
-"src": "https://ecodeteruel.tv/ferias-teruel-2026-un-ano-de-ferias-con-sabor-a-trufa-jamon-y-motor/",
-"site": "Eco de Teruel",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-exproreus-2026": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/12755dsc04928.jpg",
@@ -585,16 +480,10 @@
 "fecha": "2026-10-06"
 },
 "ev-feria-aceite-enguera-va": {
-"img": "https://www.valenciabonita.es/wp-content/uploads/2026/09/mercados-medievales-Valencia-octubre-2026.jpg",
-"src": "https://www.valenciabonita.es/2026/09/30/mercados-medievales-valencia-octubre-2026/",
-"site": "Valenciabonita",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-feria-agro-muro-alcoy-va": {
-"img": "https://www.valenciabonita.es/wp-content/uploads/2026/09/mercados-medievales-Valencia-octubre-2026.jpg",
-"src": "https://www.valenciabonita.es/2026/09/30/mercados-medievales-valencia-octubre-2026/",
-"site": "Valenciabonita",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-feria-animales-turia-va": {
 "img": "https://www.valenciabonita.es/wp-content/uploads/2026/09/Feria-de-los-Animales-Valencia-2026.jpg",
@@ -603,10 +492,7 @@
 "fecha": "2026-10-06"
 },
 "ev-feria-artesania-naval-ar": {
-"img": "https://www.ondacerocinca.es/wp-content/uploads/2026/01/ferieta.jpg",
-"src": "https://www.ondacerocinca.es/2026/01/18/aragon-incorpora-seis-nuevas-ferias-en-2026/",
-"site": "Onda Cero Cinca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-feria-dos-aguas-va": {
 "img": "https://www.valenciabonita.es/wp-content/uploads/2026/10/Feria-Gastronomica-y-Artesanal-de-Dos-Aguas-2026.jpg",
@@ -639,10 +525,7 @@
 "fecha": "2026-10-06"
 },
 "ev-feria-olivo-calaceite-te": {
-"img": "https://ecodeteruel.tv/wp-content/uploads/2026/01/autoclassic-alcaniz-2023-visita-este-puente-un-centenar-de-vehiculos-historicos_2_790x454.jpeg",
-"src": "https://ecodeteruel.tv/ferias-teruel-2026-un-ano-de-ferias-con-sabor-a-trufa-jamon-y-motor/",
-"site": "Eco de Teruel",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-feria-otono-biescas-ar": {
 "img": "https://feriasenaragon.com/assets/sites/fer_cdir/shop_thumbnail_ferias_aragon-3ca41f5e53027020f9ea90a9664f9e085b700f41c0f694aa7915adae8b5e4ad6.jpg",
@@ -657,43 +540,25 @@
 "fecha": "2026-10-06"
 },
 "ev-feria-san-martin-lascuarre-ar": {
-"img": "https://www.ondacerocinca.es/wp-content/uploads/2026/01/ferieta.jpg",
-"src": "https://www.ondacerocinca.es/2026/01/18/aragon-incorpora-seis-nuevas-ferias-en-2026/",
-"site": "Onda Cero Cinca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-feria-trufa-graus-ar": {
-"img": "https://www.ondacerocinca.es/wp-content/uploads/2026/01/ferieta.jpg",
-"src": "https://www.ondacerocinca.es/2026/01/18/aragon-incorpora-seis-nuevas-ferias-en-2026/",
-"site": "Onda Cero Cinca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-ferias-otono-elizondo-na": {
 "error": "HTTPError"
 },
 "ev-ferma-barbastro-ar": {
-"img": "https://www.ondacerocinca.es/wp-content/uploads/2026/01/ferieta.jpg",
-"src": "https://www.ondacerocinca.es/2026/01/18/aragon-incorpora-seis-nuevas-ferias-en-2026/",
-"site": "Onda Cero Cinca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-festa-bolet-calella": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-festa-bolet-ribes": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-festa-bolet-seva": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-festa-clotxa-garcia": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/99562clotxa.jpg",
@@ -720,10 +585,7 @@
 "fecha": "2026-10-06"
 },
 "ev-festival-magia-solsona": {
-"img": "https://guiaactivitats.aralleida.cat/wp-content/uploads/2024/03/escut_diputacio_patronat.jpg",
-"src": "https://guiaactivitats.aralleida.cat/events/festival-de-magia-de-prop-de-solsona-solsona-solsones-2/",
-"site": "Guia activitats de Lleida",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-festival-pallasses-circ-cric": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/24181festival-familiar-teatre-shutterstock249721537.jpg",
@@ -807,22 +669,13 @@
 "error": "URLError"
 },
 "ev-fira-avet-espinelves": {
-"img": "https://www.escapadaambnens.com/fotografies/petites/53791fires-nadal-catalunya.jpg",
-"src": "https://www.escapadaambnens.com/proposta/202/les-20-millors-fires-i-mercats-de-nadal-a-catalunya-2026/",
-"site": "escapadaambnens.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-bolet-albanya": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-bolet-cantonigros": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-bolet-llagostera": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/28555bolets-shutterstock290822378.jpg",
@@ -858,10 +711,7 @@
 "error": "HTTPError"
 },
 "ev-fira-cassalla-real-va": {
-"img": "https://www.valenciabonita.es/wp-content/uploads/2026/09/que-hacer-en-Valencia-en-octubre-de-2026.jpg",
-"src": "https://www.valenciabonita.es/2026/09/30/que-hacer-octubre-2026-valencia/",
-"site": "Valenciabonita",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-castanya-navarcles": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/27265navarcles-shutterstock1488186677.jpg",
@@ -882,16 +732,10 @@
 "fecha": "2026-10-06"
 },
 "ev-fira-codony-tremp": {
-"img": "https://guiaactivitats.aralleida.cat/wp-content/uploads/2024/03/escut_diputacio_patronat.jpg",
-"src": "https://guiaactivitats.aralleida.cat/events/xxv-fira-del-codony-tremp-pallars-jussa/",
-"site": "Guia activitats de Lleida",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-de-fires-castelltercol": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-del-bosc-sant-celoni": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/97676firaboscsantceloni1.jpg",
@@ -924,10 +768,7 @@
 "error": "HTTPError"
 },
 "ev-fira-llenega-cardona": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-mediterrania-manresa": {
 "error": "HTTPError"
@@ -939,10 +780,7 @@
 "error": "HTTPError"
 },
 "ev-fira-nadal-cardedeu": {
-"img": "https://www.escapadaambnens.com/fotografies/petites/53791fires-nadal-catalunya.jpg",
-"src": "https://www.escapadaambnens.com/proposta/202/les-20-millors-fires-i-mercats-de-nadal-a-catalunya-2026/",
-"site": "escapadaambnens.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-nou-montesquiu": {
 "error": "HTTPError"
@@ -960,10 +798,7 @@
 "error": "HTTPError"
 },
 "ev-fira-poma-barbens": {
-"img": "https://guiaactivitats.aralleida.cat/wp-content/uploads/2024/03/escut_diputacio_patronat.jpg",
-"src": "https://guiaactivitats.aralleida.cat/events/xliii-fira-de-la-poma-barbens-pla-durgell/",
-"site": "Guia activitats de Lleida",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-rocaguinarda-olost": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/52847olost.jpg",
@@ -1014,10 +849,7 @@
 "error": "HTTPError"
 },
 "ev-fira-tio-arbucies": {
-"img": "https://www.escapadaambnens.com/fotografies/petites/53791fires-nadal-catalunya.jpg",
-"src": "https://www.escapadaambnens.com/proposta/202/les-20-millors-fires-i-mercats-de-nadal-a-catalunya-2026/",
-"site": "escapadaambnens.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fira-tofona-centelles": {
 "error": "HTTPError"
@@ -1071,10 +903,7 @@
 "error": "sin-imagen"
 },
 "ev-follarasca-ainsa-ar": {
-"img": "https://www.ondacerocinca.es/wp-content/uploads/2026/01/ferieta.jpg",
-"src": "https://www.ondacerocinca.es/2026/01/18/aragon-incorpora-seis-nuevas-ferias-en-2026/",
-"site": "Onda Cero Cinca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fr-barcares-christmas-tour": {
 "img": "https://www.jds.fr/medias/image/1ec2eaf1e1660d4803b2ba389534421d203a01e21d927b21-1068401-1200-630.webp",
@@ -1086,22 +915,13 @@
 "error": "sin-imagen"
 },
 "ev-fr-collioure-lumiere-sur-mer": {
-"img": "https://www.tourisme-collioure.com/app/uploads/2023/11/noel-a-collioure-collioure-en-hiver.webp",
-"src": "https://www.tourisme-collioure.com/temps-fort/les-animation-de-noel/",
-"site": "Collioure Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fr-collioure-marche-noel": {
-"img": "https://www.tourisme-collioure.com/app/uploads/2023/11/noel-a-collioure-collioure-en-hiver.webp",
-"src": "https://www.tourisme-collioure.com/temps-fort/les-animation-de-noel/",
-"site": "Collioure Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fr-collioure-nochevieja": {
-"img": "https://www.tourisme-collioure.com/app/uploads/2023/11/noel-a-collioure-collioure-en-hiver.webp",
-"src": "https://www.tourisme-collioure.com/temps-fort/les-animation-de-noel/",
-"site": "Collioure Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fr-escape-amelia-les-angles": {
 "error": "HTTPError"
@@ -1137,10 +957,7 @@
 "fecha": "2026-10-06"
 },
 "ev-fr-foire-saint-martin-perpignan": {
-"img": "https://www.perpignantourisme.com/assets/uploads/sites/7/2024/02/perpignan-hotelpamsmarcnouss-1-scaled-e1711462798120-800x375.jpg",
-"src": "https://www.perpignantourisme.com/en/agenda/foire-saint-martin",
-"site": "Perpignan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fr-halloween-aquasud": {
 "img": "https://www.jds.fr/medias/image/halloween-party-1107038-1200-630.webp",
@@ -1224,22 +1041,13 @@
 "fecha": "2026-10-06"
 },
 "ev-fr-noel-canet": {
-"img": "https://66.agendaculturel.fr/media/ecKokPUZdmDjOE2ov69VJw/storage/2025/685ebedc66863.webp/w=1200,fit=contain,f=auto",
-"src": "https://66.agendaculturel.fr/festival/spectacles-de-noel/",
-"site": "Agenda Culturel",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fr-noel-perpignan": {
-"img": "https://66.agendaculturel.fr/media/ecKokPUZdmDjOE2ov69VJw/storage/2025/685ebedc66863.webp/w=1200,fit=contain,f=auto",
-"src": "https://66.agendaculturel.fr/festival/spectacles-de-noel/",
-"site": "Agenda Culturel",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fr-noel-sorede": {
-"img": "https://66.agendaculturel.fr/media/ecKokPUZdmDjOE2ov69VJw/storage/2025/685ebedc66863.webp/w=1200,fit=contain,f=auto",
-"src": "https://66.agendaculturel.fr/festival/spectacles-de-noel/",
-"site": "Agenda Culturel",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fr-transbordeuse-cerbere": {
 "img": "https://66.agendaculturel.fr/apercu/01a10abd-873e-7f5e-a78e-f255771571bb.jpg?v=1791188759",
@@ -1248,10 +1056,7 @@
 "fecha": "2026-10-06"
 },
 "ev-fr-trobades-medievales-perpignan": {
-"img": "https://www.perpignantourisme.com/assets/uploads/sites/7/2024/02/perpignan-hotelpamsmarcnouss-1-scaled-e1711462798120-800x375.jpg",
-"src": "https://www.perpignantourisme.com/agenda/trobades-medievales/",
-"site": "Perpignan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-fr-vendanges-banyuls": {
 "img": "https://www.tourisme-pyrenees-mediterranee.com/app/uploads/2026/09/fete-des-vendanges-2025-guillaume-levasseur-coupe.webp",
@@ -1302,10 +1107,7 @@
 "fecha": "2026-10-06"
 },
 "ev-halloween-roure-oce": {
-"img": "https://www.gorges-ardeche-pontdarc.fr/content/uploads/2022/10/Halloween-Gorges-de-lArdeche.jpg",
-"src": "https://www.gorges-ardeche-pontdarc.fr/animations-monstrueuses-pour-halloween/",
-"site": "Gorges de l'Ardèche Pont-d'Arc",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-halloween-sendaviva-na": {
 "img": "https://www.infoarguedas.com/wp-content/uploads/2026/09/Senda-Viva-R-Halloween-2025-38.jpg",
@@ -1326,10 +1128,7 @@
 "fecha": "2026-10-06"
 },
 "ev-halloween-vogue-oce": {
-"img": "https://www.gorges-ardeche-pontdarc.fr/content/uploads/2022/10/Halloween-Gorges-de-lArdeche.jpg",
-"src": "https://www.gorges-ardeche-pontdarc.fr/animations-monstrueuses-pour-halloween/",
-"site": "Gorges de l'Ardèche Pont-d'Arc",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-huesca-es-dulce-ar": {
 "img": "https://zaragozala.com/wp-content/uploads/2025/10/Tallerraulbernalferiadeldulce2024huesca11.webp",
@@ -1347,16 +1146,10 @@
 "fecha": "2026-10-06"
 },
 "ev-la-feria-castejon-sos-ar": {
-"img": "https://www.ondacerocinca.es/wp-content/uploads/2026/01/ferieta.jpg",
-"src": "https://www.ondacerocinca.es/2026/01/18/aragon-incorpora-seis-nuevas-ferias-en-2026/",
-"site": "Onda Cero Cinca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-lapislazuli-fraga-ar": {
-"img": "https://www.ondacerocinca.es/wp-content/uploads/2026/01/ferieta.jpg",
-"src": "https://www.ondacerocinca.es/2026/01/18/aragon-incorpora-seis-nuevas-ferias-en-2026/",
-"site": "Onda Cero Cinca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-lumieres-quai-savoirs-oco": {
 "img": "https://quaidessavoirs.toulouse-metropole.fr/wp-content/uploads/sites/13/2026/04/couverture-stephanie-roland.jpg",
@@ -1401,10 +1194,7 @@
 "error": "sin-imagen"
 },
 "ev-medieval-alcasser-va": {
-"img": "https://www.valenciabonita.es/wp-content/uploads/2026/09/mercados-medievales-Valencia-octubre-2026.jpg",
-"src": "https://www.valenciabonita.es/2026/09/30/mercados-medievales-valencia-octubre-2026/",
-"site": "Valenciabonita",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-medieval-alfafar-va": {
 "img": "https://demercadosmedievales.info/wp-content/uploads/2026/02/Copia-de-alfafar_2026_fb_oct.jpg",
@@ -1494,10 +1284,7 @@
 "error": "HTTPError"
 },
 "ev-mercat-nadal-caldes": {
-"img": "https://www.escapadaambnens.com/fotografies/petites/53791fires-nadal-catalunya.jpg",
-"src": "https://www.escapadaambnens.com/proposta/202/les-20-millors-fires-i-mercats-de-nadal-a-catalunya-2026/",
-"site": "escapadaambnens.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-mercat-nadal-valls": {
 "error": "HTTPError"
@@ -1509,16 +1296,10 @@
 "fecha": "2026-10-06"
 },
 "ev-monstres-balazuc-oce": {
-"img": "https://www.gorges-ardeche-pontdarc.fr/content/uploads/2022/10/Halloween-Gorges-de-lArdeche.jpg",
-"src": "https://www.gorges-ardeche-pontdarc.fr/animations-monstrueuses-pour-halloween/",
-"site": "Gorges de l'Ardèche Pont-d'Arc",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-mostra-gastronomica-garrigues": {
-"img": "https://guiaactivitats.aralleida.cat/wp-content/uploads/2024/03/escut_diputacio_patronat.jpg",
-"src": "https://guiaactivitats.aralleida.cat/events/xxxii-mostra-gastronomica-de-les-garrigues-les-borges-blanques-garrigues/",
-"site": "Guia activitats de Lleida",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-nadal-reis-montblanc": {
 "img": "https://femturisme.cat/_fotos/agenda/main/festes-de-nadal-i-reis-a-montblanc.jpg",
@@ -1644,10 +1425,7 @@
 "fecha": "2026-10-06"
 },
 "ev-parque-infantil-navidad-calamocha-te": {
-"img": "https://ecodeteruel.tv/wp-content/uploads/2026/01/autoclassic-alcaniz-2023-visita-este-puente-un-centenar-de-vehiculos-historicos_2_790x454.jpeg",
-"src": "https://ecodeteruel.tv/ferias-teruel-2026-un-ano-de-ferias-con-sabor-a-trufa-jamon-y-motor/",
-"site": "Eco de Teruel",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-patate-thueyts-oce": {
 "img": "https://flanerbouger.fr/storage/events/832297/potatoes.jpg",
@@ -1722,10 +1500,7 @@
 "error": "HTTPError"
 },
 "ev-santa-llucia-canyelles": {
-"img": "https://www.escapadaambnens.com/fotografies/petites/53791fires-nadal-catalunya.jpg",
-"src": "https://www.escapadaambnens.com/proposta/202/les-20-millors-fires-i-mercats-de-nadal-a-catalunya-2026/",
-"site": "escapadaambnens.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-santa-llucia-manresa": {
 "error": "HTTPError"
@@ -1737,16 +1512,10 @@
 "fecha": "2026-10-06"
 },
 "ev-sobre-ruedas-teruel-te": {
-"img": "https://ecodeteruel.tv/wp-content/uploads/2026/01/autoclassic-alcaniz-2023-visita-este-puente-un-centenar-de-vehiculos-historicos_2_790x454.jpeg",
-"src": "https://ecodeteruel.tv/ferias-teruel-2026-un-ano-de-ferias-con-sabor-a-trufa-jamon-y-motor/",
-"site": "Eco de Teruel",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-solsoterra": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-sorcieres-saint-chaptes-oce": {
 "img": "https://www.les-sorcieres-de-st-chaptes.com/images/2018/Affiche.jpg",
@@ -1761,10 +1530,7 @@
 "error": "sin-imagen"
 },
 "ev-tiempo-nueces-viver-va": {
-"img": "https://www.valenciabonita.es/wp-content/uploads/2026/09/que-hacer-en-Valencia-en-octubre-de-2026.jpg",
-"src": "https://www.valenciabonita.es/2026/09/30/que-hacer-octubre-2026-valencia/",
-"site": "Valenciabonita",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-titeres-alcaniz-te": {
 "img": "https://culturadearagon.es/wp-content/uploads/2026/09/Escenas-de-Otono-2026-Alcaniz.webp",
@@ -1773,10 +1539,7 @@
 "fecha": "2026-10-06"
 },
 "ev-tocats-bolets-montmajor": {
-"img": "https://totnens.cat/wp-content/uploads/2024/09/calendari-boletaire.jpg",
-"src": "https://totnens.cat/fires-i-festes-del-bolet/",
-"site": "totnens",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-tots-sants-oliana": {
 "error": "HTTPError"
@@ -1794,16 +1557,10 @@
 "fecha": "2026-10-06"
 },
 "ev-trobada-colles-sud-montblanc": {
-"img": "https://castellscat.cat/images/footer/1742396975_284.jpg",
-"src": "https://castellscat.cat/en/schedule",
-"site": "castellscat.cat",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-turno-del-torno-manises-va": {
-"img": "https://www.valenciabonita.es/wp-content/uploads/2026/09/que-hacer-en-Valencia-en-octubre-de-2026.jpg",
-"src": "https://www.valenciabonita.es/2026/09/30/que-hacer-octubre-2026-valencia/",
-"site": "Valenciabonita",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ev-utiel-gastronomica-va": {
 "error": "sin-imagen"
@@ -1815,16 +1572,10 @@
 "error": "HTTPError"
 },
 "ev-zagalandia-barbastro-ar": {
-"img": "https://www.ondacerocinca.es/wp-content/uploads/2026/01/ferieta.jpg",
-"src": "https://www.ondacerocinca.es/2026/01/18/aragon-incorpora-seis-nuevas-ferias-en-2026/",
-"site": "Onda Cero Cinca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-acueducto-albarracin-te": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2022/04/IMG_8352-scaled-e1650093809284.jpg",
-"src": "https://viajandoconmanuela.com/viajes/albarracin-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-aiguamolls-emporda": {
 "img": "https://parcsnaturals.gencat.cat/web/.content/Xarxa-de-parcs/aiguamolls-emporda/imatges-capcalera-peu/aiguamolls1_new.jpg",
@@ -1845,28 +1596,16 @@
 "error": "HTTPError"
 },
 "na-ar-cascada-sorrosal": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-ar-forau-aigualluts": {
-"img": "https://bookingcaravaning.com/wp-content/uploads/2026/06/A_modern_photorealistic_image_16_9_202606051340-1024x572.jpg",
-"src": "https://bookingcaravaning.com/pirineo-aragones-autocaravana-ruta-7-dias-n260/",
-"site": "Booking Caravaning",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-ar-mallos-riglos": {
-"img": "https://mundovan.com/wp-content/uploads/2024/05/zaragoza2.jpg",
-"src": "https://mundovan.com/viajes/la-mejor-ruta-en-autocaravana-con-ninos-en-aragon/",
-"site": "Mundovan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-ar-moncayo": {
-"img": "https://www.aragondigital.es/media/aragondigital/images/2025/11/03/2025110310142930316.jpg",
-"src": "https://www.aragondigital.es/articulo/zaragoza-provincia/mejores-areas-autocaravanas-otono-zaragoza-provincia-pernoctar/20251103101519949709.html",
-"site": "Aragón Digital",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-ar-ordesa-cascadas": {
 "img": "https://ordesabus.com/wp-content/uploads/2026/08/qr-horarios-ordesa-2026.png",
@@ -1875,10 +1614,7 @@
 "fecha": "2026-10-06"
 },
 "na-ar-panticosa-banos": {
-"img": "https://bookingcaravaning.com/wp-content/uploads/2026/06/A_modern_photorealistic_image_16_9_202606051340-1024x572.jpg",
-"src": "https://bookingcaravaning.com/pirineo-aragones-autocaravana-ruta-7-dias-n260/",
-"site": "Booking Caravaning",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-ar-pasarelas-alquezar": {
 "img": "https://pasarelasdealquezar.com/wp-content/themes/wanderland/assets/img/open_graph.jpg",
@@ -1926,10 +1662,7 @@
 "fecha": "2026-10-06"
 },
 "na-canal-grau-oce": {
-"img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIvQmt-o2CJcyFnjSkboBiyQN3dWIDvp5R_zvbu6Y_Jd-bQyED6PLj4oBRuhhdgLPbTumonIUnbm0EYB1r0zN2z9CN4lgFg0l6hUs7YMMFh7amY25bnsGsB3Zp_3ZYNNEQa1hWCRMNP4Z2/w1200-h630-p-k-no-nu/45.+Verneque+circuito.JPG",
-"src": "https://viajarenautocaravanaconpeques.blogspot.com/2016/02/2-gran-viaje-3etapa-la-camarga-arles-y.html",
-"site": "viajarenautocaravanaconpeques.blogspot.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-cap-bear": {
 "img": "https://www.port-vendres.com/images/Mémorial_SOLDIS_-_Situation_du_monument_Soldis.jpg",
@@ -1956,10 +1689,7 @@
 "fecha": "2026-10-06"
 },
 "na-carança": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-cascade-gincla": {
 "img": "https://cdt11.media.tourinsoft.eu/upload/gincla-wide.jpg",
@@ -2004,10 +1734,7 @@
 "error": "URLError"
 },
 "na-desert-palmes-va": {
-"img": "https://tourandkids.com/uploads/entorno_28/user_1/2023/6/posts/037bbc5aaa37dab6040db5cc2f87471e647f15a34781f2023_06_06_13_16_51.png",
-"src": "https://tourandkids.com/es/blog/viajar-en-autocaravana-con-ninos-tres-rutas-por-la-comunidad-valenciana",
-"site": "Tour & Kids",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-devesa-saler-va": {
 "error": "HTTPError"
@@ -2031,10 +1758,7 @@
 "error": "sin-imagen"
 },
 "na-ermitage-font-romeu": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-espadan-eslida-va": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/SEspadan_VallAlmonacid.jpg/1280px-SEspadan_VallAlmonacid.jpg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
@@ -2070,16 +1794,10 @@
 "fecha": "2026-10-06"
 },
 "na-etang-canet": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-etang-lers": {
-"img": "https://www.ariegepyrenees.com/wp-content/uploads/2025/11/HIVER-yoga-horiz2.jpg",
-"src": "https://www.ariegepyrenees.com",
-"site": "Ariège Pyrénées Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-fageda-den-jorda": {
 "error": "HTTPError"
@@ -2097,10 +1815,7 @@
 "fecha": "2026-10-06"
 },
 "na-fontestorbes": {
-"img": "https://www.ariegepyrenees.com/wp-content/uploads/2025/11/HIVER-yoga-horiz2.jpg",
-"src": "https://www.ariegepyrenees.com",
-"site": "Ariège Pyrénées Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-fonts-llobregat": {
 "error": "URLError"
@@ -2112,10 +1827,7 @@
 "fecha": "2026-10-06"
 },
 "na-garbi-va": {
-"img": "https://autocaravaners.com/wp-content/uploads/2025/08/ruta-autocaravana-valencia.jpg",
-"src": "https://autocaravaners.com/rutas-viajes/autocaravana-valencia/",
-"site": "AUTOCARAVANERS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-gorg-blau-sant-aniol": {
 "img": "https://altagarrotxa.org/wp-content/uploads/2026/09/2026_sadernes.jpg",
@@ -2148,43 +1860,25 @@
 "fecha": "2026-10-06"
 },
 "na-gouffre-oeil-doux": {
-"img": "https://www.audetourisme.com/uploads/2019/06/lapradelle-puilaurens-vue-chateau-cr-vincent-photographie.jpg",
-"src": "https://www.audetourisme.com/fr/",
-"site": "Aude Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-grandes-canalettes": {
 "error": "URLError"
 },
 "na-grotte-labouiche": {
-"img": "https://www.ariegepyrenees.com/wp-content/uploads/2025/11/HIVER-yoga-horiz2.jpg",
-"src": "https://www.ariegepyrenees.com",
-"site": "Ariège Pyrénées Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-grotte-lombrives": {
-"img": "https://www.ariegepyrenees.com/wp-content/uploads/2025/11/HIVER-yoga-horiz2.jpg",
-"src": "https://www.ariegepyrenees.com",
-"site": "Ariège Pyrénées Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-grotte-niaux": {
-"img": "https://www.ariegepyrenees.com/wp-content/uploads/2025/11/HIVER-yoga-horiz2.jpg",
-"src": "https://www.ariegepyrenees.com",
-"site": "Ariège Pyrénées Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-hoz-calomarde-te": {
-"img": "https://milyunarutas.com/wp-content/uploads/IMG_1782-scaled.jpeg",
-"src": "https://milyunarutas.com/pueblos-de-teruel-en-autocaravana",
-"site": "MIL Y UNA RUTAS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-ile-sainte-lucie": {
-"img": "https://www.audetourisme.com/uploads/2019/06/lapradelle-puilaurens-vue-chateau-cr-vincent-photographie.jpg",
-"src": "https://www.audetourisme.com/fr/",
-"site": "Aude Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-la-mola": {
 "error": "sin-imagen"
@@ -2193,31 +1887,19 @@
 "error": "sin-imagen"
 },
 "na-lac-cavayere": {
-"img": "https://www.audetourisme.com/uploads/2019/06/lapradelle-puilaurens-vue-chateau-cr-vincent-photographie.jpg",
-"src": "https://www.audetourisme.com/fr/",
-"site": "Aude Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-lac-matemale": {
 "error": "sin-imagen"
 },
 "na-lac-montbel": {
-"img": "https://www.ariegepyrenees.com/wp-content/uploads/2025/11/HIVER-yoga-horiz2.jpg",
-"src": "https://www.ariegepyrenees.com",
-"site": "Ariège Pyrénées Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-lac-villeneuve-raho": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-lac-vinca": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-lago-puigcerda": {
 "img": "https://images.hoobaweb.com/2187/imgf-1200-630/01-marca-completa-1667689.png",
@@ -2253,25 +1935,16 @@
 "fecha": "2026-10-06"
 },
 "na-mas-larrieu": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-masmut-te": {
-"img": "https://milyunarutas.com/wp-content/uploads/IMG_1782-scaled.jpeg",
-"src": "https://milyunarutas.com/pueblos-de-teruel-en-autocaravana",
-"site": "MIL Y UNA RUTAS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-matagalls-coll-formic": {
 "error": "sin-imagen"
 },
 "na-molino-tramacastilla-te": {
-"img": "https://milyunarutas.com/wp-content/uploads/IMG_1782-scaled.jpeg",
-"src": "https://milyunarutas.com/pueblos-de-teruel-en-autocaravana",
-"site": "MIL Y UNA RUTAS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-mont-rebei": {
 "error": "sin-imagen"
@@ -2280,10 +1953,7 @@
 "error": "HTTPError"
 },
 "na-montanejos-va": {
-"img": "https://tourandkids.com/uploads/entorno_28/user_1/2023/6/posts/037bbc5aaa37dab6040db5cc2f87471e647f15a34781f2023_06_06_13_16_51.png",
-"src": "https://tourandkids.com/es/blog/viajar-en-autocaravana-con-ninos-tres-rutas-por-la-comunidad-valenciana",
-"site": "Tour & Kids",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-montsacopa-olot": {
 "img": "https://www.turismeolot.com/assets/files/barroc21-1.jpeg",
@@ -2298,16 +1968,10 @@
 "fecha": "2026-10-06"
 },
 "na-moulin-foux-oce": {
-"img": "https://www.van-away.com/wp-content/uploads/VALLE-DE-L-HERAULT.jpg",
-"src": "https://www.van-away.com/en/voyage-en-van/en-location-vans-roadtrips/road-trip-gorges-herault",
-"site": "VAN-AWAY, give yourself the freedom to r",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-moureze-oce": {
-"img": "https://www.van-away.com/wp-content/uploads/VALLE-DE-L-HERAULT.jpg",
-"src": "https://www.van-away.com/en/voyage-en-van/en-location-vans-roadtrips/road-trip-gorges-herault",
-"site": "VAN-AWAY, give yourself the freedom to r",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-muntanyans-torredembarra": {
 "img": "https://www.catalunya.com/content/dam/catalunyacom/web/ca/contingut-generic/logotips/catalunya.jpg",
@@ -2322,34 +1986,19 @@
 "fecha": "2026-10-06"
 },
 "na-na-bertiz": {
-"img": "https://www.danzarviajando.com/wp-content/uploads/2024/04/IMG_0109-scaled.jpeg",
-"src": "https://www.danzarviajando.com/navarra-en-camper-la-mejor-ruta-de-12-dias/",
-"site": "Danzarviajando.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-na-cascada-belabarce": {
-"img": "https://www.danzarviajando.com/wp-content/uploads/2024/04/IMG_0109-scaled.jpeg",
-"src": "https://www.danzarviajando.com/navarra-en-camper-la-mejor-ruta-de-12-dias/",
-"site": "Danzarviajando.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-na-foz-arbayun": {
-"img": "https://mundovan.com/wp-content/uploads/2024/06/Bardenas-Reales.jpg",
-"src": "https://mundovan.com/autocaravanas/navarra-en-autocaravana/",
-"site": "Mundovan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-na-foz-lumbier": {
-"img": "https://iratibarnean.com/wp-content/uploads/que-ver-con-una-camper-1.webp",
-"src": "https://iratibarnean.com/que-ver-en-navarra-en-4-dias-en-furgoneta-camper/",
-"site": "Cabañas con forma de iglú en plena Selva",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-na-selva-irati": {
-"img": "https://m3caravaning.com/wp-content/uploads/2021/09/rutas-pirineos-autocaravana.webp",
-"src": "https://m3caravaning.com/autocaravanas/ruta-pirineos-autocaravana/",
-"site": "Autocaravanas, caravanas y furgonetas ca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-na-urederra": {
 "img": "https://www.visitnavarra.es/documents/8191683/8201413/1+cabecera.jpg/d65ebbf3-931b-8463-96c2-8a2c4664bde2?t=1619722644104",
@@ -2436,10 +2085,7 @@
 "fecha": "2026-10-06"
 },
 "na-paseo-guadalaviar-te": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2022/04/IMG_8352-scaled-e1650093809284.jpg",
-"src": "https://viajandoconmanuela.com/viajes/albarracin-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-paulilles": {
 "img": "https://cdn-cloud.fra1.digitaloceanspaces.com/po66/wp-content/themes/ptl-theme-master/assets/img/nos-site.jpg",
@@ -2496,10 +2142,7 @@
 "fecha": "2026-10-06"
 },
 "na-pou-clar-va": {
-"img": "https://autocaravaners.com/wp-content/uploads/2025/08/ruta-autocaravana-valencia.jpg",
-"src": "https://autocaravaners.com/rutas-viajes/autocaravana-valencia/",
-"site": "AUTOCARAVANERS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-pozo-salto-molinos-te": {
 "error": "HTTPError"
@@ -2517,10 +2160,7 @@
 "fecha": "2026-10-06"
 },
 "na-racou-sentier-littoral": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-rasos-peguera": {
 "error": "URLError"
@@ -2538,10 +2178,7 @@
 "error": "sin-imagen"
 },
 "na-rodeno-te": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2022/04/IMG_8352-scaled-e1650093809284.jpg",
-"src": "https://viajandoconmanuela.com/viajes/albarracin-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-route-gorges-ardeche-pr": {
 "img": "https://espritcampingcar.com/wp-content/uploads/2026/08/pont-arc-camping-car-en-ardeche.jpg",
@@ -2565,10 +2202,7 @@
 "fecha": "2026-10-06"
 },
 "na-salin-giraud-pr": {
-"img": "https://www.voyagesetenfants.com/wp-content/uploads/2023/01/Camargue-en-camping-car-15-015.jpg",
-"src": "https://www.voyagesetenfants.com/3-jours-en-camargue-en-camping-car/",
-"site": "VOYAGES ET ENFANTS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-salt-de-sallent-rupit": {
 "img": "https://objetivocamper.com/wp-content/uploads/2024/05/SALT-DE-SALLENT2.jpg",
@@ -2619,10 +2253,7 @@
 "error": "HTTPError"
 },
 "na-senda-alcala-selva-te": {
-"img": "https://milyunarutas.com/wp-content/uploads/IMG_1782-scaled.jpeg",
-"src": "https://milyunarutas.com/pueblos-de-teruel-en-autocaravana",
-"site": "MIL Y UNA RUTAS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-sentier-rousty-pr": {
 "img": "https://www.museedelacamargue.com/images/2023/10/09/musee-estelle-rouquette-bd.jpg",
@@ -2679,10 +2310,7 @@
 "error": "sin-imagen"
 },
 "na-via-verde-mar-va": {
-"img": "https://tourandkids.com/uploads/entorno_28/user_1/2023/6/posts/037bbc5aaa37dab6040db5cc2f87471e647f15a34781f2023_06_06_13_16_51.png",
-"src": "https://tourandkids.com/es/blog/viajar-en-autocaravana-con-ninos-tres-rutas-por-la-comunidad-valenciana",
-"site": "Tour & Kids",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "na-volcans-santa-margarida-croscat": {
 "error": "HTTPError"
@@ -2757,22 +2385,13 @@
 "error": "HTTPError"
 },
 "pe-ar-ainsa": {
-"img": "https://bookingcaravaning.com/wp-content/uploads/2026/06/A_modern_photorealistic_image_16_9_202606051340-1024x572.jpg",
-"src": "https://bookingcaravaning.com/pirineo-aragones-autocaravana-ruta-7-dias-n260/",
-"site": "Booking Caravaning",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-alquezar-camping": {
-"img": "https://bookingcaravaning.com/wp-content/uploads/2026/06/A_modern_photorealistic_image_16_9_202606051340-1024x572.jpg",
-"src": "https://bookingcaravaning.com/pirineo-aragones-autocaravana-ruta-7-dias-n260/",
-"site": "Booking Caravaning",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-benasque": {
-"img": "https://bookingcaravaning.com/wp-content/uploads/2026/06/A_modern_photorealistic_image_16_9_202606051340-1024x572.jpg",
-"src": "https://bookingcaravaning.com/pirineo-aragones-autocaravana-ruta-7-dias-n260/",
-"site": "Booking Caravaning",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-calatayud": {
 "img": "https://yescapa.twic.pics/blog/media/images/stone-monastery-ga9dab8714-1920.max-2000x2000.jpg?twic=v1/focus=auto/cover=1200x630",
@@ -2781,34 +2400,19 @@
 "fecha": "2026-10-06"
 },
 "pe-ar-canfranc": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-fiscal": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-grisel": {
-"img": "https://www.aragondigital.es/media/aragondigital/images/2025/11/03/2025110310142930316.jpg",
-"src": "https://www.aragondigital.es/articulo/zaragoza-provincia/mejores-areas-autocaravanas-otono-zaragoza-provincia-pernoctar/20251103101519949709.html",
-"site": "Aragón Digital",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-jaca": {
-"img": "https://www.danzarviajando.com/wp-content/uploads/2024/04/IMG_0109-scaled.jpeg",
-"src": "https://www.danzarviajando.com/navarra-en-camper-la-mejor-ruta-de-12-dias/",
-"site": "Danzarviajando.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-loarre": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-nuevalos": {
 "img": "https://yescapa.twic.pics/blog/media/images/stone-monastery-ga9dab8714-1920.max-2000x2000.jpg?twic=v1/focus=auto/cover=1200x630",
@@ -2817,22 +2421,13 @@
 "fecha": "2026-10-06"
 },
 "pe-ar-sallent": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-sos": {
-"img": "https://www.aragondigital.es/media/aragondigital/images/2025/11/03/2025110310142930316.jpg",
-"src": "https://www.aragondigital.es/articulo/zaragoza-provincia/mejores-areas-autocaravanas-otono-zaragoza-provincia-pernoctar/20251103101519949709.html",
-"site": "Aragón Digital",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-ar-zaragoza": {
-"img": "https://www.aragondigital.es/media/aragondigital/images/2025/11/03/2025110310142930316.jpg",
-"src": "https://www.aragondigital.es/articulo/zaragoza-provincia/mejores-areas-autocaravanas-otono-zaragoza-provincia-pernoctar/20251103101519949709.html",
-"site": "Aragón Digital",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-aramon-ccp-pr": {
 "error": "sin-imagen"
@@ -2949,10 +2544,7 @@
 "fecha": "2026-10-06"
 },
 "pe-devesa-gardens-va": {
-"img": "https://tourandkids.com/uploads/entorno_28/user_1/2023/6/posts/037bbc5aaa37dab6040db5cc2f87471e647f15a34781f2023_06_06_13_16_51.png",
-"src": "https://tourandkids.com/es/blog/viajar-en-autocaravana-con-ninos-tres-rutas-por-la-comunidad-valenciana",
-"site": "Tour & Kids",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-empuriabrava": {
 "img": "https://cdn3.park4night.com/lieu/2075101_2075200/2075177_gd.jpg",
@@ -3057,40 +2649,22 @@
 "error": "sin-imagen"
 },
 "pe-na-arguedas": {
-"img": "https://iratibarnean.com/wp-content/uploads/que-ver-con-una-camper-1.webp",
-"src": "https://iratibarnean.com/que-ver-en-navarra-en-4-dias-en-furgoneta-camper/",
-"site": "Cabañas con forma de iglú en plena Selva",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-na-baquedano": {
-"img": "https://www.comopedroporsucasa.com/wp-content/uploads/2018/08/area-autocaravanas-navarra.jpg",
-"src": "https://www.comopedroporsucasa.com/2018/08/22/ruta-autocaravana-navarra/",
-"site": "Como Pedro por su Casa",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-na-irache": {
-"img": "https://www.comopedroporsucasa.com/wp-content/uploads/2018/08/area-autocaravanas-navarra.jpg",
-"src": "https://www.comopedroporsucasa.com/2018/08/22/ruta-autocaravana-navarra/",
-"site": "Como Pedro por su Casa",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-na-isaba": {
-"img": "https://www.danzarviajando.com/wp-content/uploads/2024/04/IMG_0109-scaled.jpeg",
-"src": "https://www.danzarviajando.com/navarra-en-camper-la-mejor-ruta-de-12-dias/",
-"site": "Danzarviajando.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-na-ochagavia": {
-"img": "https://www.danzarviajando.com/wp-content/uploads/2024/04/IMG_0109-scaled.jpeg",
-"src": "https://www.danzarviajando.com/navarra-en-camper-la-mejor-ruta-de-12-dias/",
-"site": "Danzarviajando.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-na-olite": {
-"img": "https://familiawally.com/wp-content/uploads/2023/02/Photo_6553747_DJI_147_jpg_9423693_0_2022415123658_photo_original-portada.jpg",
-"src": "https://familiawally.com/olite-y-ujue-en-autocaravana/",
-"site": "Familia Wally",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-nomadic-va": {
 "img": "https://cdn3.park4night.com/lieu/2121901_2122000/2121950_gd.jpg",
@@ -3273,10 +2847,7 @@
 "fecha": "2026-10-06"
 },
 "pe-saintes-maries-oce": {
-"img": "https://www.voyagesetenfants.com/wp-content/uploads/2023/01/Camargue-en-camping-car-15-015.jpg",
-"src": "https://www.voyagesetenfants.com/3-jours-en-camargue-en-camping-car/",
-"site": "VOYAGES ET ENFANTS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-salagou-ccp-oce": {
 "error": "sin-imagen"
@@ -3336,10 +2907,7 @@
 "error": "sin-imagen"
 },
 "pe-torres-albarracin-te": {
-"img": "https://milyunarutas.com/wp-content/uploads/IMG_1782-scaled.jpeg",
-"src": "https://milyunarutas.com/pueblos-de-teruel-en-autocaravana",
-"site": "MIL Y UNA RUTAS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "pe-torroella-la-granja": {
 "img": "https://cdn3.park4night.com/lieu/484801_484900/484894_gd.jpg",
@@ -3399,10 +2967,7 @@
 "fecha": "2026-10-06"
 },
 "ru-ar-pirineo-3dias": {
-"img": "https://m3caravaning.com/wp-content/uploads/2021/09/rutas-pirineos-autocaravana.webp",
-"src": "https://m3caravaning.com/autocaravanas/ruta-pirineos-autocaravana/",
-"site": "Autocaravanas, caravanas y furgonetas ca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ru-ardeche-cece-autocaravanas-pr": {
 "error": "HTTPError"
@@ -3429,16 +2994,10 @@
 "error": "sin-imagen"
 },
 "ru-camarga-arles-peques-pr": {
-"img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIvQmt-o2CJcyFnjSkboBiyQN3dWIDvp5R_zvbu6Y_Jd-bQyED6PLj4oBRuhhdgLPbTumonIUnbm0EYB1r0zN2z9CN4lgFg0l6hUs7YMMFh7amY25bnsGsB3Zp_3ZYNNEQa1hWCRMNP4Z2/w1200-h630-p-k-no-nu/45.+Verneque+circuito.JPG",
-"src": "https://viajarenautocaravanaconpeques.blogspot.com/2016/02/2-gran-viaje-3etapa-la-camarga-arles-y.html",
-"site": "viajarenautocaravanaconpeques.blogspot.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ru-camarga-familia-pr": {
-"img": "https://www.voyagesetenfants.com/wp-content/uploads/2023/01/Camargue-en-camping-car-15-015.jpg",
-"src": "https://www.voyagesetenfants.com/3-jours-en-camargue-en-camping-car/",
-"site": "VOYAGES ET ENFANTS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ru-castillos-cataros": {
 "img": "https://www.wikicampers.fr/uploads/route-des-chateaux-cathares-en-camping-car.jpg",
@@ -3495,10 +3054,7 @@
 "fecha": "2026-10-06"
 },
 "ru-gorges-herault-vanaway-oce": {
-"img": "https://www.van-away.com/wp-content/uploads/VALLE-DE-L-HERAULT.jpg",
-"src": "https://www.van-away.com/en/voyage-en-van/en-location-vans-roadtrips/road-trip-gorges-herault",
-"site": "VAN-AWAY, give yourself the freedom to r",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ru-herault-salagou-guilhem-oce": {
 "error": "URLError"
@@ -3522,28 +3078,16 @@
 "fecha": "2026-10-06"
 },
 "ru-na-navarra-4dias": {
-"img": "https://iratibarnean.com/wp-content/uploads/que-ver-con-una-camper-1.webp",
-"src": "https://iratibarnean.com/que-ver-en-navarra-en-4-dias-en-furgoneta-camper/",
-"site": "Cabañas con forma de iglú en plena Selva",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ru-na-olite-ujue": {
-"img": "https://familiawally.com/wp-content/uploads/2023/02/Photo_6553747_DJI_147_jpg_9423693_0_2022415123658_photo_original-portada.jpg",
-"src": "https://familiawally.com/olite-y-ujue-en-autocaravana/",
-"site": "Familia Wally",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ru-na-pirineo-navarro-3dias": {
-"img": "https://m3caravaning.com/wp-content/uploads/2021/09/rutas-pirineos-autocaravana.webp",
-"src": "https://m3caravaning.com/autocaravanas/ruta-pirineos-autocaravana/",
-"site": "Autocaravanas, caravanas y furgonetas ca",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ru-na-tierra-estella-baztan": {
-"img": "https://www.comopedroporsucasa.com/wp-content/uploads/2018/08/area-autocaravanas-navarra.jpg",
-"src": "https://www.comopedroporsucasa.com/2018/08/22/ruta-autocaravana-navarra/",
-"site": "Como Pedro por su Casa",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ru-navidad-avet-vic": {
 "error": "HTTPError"
@@ -3609,10 +3153,7 @@
 "error": "sin-imagen"
 },
 "ru-sierra-albarracin-gudar-te": {
-"img": "https://milyunarutas.com/wp-content/uploads/IMG_1782-scaled.jpeg",
-"src": "https://milyunarutas.com/pueblos-de-teruel-en-autocaravana",
-"site": "MIL Y UNA RUTAS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "ru-terra-alta-miravet": {
 "error": "HTTPError"
@@ -3651,10 +3192,7 @@
 "error": "HTTPError"
 },
 "vi-albarracin-te": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2022/04/IMG_8352-scaled-e1650093809284.jpg",
-"src": "https://viajandoconmanuela.com/viajes/albarracin-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-alcaniz-te": {
 "img": "https://sunvan.es/wp-content/uploads/2022/08/vista-de-valderrobres.jpg",
@@ -3666,16 +3204,10 @@
 "error": "sin-imagen"
 },
 "vi-ar-ainsa": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-aljaferia": {
-"img": "https://mundovan.com/wp-content/uploads/2024/05/zaragoza2.jpg",
-"src": "https://mundovan.com/viajes/la-mejor-ruta-en-autocaravana-con-ninos-en-aragon/",
-"site": "Mundovan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-alquezar": {
 "img": "https://mifamiliaviajera.com/wp-content/uploads/2022/04/pasarelas_del_vero_mi_familia_viajera.jpg",
@@ -3684,22 +3216,13 @@
 "fecha": "2026-10-06"
 },
 "vi-ar-ayerbe": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-belchite": {
-"img": "https://www.aragondigital.es/media/aragondigital/images/2025/11/03/2025110310142930316.jpg",
-"src": "https://www.aragondigital.es/articulo/zaragoza-provincia/mejores-areas-autocaravanas-otono-zaragoza-provincia-pernoctar/20251103101519949709.html",
-"site": "Aragón Digital",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-calatayud": {
-"img": "https://www.aragondigital.es/media/aragondigital/images/2025/11/03/2025110310142930316.jpg",
-"src": "https://www.aragondigital.es/articulo/zaragoza-provincia/mejores-areas-autocaravanas-otono-zaragoza-provincia-pernoctar/20251103101519949709.html",
-"site": "Aragón Digital",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-castillo-loarre": {
 "img": "https://conpequesenzgz.com/wp-content/uploads/2022/01/castilloLoarre_conpeques.jpg",
@@ -3708,10 +3231,7 @@
 "fecha": "2026-10-06"
 },
 "vi-ar-ciudadela-jaca": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-daroca": {
 "error": "sin-imagen"
@@ -3723,55 +3243,31 @@
 "fecha": "2026-10-06"
 },
 "vi-ar-huesca": {
-"img": "https://mundovan.com/wp-content/uploads/2024/05/zaragoza2.jpg",
-"src": "https://mundovan.com/viajes/la-mejor-ruta-en-autocaravana-con-ninos-en-aragon/",
-"site": "Mundovan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-lanuza": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-monasterio-piedra": {
 "error": "sin-imagen"
 },
 "vi-ar-san-juan-pena": {
-"img": "https://mundovan.com/wp-content/uploads/2024/05/zaragoza2.jpg",
-"src": "https://mundovan.com/viajes/la-mejor-ruta-en-autocaravana-con-ninos-en-aragon/",
-"site": "Mundovan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-sos-rey-catolico": {
-"img": "https://www.aragondigital.es/media/aragondigital/images/2025/11/03/2025110310142930316.jpg",
-"src": "https://www.aragondigital.es/articulo/zaragoza-provincia/mejores-areas-autocaravanas-otono-zaragoza-provincia-pernoctar/20251103101519949709.html",
-"site": "Aragón Digital",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-tren-sarrio": {
-"img": "https://viajandoconmanuela.com/wp-content/uploads/2024/10/Captura-de-Pantalla-2024-10-03-a-las-22.50.47.png",
-"src": "https://viajandoconmanuela.com/viajes/ruta-pirineo-aragones-en-autocaravana/",
-"site": "VIAJANDO CON MANUELA",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ar-zaragoza-pilar": {
-"img": "https://mundovan.com/wp-content/uploads/2024/05/zaragoza2.jpg",
-"src": "https://mundovan.com/viajes/la-mejor-ruta-en-autocaravana-con-ninos-en-aragon/",
-"site": "Mundovan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-ares-va": {
-"img": "https://tourandkids.com/uploads/entorno_28/user_1/2023/6/posts/037bbc5aaa37dab6040db5cc2f87471e647f15a34781f2023_06_06_13_16_51.png",
-"src": "https://tourandkids.com/es/blog/viajar-en-autocaravana-con-ninos-tres-rutas-por-la-comunidad-valenciana",
-"site": "Tour & Kids",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-arles-pr": {
-"img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIvQmt-o2CJcyFnjSkboBiyQN3dWIDvp5R_zvbu6Y_Jd-bQyED6PLj4oBRuhhdgLPbTumonIUnbm0EYB1r0zN2z9CN4lgFg0l6hUs7YMMFh7amY25bnsGsB3Zp_3ZYNNEQa1hWCRMNP4Z2/w1200-h630-p-k-no-nu/45.+Verneque+circuito.JPG",
-"src": "https://viajarenautocaravanaconpeques.blogspot.com/2016/02/2-gran-viaje-3etapa-la-camarga-arles-y.html",
-"site": "viajarenautocaravanaconpeques.blogspot.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-avignon-palais-pr": {
 "error": "sin-imagen"
@@ -3831,10 +3327,7 @@
 "fecha": "2026-10-06"
 },
 "vi-bocairent-va": {
-"img": "https://autocaravaners.com/wp-content/uploads/2025/08/ruta-autocaravana-valencia.jpg",
-"src": "https://autocaravaners.com/rutas-viajes/autocaravana-valencia/",
-"site": "AUTOCARAVANERS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-cadaques": {
 "img": "https://www.visitcadaques.org/img/documents/xdes_pdf.jpg.pagespeed.ic.6uqRxA5Uh_.jpg",
@@ -3855,10 +3348,7 @@
 "fecha": "2026-10-06"
 },
 "vi-camon": {
-"img": "https://www.ariegepyrenees.com/wp-content/uploads/2025/11/HIVER-yoga-horiz2.jpg",
-"src": "https://www.ariegepyrenees.com/",
-"site": "Ariège Pyrénées Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-cantavieja-te": {
 "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOHSPNpJ5sPALO4m5IY1IMhIx5gWsDrXoB4BM2SjmOqhBfN6iOc4EBicUf8Wmvcw2W4MVctAVGc2BrbjZzBnOgxMOo2UMJKHmP7hJgH_0HUSfSjlsjZWCQex2yeqXgB4ngxVT3QAWu7vw/w1200-h630-p-k-no-nu/DSC_0019.JPG",
@@ -4044,16 +3534,10 @@
 "fecha": "2026-10-06"
 },
 "vi-eus": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-evol": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-farinera-castello": {
 "img": "https://visitmuseum.gencat.cat/media/cache/1200x500/uploads/museums/photos/54cfb893848c8_ecomuseu-farinera-de-castello-d-empuries.webp?v903017",
@@ -4080,10 +3564,7 @@
 "error": "URLError"
 },
 "vi-gandia-va": {
-"img": "https://tourandkids.com/uploads/entorno_28/user_1/2023/6/posts/037bbc5aaa37dab6040db5cc2f87471e647f15a34781f2023_06_06_13_16_51.png",
-"src": "https://tourandkids.com/es/blog/viajar-en-autocaravana-con-ninos-tres-rutas-por-la-comunidad-valenciana",
-"site": "Tour & Kids",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-gerri-sal": {
 "error": "HTTPError"
@@ -4185,10 +3666,7 @@
 "error": "sin-imagen"
 },
 "vi-mirepoix": {
-"img": "https://www.ariegepyrenees.com/wp-content/uploads/2025/11/HIVER-yoga-horiz2.jpg",
-"src": "https://www.ariegepyrenees.com/",
-"site": "Ariège Pyrénées Tourisme",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-mnactec": {
 "img": "https://mnactec.cat/assets/img/opengraph.jpg",
@@ -4236,10 +3714,7 @@
 "error": "sin-imagen"
 },
 "vi-mosset": {
-"img": "https://woody.cloudly.space/app/uploads/pyreneesorientales/2025/08/thumbs/JcMilhet.JcMilhet_Eyne_CambredAze_17.03.02.19.44.56-1920x960.webp",
-"src": "https://www.tourisme-pyreneesorientales.com/",
-"site": "Tourisme Pyrénées-Orientales",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-muntanya-sal": {
 "img": "https://cardonaturisme.cat/wp-content/uploads/2023/10/muntanya-general-1.jpg",
@@ -4299,22 +3774,13 @@
 "error": "URLError"
 },
 "vi-na-castillo-javier": {
-"img": "https://mundovan.com/wp-content/uploads/2024/06/Bardenas-Reales.jpg",
-"src": "https://mundovan.com/autocaravanas/navarra-en-autocaravana/",
-"site": "Mundovan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-na-estella": {
-"img": "https://www.comopedroporsucasa.com/wp-content/uploads/2018/08/area-autocaravanas-navarra.jpg",
-"src": "https://www.comopedroporsucasa.com/2018/08/22/ruta-autocaravana-navarra/",
-"site": "Como Pedro por su Casa",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-na-leyre": {
-"img": "https://mundovan.com/wp-content/uploads/2024/06/Bardenas-Reales.jpg",
-"src": "https://mundovan.com/autocaravanas/navarra-en-autocaravana/",
-"site": "Mundovan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-na-palacio-olite": {
 "img": "https://oliteinfo.com/nuevaweb/wp-content/uploads/2021/10/IMG_20171119_120922-1024x768.jpg",
@@ -4338,16 +3804,10 @@
 "error": "sin-imagen"
 },
 "vi-na-ujue": {
-"img": "https://familiawally.com/wp-content/uploads/2023/02/Photo_6553747_DJI_147_jpg_9423693_0_2022415123658_photo_original-portada.jpg",
-"src": "https://familiawally.com/olite-y-ujue-en-autocaravana/",
-"site": "Familia Wally",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-na-zugarramurdi": {
-"img": "https://mundovan.com/wp-content/uploads/2024/06/Bardenas-Reales.jpg",
-"src": "https://mundovan.com/autocaravanas/navarra-en-autocaravana/",
-"site": "Mundovan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-naturland-tobotronc": {
 "img": "https://andorra.com/api/media/file/naturlandia.webp",
@@ -4581,10 +4041,7 @@
 "error": "HTTPError"
 },
 "vi-perpignan-palais-rois": {
-"img": "https://www.perpignantourisme.com/assets/uploads/sites/7/2024/02/perpignan-hotelpamsmarcnouss-1-scaled-e1711462798120-800x375.jpg",
-"src": "https://www.perpignantourisme.com/en/activite/palais-des-rois-de-majorque/",
-"site": "Perpignan",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-peyrepertuse": {
 "img": "https://www.peyrepertuse.com/wp-content/uploads/2024/03/PEYREPERTUSE-Accueil-005-1024x683.jpg",
@@ -4593,10 +4050,7 @@
 "fecha": "2026-10-06"
 },
 "vi-pezenas-oce": {
-"img": "https://www.van-away.com/wp-content/uploads/VALLE-DE-L-HERAULT.jpg",
-"src": "https://www.van-away.com/en/voyage-en-van/en-location-vans-roadtrips/road-trip-gorges-herault",
-"site": "VAN-AWAY, give yourself the freedom to r",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-poblet": {
 "img": "https://losapuntesdelviajero.com/wp-content/uploads/2019/04/Monasterio-de-Poblet-25.jpg",
@@ -4662,10 +4116,7 @@
 "fecha": "2026-10-06"
 },
 "vi-sagunto-va": {
-"img": "https://autocaravaners.com/wp-content/uploads/2025/08/ruta-autocaravana-valencia.jpg",
-"src": "https://autocaravaners.com/rutas-viajes/autocaravana-valencia/",
-"site": "AUTOCARAVANERS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-saint-guilhem-oce": {
 "error": "URLError"
@@ -4674,10 +4125,7 @@
 "error": "sin-imagen"
 },
 "vi-saintes-maries-oce": {
-"img": "https://www.voyagesetenfants.com/wp-content/uploads/2023/01/Camargue-en-camping-car-15-015.jpg",
-"src": "https://www.voyagesetenfants.com/3-jours-en-camargue-en-camping-car/",
-"site": "VOYAGES ET ENFANTS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-salamandre-oce": {
 "img": "https://www.grottes-france.com/wp-content/uploads/grotte-salamandre.jpg",
@@ -4794,10 +4242,7 @@
 "fecha": "2026-10-06"
 },
 "vi-valencia-centro-va": {
-"img": "https://autocaravaners.com/wp-content/uploads/2025/08/ruta-autocaravana-valencia.jpg",
-"src": "https://autocaravaners.com/rutas-viajes/autocaravana-valencia/",
-"site": "AUTOCARAVANERS",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-vallbona": {
 "img": "https://www.monestirvallbona.cat/wp-content/uploads/2026/03/IMG_7109-1024x728.jpg",
@@ -4824,10 +4269,7 @@
 "fecha": "2026-10-06"
 },
 "vi-villeneuvette-oce": {
-"img": "https://www.van-away.com/wp-content/uploads/VALLE-DE-L-HERAULT.jpg",
-"src": "https://www.van-away.com/en/voyage-en-van/en-location-vans-roadtrips/road-trip-gorges-herault",
-"site": "VAN-AWAY, give yourself the freedom to r",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-xativa-va": {
 "error": "HTTPError"

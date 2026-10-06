@@ -88,7 +88,8 @@ def main():
         photos = {}
     ids = {p["id"] for p in items}
     photos = {k: v for k, v in photos.items() if k in ids}
-    todo = [p for p in items if p.get("url") and (a.all or not photos.get(p["id"], {}).get("img"))]
+    todo = [p for p in items if p.get("url") and (a.all or not photos.get(p["id"], {}).get("img"))
+            and photos.get(p["id"], {}).get("error") != "generica"]
     # los que fallaron hace poco se reintentan, pero al final de la cola
     todo.sort(key=lambda p: "error" in photos.get(p["id"], {}))
     if a.limit:
@@ -104,6 +105,13 @@ def main():
                 photos[pid] = res
             elif res is None and pid not in photos:
                 photos[pid] = {"error": "sin-imagen"}
+    # Una misma imagen en 3+ sitios suele venir de una página-listado (agenda, blog):
+    # no representa a ninguno, así que se descarta.
+    from collections import Counter
+    uses = Counter(v["img"] for v in photos.values() if v.get("img"))
+    for pid, v in photos.items():
+        if v.get("img") and uses[v["img"]] >= 3:
+            photos[pid] = {"error": "generica"}
     with open(PHOTOS, "w", encoding="utf-8") as f:
         json.dump(dict(sorted(photos.items())), f, ensure_ascii=False, indent=0)
         f.write("\n")
