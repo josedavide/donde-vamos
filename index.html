@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>¿Adónde vamos?</title>
+<meta name="description" content="Mapa de eventos, visitas, naturaleza y pernocta para salidas en autocaravana desde Mataró.">
+<meta name="theme-color" content="#0B7C8A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Overpass:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="app" id="app">
+  <nav class="rail" id="rail" aria-label="Secciones"></nav>
+  <aside class="panel" id="panel" aria-label="Contenido">
+    <div class="handle" id="handle" aria-hidden="true"></div>
+    <div class="p-head" id="phead"></div>
+    <div class="p-body" id="pbody"></div>
+    <div class="resizer" id="resizer" role="separator" aria-orientation="vertical" aria-label="Ancho del panel" tabindex="0"></div>
+  </aside>
+  <main class="mapwrap">
+    <div id="map" role="application" aria-label="Mapa"></div>
+    <div class="mapctl">
+      <div class="ctlgrp"><button id="m-style" aria-label="Tipo de mapa"></button></div>
+      <div class="stylepop" id="stylepop" hidden></div>
+      <div class="ctlgrp"><button id="m-in" aria-label="Acercar"></button><button id="m-out" aria-label="Alejar"></button></div>
+      <div class="ctlgrp"><button id="m-home" aria-label="Centrar en casa"></button><button id="m-fit" aria-label="Ver todos los resultados"></button></div>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="focusbar" id="focusbar" hidden></div>
+    <div class="symtip" id="symtip" hidden></div>
+    <div class="card" id="card" hidden aria-label="Ficha del sitio"></div>
+  </main>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="assets/icons.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
