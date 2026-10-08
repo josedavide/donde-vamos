@@ -9,10 +9,29 @@ Ideas de salidas en autocaravana (7 m, familia con niños) desde Mataró, radio 
   (`SymLayer`, sprites pre-renderizados) por rendimiento: no usar marcadores DOM ni clusters.
 - `assets/app.css` — estilos; tokens de color en `:root` (claro/oscuro).
 - `data/places.json` — `{"actualizado":"YYYY-MM-DD","items":[...]}`, un punto por línea.
-- `data/photos.json` — `{id:{img,src,site,fecha}}` generado por `scripts/fetch_photos.py`
-  (GitHub Action semanal `photos.yml`). No editar a mano.
+- `data/photos.json` — `{id:{img,src,site,fecha}}` generado por `scripts/fetch_photos.py`. No editar a mano.
+- `data/areas.json` — áreas de autocaravanas y campings de OpenStreetMap (`scripts/fetch_areas.py`).
+  Se regenera entero cada semana; no editar a mano. Las pernoctas revisadas a mano van en places.json
+  y tienen prioridad (el script descarta las de OSM a <250 m de una revisada).
+- `data/fuentes.json` — registro de fuentes (turismo comarcal/municipal, agendas, blogs) con
+  `ultima_revision`. Sirve para actualizar de forma incremental (ver abajo).
+- GitHub Action `enriquecer.yml` (lunes y tras cada cambio de places.json): áreas OSM →
+  `scripts/geocode_aprox.py` (afina coordenadas `aprox`) → fotos → commit + publicar.
 - Datos del usuario (favoritos, vistos, salidas) viven en `localStorage` del navegador
   (`dv-est`, `dv-ui`); hay exportar/importar JSON en Guardados.
+
+## Niveles
+- `nivel: 1` destacado (merece el viaje / imprescindible de la comarca). Se ve siempre.
+- `nivel: 2` complemento si estás por la zona. Solo aparece en el mapa con zoom ≥ 9 (o al buscar),
+  y alimenta la sección "Qué hacer cerca con niños" de cada ficha. La mayoría de puntos nuevos son 2.
+- `aprox: true` = coordenadas del centro del pueblo; la ficha avisa "ubicación aproximada".
+
+## Política de actualización (incremental)
+- No re-descargar ni re-verificar todo. Cada semana: borrar eventos pasados, añadir eventos NUEVOS,
+  1-3 escapadas nuevas de blogs/foros y revisar solo las fuentes de `fuentes.json` con
+  `ultima_revision` más antigua (unas 10-15 por semana), actualizando su fecha.
+- Un punto existente solo se toca si una fuente indica un cambio (cierre, precio, obras).
+- Áreas oficiales: las trae OSM automáticamente; a mano solo las que falten en OSM.
 
 ## Actualizar datos
 1. Editar `data/places.json` (mantener un objeto por línea, ids estables: cambiar un id pierde favoritos/vistos).
@@ -39,6 +58,8 @@ descripcion   ≤ ~220 caracteres, redactada con palabras propias (no copiar la 
 consejo       opcional, consejo práctico (foros/opiniones) con palabras propias
 url, fuente   fuente principal (oficial si existe)
 verificado    YYYY-MM-DD
+nivel         1 | 2
+aprox         true si las coordenadas son del centro del pueblo (opcional)
 ```
 Capa `ruta` añade: `dias`, `km_total`, `paradas:[{nombre,lat,lng,dia,tipo,nota}]`, `fuentes:[{nombre,url}]`.
 

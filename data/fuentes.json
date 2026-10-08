@@ -1,0 +1,1046 @@
+[
+ {
+  "comarca": "Garrigues",
+  "nombre": "Turisme Garrigues",
+  "url": "https://www.turismegarrigues.com/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://www.turismegarrigues.com/les-garrigues/agenda/",
+  "notas": "Oficial. Fichas de visitas (/en/what-to-do/visits/) con horarios y precios; sin sección de áreas AC.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Segrià",
+  "nombre": "Lleida Turisme (Paeria)",
+  "url": "https://www.lleidaturisme.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://www.lleidaturisme.cat/ca/agenda",
+  "notas": "Fichas de patrimonio, museos y espacios naturales con coordenadas, horarios y precios. agenda_url deducida del patrón de URLs.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Segrià",
+  "nombre": "Turisme Segrià (femturisme)",
+  "url": "https://femturisme.cat/establiments/turisme-segria",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Poco detalle; no hemos localizado web propia del Consell Comarcal del Segrià.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Pla d'Urgell",
+  "nombre": "Turisme Pla d'Urgell (femturisme)",
+  "url": "https://femturisme.cat/comarques/pla-urgell",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "plaurgell.cat no accesible desde aquí; femturisme recoge lo básico.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Pla d'Urgell",
+  "nombre": "Escapada amb nens – Pla d'Urgell",
+  "url": "https://www.escapadaambnens.com/pla-durgell/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas (enlace 'Generar ruta').",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Segrià",
+  "nombre": "Escapada amb nens – Segrià",
+  "url": "https://www.escapadaambnens.com/segria/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "17+ actividades familiares con coordenadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Garrigues",
+  "nombre": "Escapada amb nens – Garrigues (top 5)",
+  "url": "https://www.escapadaambnens.com/proposta/338/les-5-millors-activitats-per-fer-amb-nens-a-les-garrigues/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Manreana, Camí dels set sentits, Cogul, 9 salts, Font Vella.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Pla d'Urgell / Segrià / Garrigues",
+  "nombre": "Càtedra TIM UdL – Informe autocaravanes",
+  "url": "https://catedratim.udl.cat/export/sites/CatedraTim/ca/INFORME-AUTOCARAVANES_2.pdf",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Censo 2023 de áreas AC por municipio (Lleida). Pendientes de localizar: Arbeca, Vilanova de Bellpuig, Alfés, Soses.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Pla d'Urgell / Segrià / Garrigues",
+  "nombre": "park4night",
+  "url": "https://park4night.com/",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Solo como pista y opiniones; fichas usadas como url de pernoctas sin web oficial.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Garrigues / Segrià",
+  "nombre": "Guia Castells de Catalunya amb visita",
+  "url": "https://www.castellscatalans.cat/documents/Guia_Castells de Catalunya amb visita.pdf",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Castell d'Arbeca: visitas dom 11/12/13 h (dato antiguo). Floresta y Gardeny.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Maresme",
+  "nombre": "Turisme Costa de Barcelona Maresme",
+  "url": "https://www.costadebarcelonamaresme.cat/ca",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Web oficial del Consell Comarcal; no se pudo recorrer en esta pasada",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Maresme",
+  "nombre": "Escapada amb nens – Maresme",
+  "url": "https://www.escapadaambnens.com/maresme/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "31 actividades familiares por municipio; buena lista base",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Vallès Oriental",
+  "nombre": "Escapada amb nens – Vallès Oriental",
+  "url": "https://www.escapadaambnens.com/valles-oriental",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Rutas fáciles Montseny/Montnegre, parques y trenes",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Vallès Oriental",
+  "nombre": "femturisme – Vallès Oriental",
+  "url": "https://femturisme.cat/comarques/valles-oriental",
+  "tipo": "agenda",
+  "agenda_url": "https://femturisme.cat/comarques/valles-oriental",
+  "notas": "Fichas con coordenadas en metadatos; también agenda",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Vallès Oriental",
+  "nombre": "Ajuntament de Granollers – Àrea autocaravanes",
+  "url": "https://www.granollers.cat/printpdf/mobilitat/%C3%A0rea-daparcament-autocaravanes",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Área gratuita 13 plazas en Passeig Fluvial, CERRADA temporalmente por obras del Congost; revisar reapertura",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Vallès Occidental",
+  "nombre": "Escapada amb nens – Vallès Occidental",
+  "url": "https://www.escapadaambnens.com/es/valles-occidental",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Trenes en miniatura, áreas de ocio y museos",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Vallès Occidental",
+  "nombre": "femturisme – Vallès Occidental",
+  "url": "https://femturisme.cat/es/comarcas/valles-occidental",
+  "tipo": "agenda",
+  "agenda_url": "https://femturisme.cat/es/comarcas/valles-occidental",
+  "notas": "Turisme Vallès Occidental",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Barcelonès",
+  "nombre": "Escapada amb nens – Barcelonès",
+  "url": "https://www.escapadaambnens.com/barcelones/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Incluye Badalona, Santa Coloma y L'Hospitalet",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Llobregat",
+  "nombre": "Turisme Baix Llobregat",
+  "url": "https://www.turismebaixllobregat.com/ca",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Web oficial; no se pudo recorrer en esta pasada",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Llobregat",
+  "nombre": "Escapada amb nens – Baix Llobregat",
+  "url": "https://www.escapadaambnens.com/baix-llobregat/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "37 actividades familiares por municipio",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Todas",
+  "nombre": "Barcelona és molt més – Caravaning",
+  "url": "https://www.barcelonaesmoltmes.cat/-/caravaning",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Diputació de Barcelona; campings y áreas recomendados por comarca",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Todas",
+  "nombre": "Inventari del Patrimoni Cultural (Diba)",
+  "url": "https://patrimonicultural.diba.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas exactas de castillos, ermitas, yacimientos",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Todas",
+  "nombre": "Campercontact / park4night",
+  "url": "https://www.campercontact.com/",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Pista y opiniones de áreas; verificar en web oficial",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Penedès",
+  "nombre": "Penedès Turisme",
+  "url": "https://penedesturisme.cat/en/penedes-children",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://penedesturisme.cat/en/agenda-0",
+  "notas": "Consorcio de turismo del Penedès; sección familias con gincanas (Vitis, Vestigis, Secret de Sant Sadurní) y miradores Miravinya.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Penedès",
+  "nombre": "RV Penedès · Sites & Vineyards",
+  "url": "https://penedesturisme.cat/en/rv-penedes-sites-vineyards",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Red oficial de 13 áreas AC gratuitas (máx. 48 h), ficha con dirección, GPS y plazas. Además, 6 bodegas con pernocta (Artcava, Cava Guilera, Carol Vallès, Eudald Massana, Giró del Gorner, Miquel Jané).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Penedès",
+  "nombre": "Surt de Casa Penedès",
+  "url": "https://surtdecasa.cat/penedes/entorn/el-penedes-en-autocaravana",
+  "tipo": "agenda",
+  "agenda_url": "https://surtdecasa.cat/penedes/agenda",
+  "notas": "Agenda y reportajes del Penedès (Alt, Baix, Garraf); útil para eventos y lugares.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Penedès",
+  "nombre": "Escapada amb nens – Alt Penedès",
+  "url": "https://www.escapadaambnens.com/alt-penedes/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas (enlace Generar Ruta), precios y edades.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Penedès",
+  "nombre": "Escapada amb nens – Baix Penedès",
+  "url": "https://www.escapadaambnens.com/baix-penedes/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Unas 25 actividades con coordenadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Penedès",
+  "nombre": "Diari de Tarragona – red AC Baix Penedès",
+  "url": "https://www.diaridetarragona.com/costa/189558/la-red-para-autocaravanas-en-el-baix-penedes-comenzara-con-cuatro-municipios-ak22397610_amp.html",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Dic. 2024: red de áreas prevista en Albinyana, La Bisbal, Sant Jaume dels Domenys y Cunit (unas 5 plazas cada una). Verificar si ya están operativas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Garraf",
+  "nombre": "Escapada amb nens – Garraf",
+  "url": "https://www.escapadaambnens.com/garraf/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "15 actividades (Parc del Garraf, Vilanova, Cubelles, Sitges).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Anoia",
+  "nombre": "Escapada amb nens – Anoia",
+  "url": "https://www.escapadaambnens.com/anoia/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "13 actividades y propuesta de fin de semana.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Camp",
+  "nombre": "Escapada amb nens – Alt Camp",
+  "url": "https://www.escapadaambnens.com/alt-camp/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "33 actividades: ríos Gaià, Brugent y Glorieta, Valls, Montferri.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Priorat",
+  "nombre": "Turisme Priorat",
+  "url": "https://www.turismepriorat.org/en/node/1385",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Puntos de interés con fichas, horarios y precios (mina de Bellmunt, Escaladei, ermitas, miradores). Tiene red de miradores.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Priorat",
+  "nombre": "Ajuntament de Falset – llocs d'interès",
+  "url": "https://www.falset.org/llocs-interes/castell-de-falset-museu-comarcal",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Castillo-museo y ermita de Sant Gregori.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Priorat",
+  "nombre": "Escapada amb nens – Priorat",
+  "url": "https://www.escapadaambnens.com/priorat/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "38 actividades con GPS en cada ficha (enlace 'Generar ruta').",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Conca de Barberà",
+  "nombre": "Turisme Conca de Barberà",
+  "url": "http://www.concaturisme.cat",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Fichas por pueblo (Conesa, Solivella…).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Conca de Barberà",
+  "nombre": "Turisme L'Espluga de Francolí",
+  "url": "https://esplugaturisme.cat/inici/fassinabalanya/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Fassina Balanyà, Cova de la Font Major, Museu Terra.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Conca de Barberà",
+  "nombre": "Ajuntament de Montblanc – espais naturals",
+  "url": "https://www.montblanc.cat/la-vila/espais-naturals/area-de-lleure-e-st-josep",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Áreas de ocio y naturaleza de Montblanc.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Conca de Barberà",
+  "nombre": "Santa Coloma de Queralt – turisme",
+  "url": "http://scq.cat",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Visitas teatralizadas; área AC municipal gratuita.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Conca de Barberà",
+  "nombre": "Escapada amb nens – Conca de Barberà",
+  "url": "https://www.escapadaambnens.com/conca-de-barbera",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "31 actividades con GPS; incluye Bosc Pintat de Poblet y pozas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Camp",
+  "nombre": "Escapada amb nens – Baix Camp (50+ actividades)",
+  "url": "https://www.escapadaambnens.com/es/propuesta/206/el-baix-camp-un-destino-para-visitar-en-familia-y-mas-de-50-actividades/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Lista muy completa con GPS por ficha.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Camp",
+  "nombre": "Turisme Hospitalet de l'Infant – Vandellòs",
+  "url": "https://hospitalet-valldellors.cat",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Ruta de El Principito, Coll de Balaguer; área AC municipal.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Camp",
+  "nombre": "Mont-roig Miami Turisme",
+  "url": "https://mont-roigmiami.cat/en/contacts/camping-playa-y-fiesta/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Campings y camperpark de Mont-roig.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Camp",
+  "nombre": "femturisme.cat – Baix Camp",
+  "url": "https://femturisme.cat/en/regions/baix-camp/villages",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Fichas de pueblos y establecimientos (campings con coordenadas).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Tarragonès",
+  "nombre": "Escapada amb nens – Tarragonès",
+  "url": "https://www.escapadaambnens.com/tarragones/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "60+ actividades (Tarragona, Altafulla, El Catllar, Salou, Vila-seca, Torredembarra) con GPS.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Tarragonès",
+  "nombre": "Visit Salou",
+  "url": "https://www.visitsalou.eu/en/during-your-visit/useful-information/f-a-q-s/on-puc-estacionar-el-meu-cotxe",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Normativa y área oficial de autocaravanas (av. Joan Fuster).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Tarragonès",
+  "nombre": "Turisme Torredembarra",
+  "url": "http://turismetorredembarra.cat",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Reservas del faro.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Tarragonès",
+  "nombre": "Port de Tarragona – Museu del Port",
+  "url": "https://www.porttarragona.cat/ca/port-i-ciutat/museu-port",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Museo interactivo del puerto.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Todas",
+  "nombre": "autocaravanas.es – áreas en Tarragona",
+  "url": "https://www.autocaravanas.es/areas-de-autocaravanas/tarragona/",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Listado provincial (53) sin coordenadas; usar como pista.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Todas",
+  "nombre": "Diari de Tarragona – áreas AC Costa Daurada",
+  "url": "https://www.diaridetarragona.com/costa/174366/los-municipios-de-la-costa-daurada-se-enfrentan-al-auge-del-turismo-de-caravanas-ik14789357.html",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Torredembarra, Vila-seca y Mont-roig planeaban áreas nuevas: revisar.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Terres de l'Ebre (las 4)",
+  "nombre": "Terres de l'Ebre Turisme (Diputació de Tarragona)",
+  "url": "https://terresdelebre.travel/en/what-to-do",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://terresdelebre.travel/en/calendar",
+  "notas": "Fichas con coordenadas GPS en espacios naturales; listados de museos, castillos, Batalla de l'Ebre, arte rupestre. Rate limit frecuente (429).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Ribera d'Ebre",
+  "nombre": "Turisme Ribera d'Ebre (Consell Comarcal)",
+  "url": "https://www.turismeriberaebre.org/que-fer/patrimoni-cultural/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://agenda.riberaebre.org",
+  "notas": "Patrimonio, museos, pasos de barca con horarios, campings. Sin coordenadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Terra Alta",
+  "nombre": "Turisme Horta de Sant Joan",
+  "url": "http://turismehortadesantjoan.cat/espais-naturals",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://hortadesantjoan.cat/event",
+  "notas": "Espacios naturales (Olles, Roques de Benet, Assut de Lledó) y patrimonio.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Terra Alta",
+  "nombre": "Escapada amb nens – Terra Alta",
+  "url": "https://www.escapadaambnens.com/proposta/107/una-setmana-a-la-terra-alta-amb-nens/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Plan de 7 días con niños; también piscinas naturales (proposta 113).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Montsià",
+  "nombre": "Visita la Sénia",
+  "url": "https://www.visitalasenia.es",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://www.visitalasenia.es/fires-festes-tradicions/",
+  "notas": "Tiene página de estacionamiento de autocaravanas (/organitzat/estacionament-dautocaravanes/15/), no se pudo leer.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Montsià",
+  "nombre": "Ajuntament de la Sénia – turisme",
+  "url": "https://lasenia.cat/web/riu-senia-moli-lavella/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Molí la Vella, Camp d'Aviació, oliveras milenarias.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Osona",
+  "nombre": "Osona Turisme",
+  "url": "https://www.osonaturisme.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Web oficial; no accesible desde el fetcher en esta sesión. Sección 'Osona, territori camper' con la red de áreas AC.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Osona",
+  "nombre": "Osona Turisme – áreas de autocaravanas",
+  "url": "https://osonaturisme.cat/experiencies/dorm-en-una-de-les-arees-dosona-territori-camper/",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Red de ~12 áreas municipales (Vic, Viladrau, Centelles, L'Esquirol, Masies de Voltregà, Manlleu, Prats, Rupit, St Julià de Vilatorta, St Pere de Torelló, Vilanova de Sau). Falta ubicación exacta de cada una.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Osona",
+  "nombre": "Escapada amb nens – Osona",
+  "url": "https://www.escapadaambnens.com/osona/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas, aparcamiento y dificultad.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Osona",
+  "nombre": "Fem Turisme – Osona",
+  "url": "https://femturisme.cat/comarques/osona/que-fer",
+  "tipo": "agenda",
+  "agenda_url": "https://femturisme.cat/agenda?ubicacio=osona",
+  "notas": "Fichas de establecimientos con GPS; páginas de pueblo con coordenadas y puntos de interés.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Osona",
+  "nombre": "Parc del Castell de Montesquiu (Diba)",
+  "url": "https://parcs.diba.cat/web/montesquiu",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Horarios del castillo y rutas del parque.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Lluçanès",
+  "nombre": "Turisme Lluçanès",
+  "url": "https://turisme.llucanes.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://femturisme.cat/agenda?ubicacio=llucanes",
+  "notas": "Web oficial del Consorci; ferias y rutas (pa, bruixes).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Lluçanès",
+  "nombre": "Fem Turisme – rutas Lluçanès",
+  "url": "https://femturisme.cat/comarques/llucanes/rutes",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "91 rutas; útil para paseos familiares.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Moianès",
+  "nombre": "Escapada amb nens – Moianès",
+  "url": "https://www.escapadaambnens.com/moianes/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "14 fichas con coordenadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Moianès",
+  "nombre": "Fem Turisme – Moianès",
+  "url": "https://femturisme.cat/comarques/moianes",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://femturisme.cat/agenda?ubicacio=moianes",
+  "notas": "Turisme Moianès redirige aquí; sin áreas AC listadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Bages",
+  "nombre": "Escapada amb nens – Bages",
+  "url": "https://www.escapadaambnens.com/bages/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "21 fichas; top 5 en /proposta/252/.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Bages",
+  "nombre": "Fem Turisme – Bages",
+  "url": "https://femturisme.cat/comarques/bages/que-fer",
+  "tipo": "agenda",
+  "agenda_url": "https://femturisme.cat/agenda?ubicacio=bages",
+  "notas": "Agenda y establecimientos con GPS.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Bages",
+  "nombre": "Barcelona és molt més – Caravaning",
+  "url": "https://www.barcelonaesmoltmes.cat/en/-/caravaning",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Diputació de Barcelona: cita áreas públicas de Avinyó y Navarcles (enlaces areasac).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Berguedà",
+  "nombre": "Turisme del Berguedà",
+  "url": "http://www.elbergueda.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://femturisme.cat/agenda?ubicacio=bergueda",
+  "notas": "Web oficial comarcal.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Berguedà",
+  "nombre": "Escapada amb nens – Berguedà",
+  "url": "https://www.escapadaambnens.com/bergueda/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "45 fichas, incl. muchas áreas de picnic del Cadí.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Berguedà",
+  "nombre": "Turisme La Pobla de Lillet",
+  "url": "https://turismelillet.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Jardins Artigas, Tren del Ciment, alojamientos (camping L'Espelt).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Pla de l'Estany",
+  "nombre": "Turisme Pla de l'Estany",
+  "url": "https://turisme.plaestany.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://turisme.plaestany.cat/agenda/",
+  "notas": "Fichas item-turistic con horarios y coordenadas (enlace Google Maps). Secciones útiles: /punts-dinteres/natura/, /rutes-3/rutes-en-familia/, /activitats/activitats-en-familia/, /allotjament/campings/. No lista áreas AC.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Pla de l'Estany",
+  "nombre": "Escapada amb nens – Pla de l'Estany",
+  "url": "https://www.escapadaambnens.com/es/pla-de-lestany/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas en el enlace 'Generar Ruta' (alguna errónea, p. ej. Gorga Blava de Corts).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Garrotxa",
+  "nombre": "OH! Garrotxa (Turisme Garrotxa)",
+  "url": "https://ohgarrotxa.com/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://ohgarrotxa.com/agenda/",
+  "notas": "Antes turismegarrotxa.com (robots bloquea). Listados de alojamiento/AC se cargan por JS; usar sitemaps (allotjament-sitemap.xml, indret_interes-sitemap.xml). Página 'estacionament-public-dautocaravanes' vacía sin JS.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Garrotxa",
+  "nombre": "Escapada amb nens – Garrotxa",
+  "url": "https://www.escapadaambnens.com/es/garrotxa/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "22 actividades familiares con coordenadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Selva",
+  "nombre": "Escapada amb nens – La Selva",
+  "url": "https://www.escapadaambnens.com/es/la-selva/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "29 actividades con coordenadas; propuestas de 1 día por pueblo (Hostalric, Arbúcies, Tossa, Santa Coloma, Sant Hilari).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Selva",
+  "nombre": "Turisme Hostalric",
+  "url": "https://www.turismehostalric.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Visitas guiadas al castillo y llave de la muralla. Robots bloquea el fetch automático.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Selva",
+  "nombre": "Visit Caldes de Malavella",
+  "url": "https://www.visitcaldes.cat/es/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Termas romanas y fuentes termales.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Selva",
+  "nombre": "Patrimoni Lloret",
+  "url": "https://patrimoni.lloret.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Jardins de Santa Clotilde y museos de Lloret.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Gironès",
+  "nombre": "Turisme Gironès",
+  "url": "https://www.turismegirones.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://femturisme.cat/agenda?ubicacio=girones",
+  "notas": "Robots bloquea el fetch automático; revisar a mano. Agenda alternativa en Fem Turisme.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Gironès",
+  "nombre": "Escapada amb nens – Gironès",
+  "url": "https://www.escapadaambnens.com/es/girones/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "18 actividades; indica aparcamiento AC junto al Parc de Domeny (Girona), sin confirmar.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Gironès",
+  "nombre": "Fem Turisme – Gironès",
+  "url": "https://femturisme.cat/comarques/girones",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://femturisme.cat/agenda?ubicacio=girones",
+  "notas": "Fichas de pueblo con coordenadas en metadatos y rutas (Carrilet II, ruta termal).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Ripollès",
+  "nombre": "Escapada amb nens – Ripollès",
+  "url": "https://www.escapadaambnens.com/ripolles/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "~40 actividades familiares con fichas que incluyen coordenadas (enlace 'Generar ruta'), horarios y consejos.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Ripollès",
+  "nombre": "Femturisme – Ripollès què fer",
+  "url": "https://femturisme.cat/ca/comarques/ripolles/que-fer",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas de establecimientos (museos, parques de aventura) con dirección, horario y coordenadas; páginas de pueblos con coordenadas geo.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Ripollès",
+  "nombre": "Ripollès Turisme (ficha en Femturisme)",
+  "url": "https://femturisme.cat/establiments/ripolles-turisme",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Oficina comarcal; no se pudo consultar su web directa en esta pasada.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Empordà",
+  "nombre": "Escapada amb nens – Alt Empordà",
+  "url": "https://www.escapadaambnens.com/alt-emporda/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "40 actividades familiares (Roses, Figueres, Cap de Creus, Albera) con coordenadas y horarios; Roses es destino de turismo familiar.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Empordà",
+  "nombre": "Escapada amb nens – Baix Empordà",
+  "url": "https://www.escapadaambnens.com/baix-emporda/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "26 actividades y fichas de pueblos; muy completo en Platja d'Aro, Palafrugell y Torroella.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Empordà",
+  "nombre": "Visit Empordà – guía de turismo familiar (PDF)",
+  "url": "https://visitemporda.com/wp-content/uploads/2019/04/Turisme-familiar-C-_F.pdf",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Guía del consorcio de turismo del Baix Empordà (2019): museos, granjas y rutas familiares. Datos a revalidar.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Empordà / Baix Empordà / Ripollès",
+  "nombre": "Autocaravanas.es – áreas de Girona",
+  "url": "https://www.autocaravanas.es/areas-de-autocaravanas/girona",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Índice de ~80 áreas y campings con área en la provincia; útil como lista de control.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Empordà / Baix Empordà / Ripollès",
+  "nombre": "La Paca – áreas de servicio (Girona)",
+  "url": "https://www.lapaca.org/descripcion-area-de-servicio/ripoll",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas, plazas, servicios y límite de estancia; enlaza al resto de áreas de Girona.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Empordà / Baix Empordà / Ripollès",
+  "nombre": "Stellplatz.info – búsquedas por municipio",
+  "url": "https://stellplatz.info/es/plaza-de-aparcamiento-para-autocaravanas/garriguella",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Listados por radio de 30 km con campings y áreas; coordenadas aproximadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Cerdanya",
+  "nombre": "Turisme Cerdanya",
+  "url": "https://cerdanya.org/es/que-hacer/actividades-con-ninos/actividades-a-cubierto/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Sección de actividades con niños (museos, talleres, centros). WebFetch solo funcionó en páginas aparecidas en búsqueda.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Cerdanya",
+  "nombre": "Escapada amb Nens – La Cerdanya",
+  "url": "https://www.escapadaambnens.com/la-cerdanya/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas exactas en el enlace 'Generar Ruta'.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Urgell",
+  "nombre": "Escapada amb Nens – Alt Urgell",
+  "url": "https://www.escapadaambnens.com/alt-urgell/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "11 actividades; comarca con menos oferta en la fuente.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Pallars Sobirà",
+  "nombre": "Escapada amb Nens – Pallars Sobirà",
+  "url": "https://www.escapadaambnens.com/pallars-sobira/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "14 actividades con coordenadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Pallars Jussà",
+  "nombre": "Escapada amb Nens – Pallars Jussà",
+  "url": "https://www.escapadaambnens.com/pallars-jussa/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "16 actividades; hay más tras 'Veure més'.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alta Ribagorça",
+  "nombre": "Escapada amb Nens – Alta Ribagorça",
+  "url": "https://www.escapadaambnens.com/alta-ribagorca/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "19 actividades, muchas en la estación Boí Taüll (verano).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Val d'Aran",
+  "nombre": "Escapada amb Nens – Vall d'Aran",
+  "url": "https://www.escapadaambnens.com/val-daran/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "17 actividades con coordenadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alta Ribagorça",
+  "nombre": "Visita El Pont de Suert",
+  "url": "https://visitaelpontdesuert.com/centre-de-fauna/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Centre de Fauna; horarios de verano.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Val d'Aran",
+  "nombre": "Los Pueblos Más Bonitos de España – Arties autocaravanas",
+  "url": "https://lospueblosmasbonitosdeespana.org/en/pueblos/arties/autocaravanas",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Lista de 4 zonas AC en Naut Aran/Vielha con coordenadas y precios.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alta Ribagorça",
+  "nombre": "OpenVan – overbooking Vall de Boí",
+  "url": "https://openvan.camp/en/news/opening/overbooking-de-autocaravanas-en-la-vall-de-boi",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Zonas temporales; solo Pla de l'Ermita permite pernocta con enseres.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Urgell",
+  "nombre": "OpenVan – nueva área AC Coll de Nargó",
+  "url": "https://openvan.camp/en/news/opening/coll-de-nargo-tendra-un-area-de-caravanas-con-16",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Área de 16 plazas proyectada junto a la L-511 (Sant Climent); no abierta aún en oct-2026. Revisar en 2027.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Solsonès",
+  "nombre": "Turisme Solsonès",
+  "url": "https://turismesolsones.com/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://femturisme.cat/agenda?ubicacio=solsones",
+  "notas": "Web oficial (no se pudo abrir en esta sesión); reservas de visitas en entradessolsones.com y solsonaexperience.com",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Solsonès",
+  "nombre": "Escapada amb nens - Solsonès",
+  "url": "https://www.escapadaambnens.com/solsones/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas en el enlace 'Generar ruta'",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Solsonès",
+  "nombre": "NacióDigital Solsona (área AC)",
+  "url": "https://naciodigital.cat/Solsona/societat/solsona-dona-llum-verda-reglament-aparcament-autocaravanes.html",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Reglamento del aparcamiento de autocaravanas de Solsona",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Segarra",
+  "nombre": "femturisme - La Segarra",
+  "url": "https://femturisme.cat/comarques/la-segarra",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://femturisme.cat/agenda?ubicacio=la-segarra",
+  "notas": "lasegarra.org (Consell Comarcal) no respondió; usar como pista",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Segarra",
+  "nombre": "Turisme Cervera",
+  "url": "https://www.turismecervera.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "No cargó en esta sesión; rutas guiadas y Aquelarre",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Segarra",
+  "nombre": "Museu de Guissona",
+  "url": "https://museudeguissona.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Visitas teatralizadas, LudiIesso, feria Playmobil/LEGO en noviembre",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Segarra",
+  "nombre": "Escapada amb nens - Segarra",
+  "url": "https://www.escapadaambnens.com/segarra/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Urgell",
+  "nombre": "Turisme Urgell",
+  "url": "https://turismeurgell.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "http://agendaurgell.cat/",
+  "notas": "Lista oficial de 14 zonas AC con coordenadas en /ca/p/on-dormir/caravanes-i-campers-4-7; museos en /ca/p/que-fer/museus-i-espais-visitables-3-18",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Urgell",
+  "nombre": "Turisme Urgell - Caravanes i campers",
+  "url": "https://turismeurgell.cat/ca/p/on-dormir/caravanes-i-campers-4-7",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Todas gratuitas, 48–72 h",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Urgell",
+  "nombre": "Escapada amb nens - Urgell",
+  "url": "https://www.escapadaambnens.com/urgell/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Top 5 actividades con niños",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Noguera",
+  "nombre": "Noguera Turisme",
+  "url": "https://www.turismenoguera.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://www.turismenoguera.cat/agenda2",
+  "notas": "Ficha por municipio de zonas AC (muchas sin zona o sin pernocta)",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Noguera",
+  "nombre": "Noguera Turisme - Zones d'autocaravanes",
+  "url": "https://www.turismenoguera.cat/guia-1/zones-dautocaravanes",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Balaguer y Camarasa: solo estacionar, sin pernocta; Ponts: privada",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Noguera",
+  "nombre": "Escapada amb nens - Noguera",
+  "url": "https://www.escapadaambnens.com/noguera/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Noguera",
+  "nombre": "Turisme Balaguer",
+  "url": "https://www.balaguer.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Juego de pistas 'Balaguer en família', llave de murallas",
+  "ultima_revision": "2026-10-09"
+ }
+]

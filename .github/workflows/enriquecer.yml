@@ -1,11 +1,11 @@
-name: Buscar fotos
+name: Enriquecer datos
 on:
   schedule:
     - cron: "30 4 * * 1"   # lunes 04:30 UTC
   workflow_dispatch:
     inputs:
       all:
-        description: "Revisar también los que ya tienen foto"
+        description: "Revisar también fotos que ya existen"
         type: boolean
         default: false
   push:
@@ -16,7 +16,7 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: photos
+  group: enriquecer
   cancel-in-progress: false
 jobs:
   photos:
@@ -27,17 +27,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Áreas de autocaravanas de OpenStreetMap
+        continue-on-error: true
+        run: python scripts/fetch_areas.py
+      - name: Afinar coordenadas aproximadas
+        continue-on-error: true
+        run: python scripts/geocode_aprox.py
       - name: Buscar og:image en las fuentes
         run: python scripts/fetch_photos.py ${{ inputs.all && '--all' || '' }}
       - name: Guardar cambios
         id: commit
         run: |
-          if git diff --quiet data/photos.json; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git add -A data/
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/photos.json
-          git commit -m "Actualizar fotos de los lugares"
-          git push
+          git commit -m "Enriquecer datos: áreas OSM, coordenadas y fotos"
+          git pull --rebase && git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
       # Los pushes hechos con GITHUB_TOKEN no disparan otros workflows: publicamos aquí.
       - name: Preparar sitio

@@ -25,7 +25,7 @@ const DIA=["dom","lun","mar","mié","jue","vie","sáb"];
 const SECTIONS=[{k:"explore",l:"Explorar",i:"map"},{k:"saved",l:"Guardados",i:"heart"},{k:"trips",l:"Salidas",i:"calendar-days"}];
 
 const S = { pts:[], byId:new Map(), layers:new Set(LAYERS.map(l=>l.k)), types:new Set(), dur:new Set(), dmode:"todo", from:null, to:null, maxmin:300,
-  ninos:false, ac:false, gratis:false, hideSeen:false, q:"", sort:"auto", follow:true, sel:null, hov:null, focus:null, fopen:null, limit:40,
+  ninos:false, ac:false, gratis:false, hideSeen:false, top:false, q:"", sort:"auto", follow:true, sel:null, hov:null, focus:null, fopen:null, limit:40,
   section:"explore", detail:null, saved:"favs", tripId:null, style:"mapa", pw:400, collapsed:false,
   est:{favs:{},vistos:{},salidas:[]}, estRef:null, filtered:[], inView:[], askText:"" };
 
@@ -68,6 +68,7 @@ function matches(p){
   if(S.ac&&!(p.ac7m==="si"||p.ac7m==="cerca"))return false;
   if(S.gratis&&p.precio!=="gratis")return false;
   if(S.hideSeen&&isSeen(p.id))return false;
+  if(S.top&&p.nivel===2)return false;
   if(S.q&&!S.q.split(/\s+/).every(w=>p._h.includes(w)))return false;
   return true;}
 function sorter(mode){
@@ -76,7 +77,7 @@ function sorter(mode){
   if(mode==="az")return (a,b)=>a.nombre.localeCompare(b.nombre,"es");
   if(mode==="date")return (a,b)=>(a.fecha_inicio||"9999").localeCompare(b.fecha_inicio||"9999")||a._min-b._min;
   return (a,b)=>{if(a.capa==="evento"&&b.capa==="evento")return a.fecha_inicio.localeCompare(b.fecha_inicio)||a._min-b._min;return rank(a)-rank(b)||a._min-b._min;};}
-function filterCount(){return S.types.size+S.dur.size+(S.ninos?1:0)+(S.ac?1:0)+(S.gratis?1:0)+(S.hideSeen?1:0)+(S.dmode!=="todo"?1:0)+(S.maxmin<300?1:0);}
+function filterCount(){return S.types.size+S.dur.size+(S.ninos?1:0)+(S.ac?1:0)+(S.gratis?1:0)+(S.hideSeen?1:0)+(S.top?1:0)+(S.dmode!=="todo"?1:0)+(S.maxmin<300?1:0);}
 
 /* ===== mapa base ===== */
 const map=L.map("map",{zoomControl:false,attributionControl:true,minZoom:5,maxZoom:18,maxBounds:L.latLngBounds([[34,-12],[50,14]]),zoomSnap:.5,wheelPxPerZoomLevel:80}).setView([42.0,1.4],7);
@@ -116,15 +117,16 @@ const SymLayer=L.Canvas.extend({
   _drawAll(){const g=this._ctx;if(!g)return;const z=Z();const mode=z<7.5?"dot":z<9.5?"mini":"pin";const b=this._bounds;if(!b)return;
     const pad=40;const list=S.filtered;const hits=[];const colors={};for(const l of LAYERS)colors[l.k]=css(l.c);
     // orden: norte primero; seleccionado al final
-    const pts=[];for(const p of list){const pt=map.latLngToLayerPoint([p.lat,p.lng]);if(pt.x<b.min.x-pad||pt.x>b.max.x+pad||pt.y<b.min.y-pad||pt.y>b.max.y+pad)continue;pts.push([p,pt]);}
+    const pts=[];for(const p of list){if(!shown(p))continue;const pt=map.latLngToLayerPoint([p.lat,p.lng]);if(pt.x<b.min.x-pad||pt.x>b.max.x+pad||pt.y<b.min.y-pad||pt.y>b.max.y+pad)continue;pts.push([p,pt]);}
     pts.sort((a,c)=>a[1].y-c[1].y);
     const selIdx=pts.findIndex(x=>x[0].id===S.sel);if(selIdx>=0){pts.push(pts.splice(selIdx,1)[0]);}
     const labelRects=[];const showLabels=z>=11;g.font="700 11px Overpass, system-ui, sans-serif";g.textAlign="center";g.textBaseline="top";
     const halo=css("--label-halo"),inkc=css("--ink");
     for(const [p,pt] of pts){const seen=isSeen(p.id)&&S.sel!==p.id;const col=colors[p.capa];const sel=S.sel===p.id,hov=S.hov===p.id;
       let sp,ax,ay,hitR;
-      if(mode==="dot"&&!sel&&!hov){sp=pinSprite(col,null,"dot",seen);ax=6;ay=6;hitR=7;}
-      else if(mode==="mini"&&!sel&&!hov){sp=pinSprite(col,iconOf(p),"mini",seen);ax=11;ay=11;hitR=11;}
+      const m2=p.nivel===2&&!sel&&!hov&&!isFav(p.id)?(z<11?"mini":mode):mode;
+      if(m2==="dot"&&!sel&&!hov){sp=pinSprite(col,null,"dot",seen);ax=6;ay=6;hitR=7;}
+      else if(m2==="mini"&&!sel&&!hov){sp=pinSprite(col,iconOf(p),"mini",seen);ax=11;ay=11;hitR=11;}
       else{sp=pinSprite(col,iconOf(p),"pin",seen);ax=17;ay=35;hitR=15;}
       let scale=1;if(sel)scale=1.25;else if(hov)scale=1.12;
       const w=sp.w*scale,h=sp.h*scale,x=pt.x-ax*scale,y=pt.y-ay*scale;
@@ -153,15 +155,17 @@ map.on("mousemove",e=>{if(hovRaf)return;hovRaf=requestAnimationFrame(()=>{hovRaf
   if(id!==S.hov){S.hov=id;sym.redraw();hoverCard(id);}
   const tip=$("symtip");if(id){const p=S.byId.get(id);const cp=map.latLngToContainerPoint([p.lat,p.lng]);tip.innerHTML=`${esc(p.nombre)}<small>${p.capa==="evento"?fmtRange(p)+" · ":""}${esc(p.municipio)} · ${fmtMin(p._min)}</small>`;tip.style.left=cp.x+"px";tip.style.top=(cp.y-(Z()<9.5?12:40))+"px";tip.hidden=false;}else tip.hidden=true;});});
 map.on("mouseout",()=>{if(S.hov){S.hov=null;sym.redraw();hoverCard(null);}$("symtip").hidden=true;});
-let mvT;map.on("moveend",()=>{clearTimeout(mvT);mvT=setTimeout(()=>{if(S.section==="explore"&&S.follow)renderList(true);},150);});
-function refresh(){S.filtered=S.pts.filter(matches).sort(sorter(S.sort));sym.redraw();renderHead();if(S.section==="explore")renderList(true);}
+let mvT;map.on("moveend",()=>{clearTimeout(mvT);mvT=setTimeout(()=>{lvlHint();if(S.section==="explore"&&S.follow)renderList(true);},150);});
+function refresh(){S.filtered=S.pts.filter(matches).sort(sorter(S.sort));sym.redraw();if(typeof lvlHint==="function")lvlHint();renderHead();if(S.section==="explore")renderList(true);}
 
 /* encuadre teniendo en cuenta el panel */
 function padL(){return isMobile()?0:0;}
 function fitPts(pts,maxZoom){if(!pts.length)return;const pad=isMobile()?{paddingTopLeft:[20,70],paddingBottomRight:[20,Math.round(innerHeight*(S.detail?.78:.5))+70]}:{paddingTopLeft:[40,60],paddingBottomRight:[S.detail?480:70,40]};
   map.flyToBounds(L.latLngBounds(pts.map(p=>[p.lat,p.lng])),{...pad,maxZoom:maxZoom||11,duration:.5});}
 function centerOn(lat,lng,zoom){const z=zoom||Math.max(Z(),10.5);let ox=0,oy=0;if(isMobile()){if(S.detail)oy=innerHeight*.28;}else if(S.detail)ox=210;const pt=map.project([lat,lng],z).add([ox,oy]);map.flyTo(map.unproject(pt,z),z,{duration:.5});}
-function inView(){const b=map.getBounds();return S.filtered.filter(p=>b.contains([p.lat,p.lng]));}
+const LVL2_Z=9;
+function shown(p){return p.nivel!==2||Z()>=LVL2_Z||!!S.q||S.sel===p.id||isFav(p.id)||!!S.focus;}
+function inView(){const b=map.getBounds();return S.filtered.filter(p=>shown(p)&&b.contains([p.lat,p.lng]));}
 
 /* ===== controles ===== */
 $("m-style").innerHTML=ic("layers");$("m-in").innerHTML=ic("plus");$("m-out").innerHTML='<svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/></svg>';$("m-home").innerHTML=ic("locate-fixed");$("m-fit").innerHTML=ic("map");
@@ -172,7 +176,8 @@ function closeStylePop(){$("stylepop").hidden=true;}
 $("m-style").onclick=e=>{e.stopPropagation();$("stylepop").hidden=!$("stylepop").hidden;};
 $("stylepop").onclick=e=>{e.stopPropagation();const b=e.target.closest("[data-st]");if(b){S.style=b.dataset.st;savePrefs();applyStyle();}};
 document.addEventListener("click",e=>{if(!e.target.closest(".mapctl"))closeStylePop();if(!e.target.closest(".searchbox"))closeSugg();});
-$("legend").innerHTML=LAYERS.map(l=>`<span><i class="d" style="--c:var(${l.c})"></i>${l.l}</span>`).join("")+`<span><i class="d" style="--c:var(--hi);border-radius:2px;transform:rotate(45deg)"></i>Casa</span><span style="opacity:.8">Más claro = ya mirado</span>`;
+$("legend").innerHTML=LAYERS.map(l=>`<span><i class="d" style="--c:var(${l.c})"></i>${l.l}</span>`).join("")+`<span><i class="d" style="--c:var(--hi);border-radius:2px;transform:rotate(45deg)"></i>Casa</span><span style="opacity:.8">Más claro = ya mirado</span><span class="lvlhint" id="lvlhint" hidden></span>`;
+function lvlHint(){const el=$("lvlhint");if(!el)return;if(Z()>=LVL2_Z||S.q){el.hidden=true;return;}const b=map.getBounds();const n=S.filtered.reduce((c,p)=>c+(p.nivel===2&&!shown(p)&&b.contains([p.lat,p.lng])?1:0),0);el.hidden=!n;el.textContent=`Acércate: +${n} sitios de la zona`;}
 
 /* ===== rail, panel, redimensionado ===== */
 function renderRail(){const nf=Object.keys(S.est.favs).filter(id=>S.byId.has(id)).length,nt=S.est.salidas.length;
@@ -262,7 +267,7 @@ function fpanelHTML(){
     <div class="opts">${[60,120,180,240].map(m=>`<button class="opt" data-mm="${m}" aria-pressed="${S.maxmin===m}">${fmtMin(m)}</button>`).join("")}<button class="opt" data-mm="300" aria-pressed="${S.maxmin>=300}">Sin límite</button></div></div><div class="foot"><span></span><button class="btn primary" data-fclose="1">Listo</button></div></div>`;
   if(S.fopen==="more")return `<div class="fpanel"><div class="grp"><span class="lbl">Tipo de plan · marca los que quieras</span><div class="opts">${TYPES.map(t=>`<button class="opt" data-ty="${t.k}" aria-pressed="${S.types.has(t.k)}">${ic(t.i)}${t.l}</button>`).join("")}</div></div>
     ${S.layers.has("ruta")?`<div class="grp"><span class="lbl">Duración de las escapadas</span><div class="opts">${DURS.map(d=>`<button class="opt" data-du="${d.k}" aria-pressed="${S.dur.has(d.k)}">${d.l}</button>`).join("")}</div></div>`:""}
-    <div class="grp"><label class="sw">Buenos para ir con niños<input type="checkbox" data-sw="ninos" ${S.ninos?"checked":""}></label><label class="sw">Se llega con 7 m<input type="checkbox" data-sw="ac" ${S.ac?"checked":""}></label><label class="sw">Solo gratis<input type="checkbox" data-sw="gratis" ${S.gratis?"checked":""}></label><label class="sw">Ocultar los que ya he mirado<input type="checkbox" data-sw="hideSeen" ${S.hideSeen?"checked":""}></label></div>
+    <div class="grp"><label class="sw">Solo destacados<input type="checkbox" data-sw="top" ${S.top?"checked":""}></label><label class="sw">Buenos para ir con niños<input type="checkbox" data-sw="ninos" ${S.ninos?"checked":""}></label><label class="sw">Se llega con 7 m<input type="checkbox" data-sw="ac" ${S.ac?"checked":""}></label><label class="sw">Solo gratis<input type="checkbox" data-sw="gratis" ${S.gratis?"checked":""}></label><label class="sw">Ocultar los que ya he mirado<input type="checkbox" data-sw="hideSeen" ${S.hideSeen?"checked":""}></label></div>
     <div class="foot"><button class="linkbtn" data-fclear="more">Borrar</button><button class="btn primary" data-fclose="1">Listo</button></div></div>`;
   return "";}
 function tileHTML(p){if(p.capa==="evento"&&p.fecha_inicio){const d=new Date(p.fecha_inicio+"T12:00:00");return `<span class="tile" style="--c:${colorVar(p)}"><span class="dt"><b>${d.getDate()}</b><span>${MES[d.getMonth()]}</span></span></span>`;}
@@ -288,7 +293,7 @@ body.addEventListener("click",e=>{const t=e.target;
   const mm=t.closest("[data-mm]");if(mm){S.maxmin=+mm.dataset.mm;savePrefs();refresh();renderHead();renderList();return;}
   const ty=t.closest("[data-ty]");if(ty){const k=ty.dataset.ty;S.types.has(k)?S.types.delete(k):S.types.add(k);savePrefs();refresh();renderHead();renderList();return;}
   const du=t.closest("[data-du]");if(du){const k=du.dataset.du;S.dur.has(k)?S.dur.delete(k):S.dur.add(k);refresh();renderList();return;}
-  const fc=t.closest("[data-fclear]");if(fc){if(fc.dataset.fclear==="date"){S.dmode="todo";S.from=S.to=null;}else Object.assign(S,{types:new Set(),dur:new Set(),ninos:false,ac:false,gratis:false,hideSeen:false});savePrefs();refresh();renderHead();renderList();return;}
+  const fc=t.closest("[data-fclear]");if(fc){if(fc.dataset.fclear==="date"){S.dmode="todo";S.from=S.to=null;}else Object.assign(S,{types:new Set(),dur:new Set(),ninos:false,ac:false,gratis:false,hideSeen:false,top:false});savePrefs();refresh();renderHead();renderList();return;}
   if(t.closest("[data-fclose]")){S.fopen=null;renderList();return;}
   if(t.closest("#more")){S.limit+=40;renderList(true);return;}
   if(t.closest("#fitall")){fitPts(S.filtered,10);return;}
@@ -310,6 +315,7 @@ function hoverCard(id){body.querySelectorAll(".card-i.hov").forEach(el=>el.class
 /* ===== detalle ===== */
 const stopColor=t=>t==="pernocta"?"var(--pe)":t==="evento"?"var(--ev)":t==="naturaleza"?"var(--na)":"var(--vi)";
 function photoURL(p){return "https://www.google.com/search?tbm=isch&q="+encodeURIComponent(p.nombre+" "+(p.municipio||""));}
+function nearDo(p,maxKm,n){return S.pts.filter(x=>(x.capa==="visita"||x.capa==="naturaleza")&&x.ninos&&x.id!==p.id).map(x=>[x,hav(p.lat,p.lng,x.lat,x.lng)]).filter(x=>x[1]<maxKm).sort((a,b)=>(a[1]+(a[0].nivel===2?6:0))-(b[1]+(b[0].nivel===2?6:0))).slice(0,n);}
 function nearest(p,capa,n){const t=iso(today());return S.pts.filter(x=>x.capa===capa&&x.id!==p.id&&(capa!=="evento"||(x.fecha_fin||x.fecha_inicio)>=t)).map(x=>[x,hav(p.lat,p.lng,x.lat,x.lng)]).sort((a,b)=>a[1]-b[1]).slice(0,n).filter(x=>x[1]<35);}
 function markSeen(id){S.est.vistos[id]=Date.now();const ks=Object.keys(S.est.vistos);if(ks.length>300){ks.sort((a,b)=>S.est.vistos[a]-S.est.vistos[b]).slice(0,ks.length-300).forEach(k=>delete S.est.vistos[k]);}saveEst();}
 function openDetail(id,opts={}){const p=S.byId.get(id);if(!p)return;try{history.replaceState(null,"","#"+encodeURIComponent(id));}catch(e){}S.sel=id;markSeen(id);S.detail=id;renderDetail();sym.redraw();renderRail();body.querySelectorAll(".card-i.sel").forEach(e=>e.classList.remove("sel"));body.querySelectorAll(`[data-card="${CSS.escape(id)}"]`).forEach(e=>e.classList.add("sel"));
@@ -328,15 +334,16 @@ function heroFallback(p){let inner;if(p.capa==="evento"&&p.fecha_inicio){const d
   const multi=p.capa==="evento"&&p.fecha_fin&&p.fecha_fin!==p.fecha_inicio?Math.round((new Date(p.fecha_fin)-new Date(p.fecha_inicio))/864e5)+1:0;const tag=p.capa==="ruta"?(p.dias||1)+(p.dias>1?" días":" día"):multi?multi+" días":layerOf(p).l;
   return `<div class="hero" style="--c:${colorVar(p)}">${inner}<span class="tag">${esc(tag)}</span></div>`;}
 function renderDetail(keep){const p=S.byId.get(S.detail);if(!p){S.detail=null;$("card").hidden=true;return;}const id=p.id;const card=$("card");const st=card.scrollTop;
-  const sleep=p.capa!=="pernocta"?nearest(p,"pernocta",3):[];
-  const todo=p.capa==="pernocta"?[...nearest(p,"evento",2),...nearest(p,"visita",2),...nearest(p,"naturaleza",2)].sort((a,b)=>a[1]-b[1]).slice(0,5):nearest(p,p.capa==="evento"?"visita":"evento",3);
+  const sleep=p.capa!=="pernocta"?nearest(p,"pernocta",4):[];
+  const kids=nearDo(p,25,6);
+  const evs=p.capa!=="evento"?nearest(p,"evento",3).filter(x=>x[1]<30):[];
   const near=(arr,title)=>arr.length?`<div class="h3">${title}</div><div class="near">${arr.map(([x,d])=>rowHTML(x,"data-s"," · "+(d<1?"<1":Math.round(d))+" km")).join("")}</div>`:"";
   const itin=p.capa==="ruta"?(()=>{const s=p.paradas||[];const days=[...new Set(s.map(x=>x.dia||1))].sort((a,b)=>a-b);const fu=(p.fuentes||[]).filter(f=>f&&f.url);
     return `<div class="h3">Itinerario${p.km_total?" · unos "+p.km_total+" km":""}</div><div class="itin">${days.map(d=>`<span class="dl">Día ${d}</span>${s.map((x,i)=>[x,i]).filter(([x])=>(x.dia||1)===d).map(([x,i])=>`<button class="rstop" data-stop="${i}"><span class="stopnum" style="--c:${stopColor(x.tipo)}">${i+1}</span><span><b>${esc(x.nombre)}</b>${x.tipo==="pernocta"?' <span class="b ok">Dormir</span>':""}${x.nota?`<br><span class="rn">${esc(x.nota)}</span>`:""}</span></button>`).join("")}`).join("")}</div>
     ${fu.length?`<div class="h3">Contado por autocaravanistas</div><div class="row">${fu.map(f=>`<a class="btn" href="${esc(f.url)}" target="_blank" rel="noopener">${ic("external-link")}${esc(f.nombre||"Fuente")}</a>`).join("")}</div>`:""}`;})():"";
   card.innerHTML=`<button class="x" id="back" aria-label="Cerrar">${ic("x")}</button><div class="dv">
     ${heroHTML(p)}<span class="kicker" style="--c:${colorVar(p)}">${esc((p.tipos||[]).slice(0,3).join(" · ")||layerOf(p).l)}</span><h2>${esc(p.nombre)}</h2>
-    <div class="where"><span>${ic("map-pin")}${esc(p.municipio)}${p.zona&&p.zona!==p.municipio?", "+esc(p.zona):""}</span><span>${ic("clock")}${fmtMin(p._min)} · ~${roadKm(p)} km</span></div>
+    <div class="where"><span>${ic("map-pin")}${esc(p.municipio)}${p.zona&&p.zona!==p.municipio?", "+esc(p.zona):""}${p.aprox?' <span class="aprox" title="Coordenadas del centro del pueblo">· ubicación aproximada</span>':""}</span><span>${ic("clock")}${fmtMin(p._min)} · ~${roadKm(p)} km</span></div>
     <div class="acts"><button class="act ${isFav(id)?"on":""}" data-fav="${esc(id)}" aria-pressed="${isFav(id)}">${ic("heart")}${isFav(id)?"Guardado":"Guardar"}</button>
       <a class="act" href="${photoURL(p)}" target="_blank" rel="noopener">${ic("image")}Fotos</a>
       <label class="act">${ic("calendar-days")}A salida<select id="d-trip" aria-label="Añadir a una salida">${tripOptions(id)}</select></label>
@@ -345,7 +352,7 @@ function renderDetail(keep){const p=S.byId.get(S.detail);if(!p){S.detail=null;$(
     <div class="badges">${p.ninos?`<span class="b ok">${ic("baby")}Bueno con niños</span>`:'<span class="b">Más para adultos</span>'}${acBadge(p)||'<span class="b">7 m: sin datos</span>'}${p.precio==="gratis"?'<span class="b ok">Gratis</span>':p.precio_txt?`<span class="b">${esc(p.precio_txt)}</span>`:""}</div>
     <p>${esc(p.descripcion)}</p>${p.consejo?`<div class="tip">${ic("info")}<span>${esc(p.consejo)}</span></div>`:""}${itin}
     <dl class="facts">${p.temporada?`<dt>Temporada</dt><dd>${esc(p.temporada)}</dd>`:""}${!p.fecha_inicio&&p.horario?`<dt>Horario</dt><dd>${esc(p.horario)}</dd>`:""}<dt>Fuente</dt><dd>${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.fuente||"Web")}</a> · revisado ${esc(p.verificado||"")}`:esc(p.fuente||"—")}</dd></dl>
-    ${near(sleep,"Dónde dormir cerca")}${near(todo,p.capa==="pernocta"?"Qué hacer cerca":"También cerca")}</div>`;
+    ${near(sleep,"Dónde dormir cerca")}${near(kids,"Qué hacer cerca con niños")}${near(evs,"Eventos cerca")}</div>`;
   card.hidden=false;card.scrollTop=keep?st:0;
   $("back").onclick=closeDetail;
   $("d-trip").onchange=e=>{const v=e.target.value;if(!v)return;let t;if(v==="__new")t=newTrip(p);else t=S.est.salidas.find(x=>x.id===v);if(t&&!t.ids.includes(id))t.ids.push(id);saveEst();toast("Añadido a «"+t.nombre+"»");renderRail();renderDetail(true);if(S.section==="trips")renderBody();};
@@ -403,8 +410,8 @@ function toggleFav(id){const on=isFav(id);if(on)delete S.est.favs[id];else S.est
 function afterFav(id){sym.redraw();renderRail();if(S.detail===id)renderDetail(true);body.querySelectorAll(`[data-fav="${CSS.escape(id)}"]`).forEach(b=>{b.classList.toggle("on",isFav(id));});if(S.section==="saved")renderSaved();}
 
 /* ===== estado ===== */
-function savePrefs(){try{localStorage.setItem("dv-ui",JSON.stringify({layers:[...S.layers],types:[...S.types],dmode:S.dmode==="rango"?"todo":S.dmode,maxmin:S.maxmin,ninos:S.ninos,ac:S.ac,gratis:S.gratis,hideSeen:S.hideSeen,sort:S.sort,follow:S.follow,style:S.style,pw:S.pw,collapsed:S.collapsed}));}catch(e){}}
-function restorePrefs(){try{const f=JSON.parse(localStorage.getItem("dv-ui")||"null");if(!f)return;Object.assign(S,{layers:new Set(f.layers&&f.layers.length?f.layers:LAYERS.map(l=>l.k)),types:new Set(f.types||[]),dmode:f.dmode||"todo",maxmin:+f.maxmin||300,ninos:!!f.ninos,ac:!!f.ac,gratis:!!f.gratis,hideSeen:!!f.hideSeen,sort:f.sort||"auto",follow:f.follow!==false,style:BASES[f.style]?f.style:"mapa",pw:+f.pw||400,collapsed:!!f.collapsed});}catch(e){}}
+function savePrefs(){try{localStorage.setItem("dv-ui",JSON.stringify({layers:[...S.layers],types:[...S.types],dmode:S.dmode==="rango"?"todo":S.dmode,maxmin:S.maxmin,ninos:S.ninos,ac:S.ac,gratis:S.gratis,hideSeen:S.hideSeen,top:S.top,sort:S.sort,follow:S.follow,style:S.style,pw:S.pw,collapsed:S.collapsed}));}catch(e){}}
+function restorePrefs(){try{const f=JSON.parse(localStorage.getItem("dv-ui")||"null");if(!f)return;Object.assign(S,{layers:new Set(f.layers&&f.layers.length?f.layers:LAYERS.map(l=>l.k)),types:new Set(f.types||[]),dmode:f.dmode||"todo",maxmin:+f.maxmin||300,ninos:!!f.ninos,ac:!!f.ac,gratis:!!f.gratis,hideSeen:!!f.hideSeen,top:!!f.top,sort:f.sort||"auto",follow:f.follow!==false,style:BASES[f.style]?f.style:"mapa",pw:+f.pw||400,collapsed:!!f.collapsed});}catch(e){}}
 let wT=null,writing=false,dirty=false;
 function cleanEst(){return {v:2,favs:{...S.est.favs},vistos:{...S.est.vistos},salidas:S.est.salidas.map(t=>({id:t.id,nombre:t.nombre,desde:t.desde||null,hasta:t.hasta||null,ids:t.ids.slice()}))};}
 function saveEst(){dirty=true;try{localStorage.setItem("dv-est",JSON.stringify(cleanEst()));}catch(e){}clearTimeout(wT);wT=setTimeout(flush,600);}
@@ -418,8 +425,10 @@ for(const n of new Set([...TYPE_ICON.map(x=>x[1]),...LAYERS.map(l=>l.i),"caravan
 applyStyle();render();
 (async()=>{
   try{
-    const [pr,ph]=await Promise.all([fetch("data/places.json",{cache:"no-cache"}),fetch("data/photos.json",{cache:"no-cache"}).catch(()=>null)]);
+    const [pr,ph,ar]=await Promise.all([fetch("data/places.json",{cache:"no-cache"}),fetch("data/photos.json",{cache:"no-cache"}).catch(()=>null),fetch("data/areas.json",{cache:"no-cache"}).catch(()=>null)]);
     const raw=await pr.json();S.photos=ph&&ph.ok?await ph.json().catch(()=>({})):{};
+    const areas=ar&&ar.ok?await ar.json().catch(()=>null):null;
+    if(areas&&Array.isArray(areas.items)){raw.items=(raw.items||raw).concat(areas.items.map(x=>({capa:"pernocta",nivel:2,ninos:false,precio:"desconocido",ac7m:"desconocido",...x})));}
     const seen=new Set();
     S.pts=(raw.items||raw).filter(p=>p&&p.id&&!seen.has(p.id)&&seen.add(p.id)&&typeof p.lat==="number"&&typeof p.lng==="number"&&LAYERS.some(l=>l.k===p.capa))
       .map(p=>{const q={...p,tipos:Array.isArray(p.tipos)?p.tipos:[]};q._min=driveMin(q);q._h=norm([q.nombre,q.municipio,q.zona,q.tipos.join(" "),q.descripcion,(q.paradas||[]).map(s=>s.nombre).join(" ")].join(" "));return q;});
