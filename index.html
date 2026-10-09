@@ -26,19 +26,23 @@
   </aside>
   <main class="mapwrap">
     <div id="map" role="application" aria-label="Mapa"></div>
+    <div class="mtop" id="mtop" hidden></div>
     <div class="mapctl">
       <div class="ctlgrp"><button id="m-style" aria-label="Tipo de mapa"></button></div>
       <div class="stylepop" id="stylepop" hidden></div>
-      <div class="ctlgrp"><button id="m-in" aria-label="Acercar"></button><button id="m-out" aria-label="Alejar"></button></div>
+      <div class="ctlgrp zoomgrp"><button id="m-in" aria-label="Acercar"></button><button id="m-out" aria-label="Alejar"></button></div>
       <div class="ctlgrp"><button id="m-home" aria-label="Centrar en casa"></button><button id="m-fit" aria-label="Ver todos los resultados"></button></div>
     </div>
     <div class="legend" id="legend"></div>
     <div class="focusbar" id="focusbar" hidden></div>
     <div class="symtip" id="symtip" hidden></div>
+    <div class="mhint" id="mhint" hidden></div>
     <div class="card" id="card" hidden aria-label="Ficha del sitio"></div>
   </main>
 </div>
 <div class="toast" id="toast" hidden></div>
+<div class="scrim" id="scrim" hidden></div>
+<div class="fsheet" id="fsheet" hidden role="dialog" aria-label="Filtros"></div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>

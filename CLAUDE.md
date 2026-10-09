@@ -20,6 +20,12 @@ Ideas de salidas en autocaravana (7 m, familia con niños) desde Mataró, radio 
 - Datos del usuario (favoritos, vistos, salidas) viven en `localStorage` del navegador
   (`dv-est`, `dv-ui`); hay exportar/importar JSON en Guardados.
 
+## Móvil (≤820 px)
+- Mapa a pantalla completa; búsqueda y chips flotan arriba (`#mtop`, lo rellena `renderHead`).
+- Lista en hoja inferior (`.panel`) con 3 posiciones (`setSnap`: asomada / media / completa); la ficha
+  (`.card`) es otra hoja (`setCSnap`); los filtros abren en `#fsheet` modal. Gestos en `makeSheet`.
+- Al buscar una zona, `S.hl` resalta sus puntos (halo amarillo) y atenúa el resto; el seleccionado pulsa.
+
 ## Niveles
 - `nivel: 1` destacado (merece el viaje / imprescindible de la comarca). Se ve siempre.
 - `nivel: 2` complemento si estás por la zona. Solo aparece en el mapa con zoom ≥ 9 (o al buscar),

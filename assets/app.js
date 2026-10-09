@@ -25,7 +25,7 @@ const DIA=["dom","lun","mar","mié","jue","vie","sáb"];
 const SECTIONS=[{k:"explore",l:"Explorar",i:"map"},{k:"saved",l:"Guardados",i:"heart"},{k:"trips",l:"Salidas",i:"calendar-days"}];
 
 const S = { pts:[], byId:new Map(), layers:new Set(LAYERS.map(l=>l.k)), types:new Set(), dur:new Set(), dmode:"todo", from:null, to:null, maxmin:300,
-  ninos:false, ac:false, gratis:false, hideSeen:false, top:false, q:"", sort:"auto", follow:true, sel:null, hov:null, focus:null, fopen:null, limit:40,
+  ninos:false, ac:false, gratis:false, hideSeen:false, top:false, q:"", hl:null, sort:"auto", follow:true, sel:null, hov:null, focus:null, fopen:null, limit:40,
   section:"explore", detail:null, saved:"favs", tripId:null, style:"mapa", pw:400, collapsed:false,
   est:{favs:{},vistos:{},salidas:[]}, estRef:null, filtered:[], inView:[], askText:"" };
 
@@ -121,7 +121,7 @@ const SymLayer=L.Canvas.extend({
     pts.sort((a,c)=>a[1].y-c[1].y);
     const selIdx=pts.findIndex(x=>x[0].id===S.sel);if(selIdx>=0){pts.push(pts.splice(selIdx,1)[0]);}
     const labelRects=[];const showLabels=z>=11;g.font="700 11px Overpass, system-ui, sans-serif";g.textAlign="center";g.textBaseline="top";
-    const halo=css("--label-halo"),inkc=css("--ink");
+    const halo=css("--label-halo"),inkc=css("--ink"),hiCol=css("--hi");
     for(const [p,pt] of pts){const seen=isSeen(p.id)&&S.sel!==p.id;const col=colors[p.capa];const sel=S.sel===p.id,hov=S.hov===p.id;
       let sp,ax,ay,hitR;
       const m2=p.nivel===2&&!sel&&!hov&&!isFav(p.id)?(z<11?"mini":mode):mode;
@@ -131,8 +131,13 @@ const SymLayer=L.Canvas.extend({
       let scale=1;if(sel)scale=1.25;else if(hov)scale=1.12;
       const w=sp.w*scale,h=sp.h*scale,x=pt.x-ax*scale,y=pt.y-ay*scale;
       const headY=(ax===17)?pt.y-20*scale:pt.y;
-      if(sel){g.beginPath();g.arc(pt.x,headY,hitR*scale+5,0,7);g.fillStyle="rgba(31,78,154,.28)";g.fill();}
+      const inHl=S.hl?S.hl.ids.has(p.id):true;
+      if(!inHl)g.globalAlpha=.3;
+      else if(S.hl){g.beginPath();g.arc(pt.x,headY,hitR*scale+6,0,7);g.fillStyle="rgba(244,196,48,.32)";g.fill();g.lineWidth=2;g.strokeStyle=hiCol;g.stroke();}
+      if(sel){const t=Math.min(1,(performance.now()-pulseT0)/1700);if(t<1){g.beginPath();g.arc(pt.x,headY,hitR*scale+6+t*26,0,7);g.lineWidth=3*(1-t);g.strokeStyle=`rgba(31,78,154,${(1-t)*.9})`;g.stroke();}
+        g.beginPath();g.arc(pt.x,headY,hitR*scale+5,0,7);g.fillStyle="rgba(31,78,154,.22)";g.fill();g.lineWidth=2.5;g.strokeStyle="rgba(31,78,154,.85)";g.stroke();}
       g.drawImage(sp.c,x,y,w,h);
+      if(!inHl)g.globalAlpha=1;
       if(isFav(p.id)&&ax!==6){const hs=heartSprite();g.drawImage(hs.c,pt.x+hitR*scale*.45,headY-hitR*scale-6,14,14);}
       hits.push({id:p.id,x:pt.x,y:headY,r:hitR*scale+2});
       if(showLabels||sel||hov){const name=p.nombre.length>28?p.nombre.slice(0,27)+"…":p.nombre;const tw=g.measureText(name).width+8;const lx=pt.x-tw/2,ly=pt.y+(ax===17?5:ax===11?12:8);
@@ -160,11 +165,13 @@ function refresh(){S.filtered=S.pts.filter(matches).sort(sorter(S.sort));sym.red
 
 /* encuadre teniendo en cuenta el panel */
 function padL(){return isMobile()?0:0;}
-function fitPts(pts,maxZoom){if(!pts.length)return;const pad=isMobile()?{paddingTopLeft:[20,70],paddingBottomRight:[20,Math.round(innerHeight*(S.detail?.78:.5))+70]}:{paddingTopLeft:[40,60],paddingBottomRight:[S.detail?480:70,40]};
+function sheetH(){const el=S.detail?$("card"):$("panel");return el&&!el.hidden&&isMobile()?el.getBoundingClientRect().height+(S.detail?0:58):0;}
+function fitPts(pts,maxZoom){if(!pts.length)return;const pad=isMobile()?{paddingTopLeft:[20,(parseInt(getComputedStyle($("mtop")).height)||0)+24],paddingBottomRight:[20,sheetH()+24]}:{paddingTopLeft:[40,60],paddingBottomRight:[S.detail?480:70,40]};
   map.flyToBounds(L.latLngBounds(pts.map(p=>[p.lat,p.lng])),{...pad,maxZoom:maxZoom||11,duration:.5});}
-function centerOn(lat,lng,zoom){const z=zoom||Math.max(Z(),10.5);let ox=0,oy=0;if(isMobile()){if(S.detail)oy=innerHeight*.28;}else if(S.detail)ox=210;const pt=map.project([lat,lng],z).add([ox,oy]);map.flyTo(map.unproject(pt,z),z,{duration:.5});}
+function centerOn(lat,lng,zoom){const z=zoom||Math.max(Z(),10.5);let ox=0,oy=0;if(isMobile()){const h=S.detail?Math.round(innerHeight*CSNAPS[0]):sheetH();oy=Math.round(h/2)-20;}else if(S.detail)ox=210;const pt=map.project([lat,lng],z).add([ox,oy]);map.flyTo(map.unproject(pt,z),z,{duration:.5});}
 const LVL2_Z=9;
-function shown(p){return p.nivel!==2||Z()>=LVL2_Z||!!S.q||S.sel===p.id||isFav(p.id)||!!S.focus;}
+let pulseT0=0;function pulse(){pulseT0=performance.now();const tick=()=>{if(performance.now()-pulseT0<1700){sym.redraw();requestAnimationFrame(tick);}else sym.redraw();};requestAnimationFrame(tick);}
+function shown(p){return (S.hl&&S.hl.ids.has(p.id))||p.nivel!==2||Z()>=LVL2_Z||!!S.q||S.sel===p.id||isFav(p.id)||!!S.focus;}
 function inView(){const b=map.getBounds();return S.filtered.filter(p=>shown(p)&&b.contains([p.lat,p.lng]));}
 
 /* ===== controles ===== */
@@ -177,13 +184,13 @@ $("m-style").onclick=e=>{e.stopPropagation();$("stylepop").hidden=!$("stylepop")
 $("stylepop").onclick=e=>{e.stopPropagation();const b=e.target.closest("[data-st]");if(b){S.style=b.dataset.st;savePrefs();applyStyle();}};
 document.addEventListener("click",e=>{if(!e.target.closest(".mapctl"))closeStylePop();if(!e.target.closest(".searchbox"))closeSugg();});
 $("legend").innerHTML=LAYERS.map(l=>`<span><i class="d" style="--c:var(${l.c})"></i>${l.l}</span>`).join("")+`<span><i class="d" style="--c:var(--hi);border-radius:2px;transform:rotate(45deg)"></i>Casa</span><span style="opacity:.8">Más claro = ya mirado</span><span class="lvlhint" id="lvlhint" hidden></span>`;
-function lvlHint(){const el=$("lvlhint");if(!el)return;if(Z()>=LVL2_Z||S.q){el.hidden=true;return;}const b=map.getBounds();const n=S.filtered.reduce((c,p)=>c+(p.nivel===2&&!shown(p)&&b.contains([p.lat,p.lng])?1:0),0);el.hidden=!n;el.textContent=`Acércate: +${n} sitios de la zona`;}
+function lvlHint(){const el=$("lvlhint"),mh=$("mhint");if(!el)return;if(Z()>=LVL2_Z||S.q){el.hidden=mh.hidden=true;return;}const b=map.getBounds();const n=S.filtered.reduce((c,p)=>c+(p.nivel===2&&!shown(p)&&b.contains([p.lat,p.lng])?1:0),0);el.hidden=!n;mh.hidden=!n||!!S.detail;el.textContent=`Acércate: +${n} sitios de la zona`;mh.textContent=`+${n} al acercarte`;}
 
 /* ===== rail, panel, redimensionado ===== */
 function renderRail(){const nf=Object.keys(S.est.favs).filter(id=>S.byId.has(id)).length,nt=S.est.salidas.length;
   $("rail").innerHTML=`<div class="logo" title="¿Adónde vamos?"><img src="assets/icon.svg" alt="" width="40" height="40"></div>`+SECTIONS.map(s=>`<button data-sec="${s.k}" aria-selected="${S.section===s.k}">${ic(s.i)}${s.l}${s.k==="saved"&&nf?`<span class="cnt">${nf}</span>`:s.k==="trips"&&nt?`<span class="cnt">${nt}</span>`:""}</button>`).join("")+
   `<span class="sp"></span><button class="tog" id="p-tog" aria-label="${S.collapsed?"Mostrar panel":"Ocultar panel"}" title="${S.collapsed?"Mostrar panel":"Ocultar panel"}">${ic(S.collapsed?"panel-left-open":"panel-left-close")}</button>`;}
-$("rail").addEventListener("click",e=>{const b=e.target.closest("[data-sec]");if(b){const k=b.dataset.sec;if(S.section===k&&!S.detail&&S.collapsed){setCollapsed(false);return;}S.section=k;if(S.collapsed)setCollapsed(false);render();return;}
+$("rail").addEventListener("click",e=>{const b=e.target.closest("[data-sec]");if(b){const k=b.dataset.sec;if(S.section===k&&!S.detail&&S.collapsed){setCollapsed(false);return;}S.section=k;if(S.collapsed)setCollapsed(false);render();if(isMobile()){if(S.detail)closeDetail();setSnap(k==="explore"?snap:1,true);}return;}
   if(e.target.closest("#p-tog"))setCollapsed(!S.collapsed);});
 function setCollapsed(c){S.collapsed=c;$("app").classList.toggle("collapsed",c);savePrefs();renderRail();setTimeout(()=>map.invalidateSize(),60);}
 function setPW(w){w=Math.max(320,Math.min(Math.round(w),Math.min(620,innerWidth-300)));S.pw=w;$("app").style.setProperty("--pw",w+"px");}
@@ -193,19 +200,38 @@ function setPW(w){w=Math.max(320,Math.min(Math.round(w),Math.min(620,innerWidth-
   r.addEventListener("keydown",e=>{if(e.key==="ArrowLeft"){setPW(S.pw-24);savePrefs();map.invalidateSize();}if(e.key==="ArrowRight"){setPW(S.pw+24);savePrefs();map.invalidateSize();}});
   r.addEventListener("dblclick",()=>{setPW(400);savePrefs();map.invalidateSize();});})();
 /* hoja móvil */
-const SNAPS=[.28,.55,.9];let snap=1;
-function setSnap(i){snap=Math.max(0,Math.min(2,i));$("panel").style.setProperty("--sh",Math.round(SNAPS[snap]*(innerHeight-58))+"px");}
-(function(){const h=$("handle"),p=$("panel");let y0,h0,on=false;
-  h.addEventListener("pointerdown",e=>{if(!isMobile())return;on=true;h.setPointerCapture(e.pointerId);y0=e.clientY;h0=p.getBoundingClientRect().height;p.classList.add("dragging");});
-  h.addEventListener("pointermove",e=>{if(!on)return;p.style.setProperty("--sh",Math.max(innerHeight*.15,Math.min(innerHeight*.92,h0+(y0-e.clientY)))+"px");});
-  h.addEventListener("pointerup",e=>{if(!on)return;on=false;p.classList.remove("dragging");const frac=p.getBoundingClientRect().height/(innerHeight-58);let best=0;SNAPS.forEach((s,i)=>{if(Math.abs(s-frac)<Math.abs(SNAPS[best]-frac))best=i;});if(Math.abs(e.clientY-y0)<6)best=snap===2?0:snap+1;setSnap(best);setTimeout(()=>map.invalidateSize(),260);});})();
-addEventListener("resize",()=>{if(isMobile())setSnap(snap);else setPW(S.pw);map.invalidateSize();});
+const CSNAPS=[.58,.94];let snap=1,csnap=0;
+function avail(){return innerHeight-58;}
+function peekH(){return $("handle").offsetHeight+$("phead").offsetHeight+6;}
+function snapPx(i){const top=(parseInt(getComputedStyle($("mtop")).height)||0)+12;return i===0?peekH():i===1?Math.round(avail()*.5):avail()-top;}
+function setSnap(i,silent){snap=Math.max(0,Math.min(2,i));const p=$("panel");p.style.setProperty("--sh",snapPx(snap)+"px");p.classList.toggle("locked",snap<2);$("app").classList.toggle("sheetfull",snap===2);
+  document.querySelector(".mapwrap").style.setProperty("--peek",snapPx(Math.min(snap,1))+"px");if(!silent)setTimeout(()=>map.invalidateSize({pan:false}),300);}
+function setCSnap(i){csnap=Math.max(0,Math.min(1,i));const c=$("card");c.style.setProperty("--ch",Math.round(innerHeight*CSNAPS[csnap])+"px");c.classList.toggle("locked",csnap<1);}
+let swallowClick=false;document.addEventListener("click",e=>{if(swallowClick){e.stopPropagation();e.preventDefault();swallowClick=false;}},true);
+function makeSheet(el,opts){let y0,h0,on=false,moved=false;
+  el.addEventListener("pointerdown",e=>{if(!isMobile()||(e.pointerType==="mouse"&&e.button!==0))return;if(!opts.canStart(e))return;on=true;moved=false;y0=e.clientY;h0=el.getBoundingClientRect().height;});
+  el.addEventListener("pointermove",e=>{if(!on)return;const dy=y0-e.clientY;if(!moved&&Math.abs(dy)<8)return;if(!moved){moved=true;el.classList.add("dragging");try{el.setPointerCapture(e.pointerId);}catch(x){}}
+    el.style.setProperty(opts.v,Math.max(opts.min(),Math.min(opts.max(),h0+dy))+"px");});
+  const end=e=>{if(!on)return;on=false;el.classList.remove("dragging");const h=el.getBoundingClientRect().height;if(moved){swallowClick=true;setTimeout(()=>swallowClick=false,80);opts.settle(h,y0-e.clientY);}else opts.tap(e);};
+  el.addEventListener("pointerup",end);el.addEventListener("pointercancel",end);}
+makeSheet($("panel"),{v:"--sh",min:()=>peekH(),max:()=>avail()-20,
+  canStart:e=>{if(e.target.closest("select,input,textarea,.sugg"))return false;const inBody=e.target.closest(".p-body");return !(inBody&&snap===2&&$("pbody").scrollTop>0);},
+  settle:(h,dy)=>{const sn=[peekH(),avail()*.5,avail()];let best=0;sn.forEach((v,i)=>{if(Math.abs(v-h)<Math.abs(sn[best]-h))best=i;});if(Math.abs(dy)>60&&best===snap)best=dy>0?Math.min(2,snap+1):Math.max(0,snap-1);setSnap(best);},
+  tap:e=>{if(e.target.closest("#handle,.reshead b"))setSnap(snap===2?0:snap+1);}});
+makeSheet($("card"),{v:"--ch",min:()=>innerHeight*.2,max:()=>innerHeight*.96,
+  canStart:e=>{if(e.target.closest("select,input,button,a"))return false;return !(csnap===1&&$("card").scrollTop>0);},
+  settle:(h,dy)=>{const fr=h/innerHeight;if(fr<.4&&dy<-40){closeDetail();return;}setCSnap(dy>0?1:fr>.8?1:0);},
+  tap:e=>{if(e.target.closest(".chandle"))setCSnap(csnap?0:1);}});
+let wasMob=isMobile();addEventListener("resize",()=>{const m=isMobile();if(m!==wasMob){wasMob=m;render();if(S.detail)renderDetail(true);}if(m){setSnap(snap,true);if(S.detail)setCSnap(csnap);}else setPW(S.pw);map.invalidateSize();});
 
 /* ===== cabecera del panel ===== */
 function render(){renderRail();renderHead();renderBody();}
-function renderHead(){const h=$("phead");
-  h.style.display="";
-  if(S.section==="explore"){const fc=filterCount();
+function renderHead(){const h=$("phead"),mt=$("mtop");const mob=isMobile();
+  h.style.display="";mt.hidden=!(mob&&S.section==="explore");if(!mob||S.section!=="explore")mt.innerHTML="";
+  if(S.section==="explore"){const fc=filterCount();const fcm=fc-(S.dmode!=="todo"?1:0)-(S.maxmin<300?1:0);
+    if(mob){mt.innerHTML=`<div class="mt1"><div class="searchbox"><div class="field">${ic("search")}<input type="search" id="q" placeholder="Pueblo, zona o plan" autocomplete="off" aria-label="Buscar" value="${esc(S.qraw||"")}"><button class="ibtn" id="q-clear" aria-label="Borrar" ${S.qraw?"":"hidden"}>${ic("x")}</button></div><div class="sugg" id="sugg" role="listbox" hidden></div></div><button class="mfilt ${fcm?"on":""}" data-fp="more" aria-label="Filtros">${ic("sliders-horizontal")}${fcm?`<span class="n">${fcm}</span>`:""}</button></div>
+      <div class="mrow"><button class="fbtn ${S.dmode!=="todo"?"on":""}" data-fp="date">${ic("calendar")}${S.dmode==="todo"?"Fechas":dateLabel()}</button><button class="fbtn ${S.maxmin<300?"on":""}" data-fp="dist">${ic("clock")}${S.maxmin<300?"Hasta "+fmtMin(S.maxmin):"Distancia"}</button><span class="sep"></span>${LAYERS.map(l=>`<button class="chip" style="--c:var(${l.c})" data-ly="${l.k}" aria-pressed="${S.layers.has(l.k)}"><span class="d"></span>${l.l}</button>`).join("")}</div>`;
+      bindSearch();document.querySelector(".mapwrap").style.setProperty("--mtoph",mt.offsetHeight+"px");return;}
     h.innerHTML=`<div class="p-title"><h1>Explorar</h1></div>
     <div class="searchbox"><div class="field">${ic("search")}<input type="search" id="q" placeholder="Pueblo, zona o plan" autocomplete="off" aria-label="Buscar" value="${esc(S.qraw||"")}"><button class="ibtn" id="q-clear" aria-label="Borrar" ${S.qraw?"":"hidden"}>${ic("x")}</button></div><div class="sugg" id="sugg" role="listbox" hidden></div></div>
     <div class="chips" id="chips">${LAYERS.map(l=>`<button class="chip" style="--c:var(${l.c})" data-ly="${l.k}" aria-pressed="${S.layers.has(l.k)}"><span class="d"></span>${l.l}</button>`).join("")}</div>
@@ -216,16 +242,17 @@ function renderHead(){const h=$("phead");
   else if(S.section==="trips")h.innerHTML=`<div class="p-title"><h1>Salidas</h1>${S.tripId?"":`<button class="btn primary" id="trip-new">${ic("plus")}Nueva</button>`}</div>`;
 }
 function dateLabel(){if(S.dmode==="rango")return (S.from?fmtD(S.from):"…")+" – "+(S.to?fmtD(S.to):"…");return DMODES.find(d=>d.k===S.dmode).l;}
-$("phead").addEventListener("click",e=>{const t=e.target;
+function onHeadClick(e){const t=e.target;
   const ly=t.closest("[data-ly]");if(ly){const k=ly.dataset.ly;S.layers.has(k)?S.layers.delete(k):S.layers.add(k);savePrefs();refresh();return;}
   const fp=t.closest("[data-fp]");if(fp){S.fopen=S.fopen===fp.dataset.fp?null:fp.dataset.fp;renderBody();return;}
   const sv=t.closest("[data-sv]");if(sv){S.saved=sv.dataset.sv;renderHead();renderBody();return;}
-  if(t.closest("#trip-new")){const n=newTrip(null);saveEst();S.tripId=n.id;render();return;}});
+  if(t.closest("#trip-new")){const n=newTrip(null);saveEst();S.tripId=n.id;render();return;}}
+$("phead").addEventListener("click",onHeadClick);$("mtop").addEventListener("click",onHeadClick);
 
 /* ===== búsqueda ===== */
 let sIdx=-1;
 function hl(text,q){const t=String(text);const w=q.split(/\s+/)[0];const i=norm(t).indexOf(w);if(!w||i<0)return esc(t);return esc(t.slice(0,i))+"<mark>"+esc(t.slice(i,i+w.length))+"</mark>"+esc(t.slice(i+w.length));}
-function rowHTML(p,attr,extra=""){return `<button class="srow" ${attr}="${esc(p.id)}"><span class="mi ${isSeen(p.id)?"seen":""}" style="--c:${colorVar(p)}">${ic(iconOf(p))}</span><span class="tx"><div class="t">${esc(p.nombre)}</div><div class="m">${p.capa==="evento"?fmtRange(p)+" · ":""}${esc(p.municipio)} · ${fmtMin(p._min)}${extra}</div></span>${isFav(p.id)?`<span class="hearticon">${ic("heart")}</span>`:""}</button>`;}
+function rowHTML(p,attr,extra=""){return `<button class="srow" ${attr}="${esc(p.id)}"><span class="mi ${isSeen(p.id)?"seen":""}" style="--c:${colorVar(p)}">${ic(iconOf(p))}</span><span class="tx"><div class="t">${esc(p.nombre)}</div><div class="m">${p.capa==="evento"?fmtRange(p)+" · ":""}${p.municipio?esc(p.municipio)+" · ":""}${fmtMin(p._min)}${extra}</div></span>${isFav(p.id)?`<span class="hearticon">${ic("heart")}</span>`:""}</button>`;}
 function buildSugg(raw){const sg=$("sugg");if(!sg)return;const q=norm(raw).trim();let h="";
   if(!q){const seen=Object.entries(S.est.vistos).sort((a,b)=>b[1]-a[1]).map(([id])=>S.byId.get(id)).filter(Boolean).slice(0,8);
     if(seen.length)h+=`<div class="sh">Vistos recientemente<button data-clearseen="1">Borrar</button></div>`+seen.map(p=>rowHTML(p,"data-s")).join("");
@@ -240,8 +267,8 @@ function buildSugg(raw){const sg=$("sugg");if(!sg)return;const q=norm(raw).trim(
   sg.innerHTML=h;sg.hidden=false;sIdx=-1;}
 function closeSugg(){const sg=$("sugg");if(sg)sg.hidden=true;sIdx=-1;}
 function bindSearch(){const q=$("q"),sg=$("sugg");if(!q)return;
-  q.addEventListener("input",e=>{S.qraw=e.target.value;$("q-clear").hidden=!e.target.value;buildSugg(e.target.value);if(!e.target.value&&S.q){S.q="";refresh();}});
-  q.addEventListener("focus",e=>{buildSugg(e.target.value);if(isMobile()&&snap<1)setSnap(1);});
+  q.addEventListener("input",e=>{S.qraw=e.target.value;$("q-clear").hidden=!e.target.value;buildSugg(e.target.value);if(!e.target.value){clearHl();if(S.q){S.q="";refresh();}}});
+  q.addEventListener("focus",e=>{buildSugg(e.target.value);if(isMobile()&&snap>0)setSnap(0);});
   q.addEventListener("keydown",e=>{const opts=[...sg.querySelectorAll(".srow")];
     if(e.key==="ArrowDown"&&opts.length){e.preventDefault();sIdx=(sIdx+1)%opts.length;}else if(e.key==="ArrowUp"&&opts.length){e.preventDefault();sIdx=(sIdx-1+opts.length)%opts.length;}
     else if(e.key==="Enter"){e.preventDefault();if(sIdx>=0)opts[sIdx].click();else applyQ(q.value);return;}else if(e.key==="Escape"){closeSugg();q.blur();return;}else return;
@@ -249,11 +276,13 @@ function bindSearch(){const q=$("q"),sg=$("sugg");if(!q)return;
   sg.addEventListener("mousedown",e=>e.preventDefault());
   sg.addEventListener("click",e=>{const t=e.target;
     if(t.closest("[data-clearseen]")){S.est.vistos={};saveEst();sym.redraw();buildSugg("");return;}
-    const s=t.closest("[data-s]");if(s){closeSugg();q.blur();openDetail(s.dataset.s,{fly:true});return;}
-    const z=t.closest("[data-z]");if(z){const x=S._pl[+z.dataset.z];closeSugg();q.blur();q.value=x.name;S.qraw=x.name;$("q-clear").hidden=false;S.follow=true;fitPts(x.pts,11);return;}
+    const s=t.closest("[data-s]");if(s){closeSugg();q.blur();clearHl();openDetail(s.dataset.s,{fly:true});return;}
+    const z=t.closest("[data-z]");if(z){const x=S._pl[+z.dataset.z];closeSugg();q.blur();q.value=x.name;S.qraw=x.name;$("q-clear").hidden=false;setHl(x.name,x.pts);fitPts(x.pts,13.5);return;}
     if(t.closest("[data-qall]"))applyQ(q.value);});
-  $("q-clear").onclick=()=>{q.value="";S.qraw="";$("q-clear").hidden=true;closeSugg();if(S.q){S.q="";refresh();}q.focus();};}
-function applyQ(v){closeSugg();const q=$("q");if(q)q.blur();S.q=norm(v).trim();S.qraw=v;refresh();if(S.q&&S.filtered.length){S.follow=false;renderList();fitPts(S.filtered,11);}}
+  $("q-clear").onclick=()=>{q.value="";S.qraw="";$("q-clear").hidden=true;closeSugg();clearHl();if(S.q){S.q="";refresh();}q.focus();};}
+function applyQ(v){closeSugg();const q=$("q");if(q)q.blur();S.q=norm(v).trim();S.qraw=v;refresh();clearHl();if(S.q&&S.filtered.length){S.follow=false;renderList();fitPts(S.filtered,11);}}
+function setHl(label,pts){S.hl={label,ids:new Set(pts.map(p=>p.id))};S.follow=true;listKey="";sym.redraw();renderList();}
+function clearHl(){if(!S.hl)return;S.hl=null;listKey="";sym.redraw();renderList();}
 
 /* ===== cuerpo: explorar ===== */
 const body=$("pbody");
@@ -270,24 +299,29 @@ function fpanelHTML(){
     <div class="grp"><label class="sw">Solo destacados<input type="checkbox" data-sw="top" ${S.top?"checked":""}></label><label class="sw">Buenos para ir con niños<input type="checkbox" data-sw="ninos" ${S.ninos?"checked":""}></label><label class="sw">Se llega con 7 m<input type="checkbox" data-sw="ac" ${S.ac?"checked":""}></label><label class="sw">Solo gratis<input type="checkbox" data-sw="gratis" ${S.gratis?"checked":""}></label><label class="sw">Ocultar los que ya he mirado<input type="checkbox" data-sw="hideSeen" ${S.hideSeen?"checked":""}></label></div>
     <div class="foot"><button class="linkbtn" data-fclear="more">Borrar</button><button class="btn primary" data-fclose="1">Listo</button></div></div>`;
   return "";}
+function renderFSheet(){const fs=$("fsheet"),sc=$("scrim");const on=isMobile()&&!!S.fopen&&S.section==="explore";fs.hidden=sc.hidden=!on;fs.innerHTML=on?fpanelHTML():"";}
 function tileHTML(p){if(p.capa==="evento"&&p.fecha_inicio){const d=new Date(p.fecha_inicio+"T12:00:00");return `<span class="tile" style="--c:${colorVar(p)}"><span class="dt"><b>${d.getDate()}</b><span>${MES[d.getMonth()]}</span></span></span>`;}
+  const ph=S.photos&&S.photos[p.id];if(ph&&ph.img)return `<span class="tile ph" style="--c:${colorVar(p)};background-image:url(&quot;${esc(ph.img)}&quot;)"><i>${ic(iconOf(p))}</i></span>`;
   return `<span class="tile" style="--c:${colorVar(p)}">${ic(iconOf(p))}</span>`;}
 function acBadge(p){return p.ac7m==="si"?`<span class="b ok">${ic("caravan")}7 m</span>`:p.ac7m==="cerca"?`<span class="b warn">${ic("caravan")}aparcar cerca</span>`:p.ac7m==="no"?`<span class="b no">${ic("caravan")}difícil con 7 m</span>`:"";}
-function subOf(p){return p.capa==="evento"?fmtRange(p)+" · "+esc(p.municipio):p.capa==="ruta"?(p.dias||1)+(p.dias>1?" días · ":" día · ")+(p.paradas||[]).length+" paradas · "+esc(p.zona||p.municipio):esc(p.municipio)+(p.zona&&p.zona!==p.municipio?", "+esc(p.zona):"");}
+function subOf(p){return p.capa==="evento"?fmtRange(p)+" · "+esc(p.municipio):!p.municipio?esc(p.zona||p.fuente||""):p.capa==="ruta"?(p.dias||1)+(p.dias>1?" días · ":" día · ")+(p.paradas||[]).length+" paradas · "+esc(p.zona||p.municipio):esc(p.municipio)+(p.zona&&p.zona!==p.municipio?", "+esc(p.zona):"");}
 function cardHTML(p,noSeen){const [fa,fb]=weekend(0);const wk=p.capa==="evento"&&overlaps(p,fa,fb);
   return `<div class="card-i ${isSeen(p.id)&&!noSeen?"seen":""} ${S.sel===p.id?"sel":""}" data-card="${esc(p.id)}" role="button" tabindex="0">${tileHTML(p)}<span class="tx"><div class="t">${esc(p.nombre)}</div><div class="m">${subOf(p)}</div><div class="badges"><span class="b">${fmtMin(p._min)}</span>${wk?'<span class="b hi">Este finde</span>':""}${p.ninos?`<span class="b ok">${ic("baby")}Niños</span>`:""}${acBadge(p)}${p.precio==="gratis"?'<span class="b ok">Gratis</span>':""}</div></span><button class="heartbtn ${isFav(p.id)?"on":""}" data-fav="${esc(p.id)}" aria-label="Guardar">${ic("heart")}</button></div>`;}
-let listKey="";
+let listKey="",lastPk=0;
 function renderList(soft){if(S.section!=="explore")return;
   if(!S.pts.length){body.innerHTML=`<div class="empty"><span class="ei">${ic("map")}</span><b>Cargando sitios…</b></div>`;return;}
-  const list=S.follow?inView():S.filtered;S.inView=list;const total=S.filtered.length;
+  const list=S.hl?S.filtered.filter(p=>S.hl.ids.has(p.id)):S.follow?inView():S.filtered;S.inView=list;const total=S.filtered.length;
   const key=[S.fopen,S.follow,S.sort,S.limit,list.map(p=>p.id).join(",")].join("|");if(soft&&key===listKey)return;listKey=key;
-  const st=body.scrollTop;
-  body.innerHTML=fpanelHTML()+`<div class="reshead"><b>${list.length} ${list.length===1?"sitio":"sitios"}${S.follow?" en el mapa":""}${S.follow&&total!==list.length?`<small>${total} en total con estos filtros</small>`:""}</b><span style="display:flex;gap:8px;align-items:center"><label class="follow" title="Mostrar solo lo que se ve en el mapa"><input type="checkbox" id="follow" ${S.follow?"checked":""}>Seguir mapa</label><select id="sort" aria-label="Ordenar"><option value="auto" ${S.sort==="auto"?"selected":""}>Eventos primero</option><option value="near" ${S.sort==="near"?"selected":""}>Más cerca</option><option value="date" ${S.sort==="date"?"selected":""}>Por fecha</option><option value="az" ${S.sort==="az"?"selected":""}>A–Z</option></select></span></div>`+
+  const st=body.scrollTop;const mob=isMobile();
+  const resh=`<div class="reshead"><b>${list.length} ${list.length===1?"sitio":"sitios"}${S.hl?" en «"+esc(S.hl.label)+"»":S.follow?" en el mapa":""}${!S.hl&&S.follow&&total!==list.length?`<small>${total} en total con estos filtros</small>`:""}</b><span style="display:flex;gap:8px;align-items:center"><label class="follow" title="Mostrar solo lo que se ve en el mapa"><input type="checkbox" id="follow" ${S.follow?"checked":""}>Seguir mapa</label><select id="sort" aria-label="Ordenar"><option value="auto" ${S.sort==="auto"?"selected":""}>Eventos primero</option><option value="near" ${S.sort==="near"?"selected":""}>Más cerca</option><option value="date" ${S.sort==="date"?"selected":""}>Por fecha</option><option value="az" ${S.sort==="az"?"selected":""}>A–Z</option></select></span></div>`;
+  if(mob){$("phead").innerHTML=resh;const pk=snapPx(snap);if(pk!==lastPk){lastPk=pk;setSnap(snap,true);}}
+  renderFSheet();
+  body.innerHTML=(mob?"":fpanelHTML()+resh)+
     (list.length?`<div class="cards">${list.slice(0,S.limit).map(cardHTML).join("")}</div>${list.length>S.limit?`<button class="btn more" id="more">Mostrar ${Math.min(40,list.length-S.limit)} más</button>`:""}`
     :total?`<div class="empty"><span class="ei">${ic("map")}</span><b>Nada en esta zona del mapa</b><span>Hay ${total} sitios con estos filtros en otras zonas.</span><button class="btn primary" id="fitall">${ic("map")}Ver todos en el mapa</button></div>`
     :`<div class="empty"><span class="ei">${ic("search")}</span><b>Ningún resultado</b><span>Prueba a quitar algún filtro, o activa más capas arriba.</span></div>`);
   body.scrollTop=soft?st:0;}
-body.addEventListener("click",e=>{const t=e.target;
+function onBodyClick(e){const t=e.target;
   const fav=t.closest("[data-fav]");if(fav){e.stopPropagation();toggleFav(fav.dataset.fav);return;}
   const dm=t.closest("[data-dm]");if(dm){S.dmode=dm.dataset.dm;savePrefs();refresh();renderHead();renderList();return;}
   const mm=t.closest("[data-mm]");if(mm){S.maxmin=+mm.dataset.mm;savePrefs();refresh();renderHead();renderList();return;}
@@ -301,13 +335,16 @@ body.addEventListener("click",e=>{const t=e.target;
   const op=t.closest("[data-s]");if(op){openDetail(op.dataset.s,{fly:true});return;}
   const sv=t.closest("[data-sv]");if(sv){S.saved=sv.dataset.sv;renderBody();return;}
   const tr=t.closest("[data-trip]");if(tr){S.tripId=tr.dataset.trip;render();return;}
-  if(t.closest("#favmap")){fitPts(Object.keys(S.est.favs).map(id=>S.byId.get(id)).filter(Boolean),10);}});
-body.addEventListener("keydown",e=>{if(e.key==="Enter"){const c=e.target.closest("[data-card]");if(c&&e.target===c)openDetail(c.dataset.card,{fly:true});}});
-body.addEventListener("change",e=>{const t=e.target;
+  if(t.closest("#favmap")){fitPts(Object.keys(S.est.favs).map(id=>S.byId.get(id)).filter(Boolean),10);}}
+body.addEventListener("click",onBodyClick);$("fsheet").addEventListener("click",onBodyClick);$("phead").addEventListener("click",onBodyClick);
+$("scrim").addEventListener("click",()=>{S.fopen=null;renderFSheet();renderHead();});
+function onBodyChange(e){const t=e.target;
   if(t.id==="follow"){S.follow=t.checked;savePrefs();renderList();}if(t.id==="sort"){S.sort=t.value;savePrefs();refresh();renderList();}
   if(t.dataset.sw){S[t.dataset.sw]=t.checked;savePrefs();refresh();renderHead();renderList();}
-  if(t.id==="d-from"){S.from=t.value||null;refresh();renderHead();}if(t.id==="d-to"){S.to=t.value||null;refresh();renderHead();}});
-body.addEventListener("input",e=>{if(e.target.id==="maxmin"){S.maxmin=+e.target.value;$("maxmin-l").textContent=S.maxmin>=300?"Sin límite":"Hasta "+fmtMin(S.maxmin);clearTimeout(S._mm);S._mm=setTimeout(()=>{savePrefs();refresh();renderHead();},150);}});
+  if(t.id==="d-from"){S.from=t.value||null;refresh();renderHead();}if(t.id==="d-to"){S.to=t.value||null;refresh();renderHead();}}
+function onBodyInput(e){if(e.target.id==="maxmin"){S.maxmin=+e.target.value;$("maxmin-l").textContent=S.maxmin>=300?"Sin límite":"Hasta "+fmtMin(S.maxmin);clearTimeout(S._mm);S._mm=setTimeout(()=>{savePrefs();refresh();renderHead();},150);}}
+for(const el of [body,$("fsheet"),$("phead")]){el.addEventListener("change",onBodyChange);el.addEventListener("input",onBodyInput);}
+body.addEventListener("keydown",e=>{if(e.key==="Enter"){const c=e.target.closest("[data-card]");if(c&&e.target===c)openDetail(c.dataset.card,{fly:true});}});
 body.addEventListener("mouseover",e=>{const c=e.target.closest("[data-card]");const id=c?c.dataset.card:null;if(id!==S.hov){S.hov=id;sym.redraw();}});
 body.addEventListener("mouseleave",()=>{if(S.hov){S.hov=null;sym.redraw();}});
 function hoverCard(id){body.querySelectorAll(".card-i.hov").forEach(el=>el.classList.remove("hov"));if(id){const el=body.querySelector(`[data-card="${CSS.escape(id)}"]`);if(el)el.classList.add("hov");}}
@@ -320,9 +357,9 @@ function nearest(p,capa,n){const t=iso(today());return S.pts.filter(x=>x.capa===
 function markSeen(id){S.est.vistos[id]=Date.now();const ks=Object.keys(S.est.vistos);if(ks.length>300){ks.sort((a,b)=>S.est.vistos[a]-S.est.vistos[b]).slice(0,ks.length-300).forEach(k=>delete S.est.vistos[k]);}saveEst();}
 function openDetail(id,opts={}){const p=S.byId.get(id);if(!p)return;try{history.replaceState(null,"","#"+encodeURIComponent(id));}catch(e){}S.sel=id;markSeen(id);S.detail=id;renderDetail();sym.redraw();renderRail();body.querySelectorAll(".card-i.sel").forEach(e=>e.classList.remove("sel"));body.querySelectorAll(`[data-card="${CSS.escape(id)}"]`).forEach(e=>e.classList.add("sel"));
   if(p.capa==="ruta"){const st=drawRoute((p.paradas||[]).map(s=>({...s,_c:stopColor(s.tipo)})),css("--ru"));if(st)fitPts(st,11);}
-  else{if(!S.focus)routeLayer.clearLayers();if(opts.fly)centerOn(p.lat,p.lng);else if(!map.getBounds().pad(-.1).contains([p.lat,p.lng]))centerOn(p.lat,p.lng,Z());}
-  if(isMobile()&&snap<1)setSnap(1);}
-function closeDetail(){try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}S.detail=null;S.sel=null;$("card").hidden=true;if(!S.focus)routeLayer.clearLayers();sym.redraw();body.querySelectorAll(".card-i.sel").forEach(e=>e.classList.remove("sel"));}
+  else{if(!S.focus)routeLayer.clearLayers();pulse();if(opts.fly)centerOn(p.lat,p.lng);else if(!map.getBounds().pad(-.1).contains([p.lat,p.lng]))centerOn(p.lat,p.lng,Z());}
+  if(isMobile()){$("app").classList.add("detail");setCSnap(0);$("card").scrollTop=0;lvlHint();}}
+function closeDetail(){try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}S.detail=null;S.sel=null;$("card").hidden=true;$("app").classList.remove("detail");if(isMobile()){setSnap(snap,true);lvlHint();}if(!S.focus)routeLayer.clearLayers();sym.redraw();body.querySelectorAll(".card-i.sel").forEach(e=>e.classList.remove("sel"));}
 function drawRoute(pts,col){routeLayer.clearLayers();const st=pts.filter(s=>typeof s.lat==="number");if(st.length<2)return null;
   L.polyline(st.map(s=>[s.lat,s.lng]),{renderer:baseR,color:col,weight:3.5,opacity:.9,dashArray:"8 7",interactive:false}).addTo(routeLayer);
   st.forEach((s,i)=>L.marker([s.lat,s.lng],{zIndexOffset:2000,keyboard:false,icon:L.divIcon({className:"",html:`<span class="stopnum" style="--c:${s._c||col}">${i+1}</span>`,iconSize:[22,22],iconAnchor:[11,11]})}).addTo(routeLayer).bindTooltip((s.dia?"Día "+s.dia+" · ":"")+s.nombre,{direction:"top",className:"tt",offset:[0,-10]}));
@@ -341,7 +378,7 @@ function renderDetail(keep){const p=S.byId.get(S.detail);if(!p){S.detail=null;$(
   const itin=p.capa==="ruta"?(()=>{const s=p.paradas||[];const days=[...new Set(s.map(x=>x.dia||1))].sort((a,b)=>a-b);const fu=(p.fuentes||[]).filter(f=>f&&f.url);
     return `<div class="h3">Itinerario${p.km_total?" · unos "+p.km_total+" km":""}</div><div class="itin">${days.map(d=>`<span class="dl">Día ${d}</span>${s.map((x,i)=>[x,i]).filter(([x])=>(x.dia||1)===d).map(([x,i])=>`<button class="rstop" data-stop="${i}"><span class="stopnum" style="--c:${stopColor(x.tipo)}">${i+1}</span><span><b>${esc(x.nombre)}</b>${x.tipo==="pernocta"?' <span class="b ok">Dormir</span>':""}${x.nota?`<br><span class="rn">${esc(x.nota)}</span>`:""}</span></button>`).join("")}`).join("")}</div>
     ${fu.length?`<div class="h3">Contado por autocaravanistas</div><div class="row">${fu.map(f=>`<a class="btn" href="${esc(f.url)}" target="_blank" rel="noopener">${ic("external-link")}${esc(f.nombre||"Fuente")}</a>`).join("")}</div>`:""}`;})():"";
-  card.innerHTML=`<button class="x" id="back" aria-label="Cerrar">${ic("x")}</button><div class="dv">
+  card.innerHTML=`<div class="chandle" aria-hidden="true"></div><button class="x" id="back" aria-label="Cerrar">${ic("x")}</button><div class="dv">
     ${heroHTML(p)}<span class="kicker" style="--c:${colorVar(p)}">${esc((p.tipos||[]).slice(0,3).join(" · ")||layerOf(p).l)}</span><h2>${esc(p.nombre)}</h2>
     <div class="where"><span>${ic("map-pin")}${esc(p.municipio)}${p.zona&&p.zona!==p.municipio?", "+esc(p.zona):""}${p.aprox?' <span class="aprox" title="Coordenadas del centro del pueblo">· ubicación aproximada</span>':""}</span><span>${ic("clock")}${fmtMin(p._min)} · ~${roadKm(p)} km</span></div>
     <div class="acts"><button class="act ${isFav(id)?"on":""}" data-fav="${esc(id)}" aria-pressed="${isFav(id)}">${ic("heart")}${isFav(id)?"Guardado":"Guardar"}</button>
@@ -420,7 +457,7 @@ function adoptEst(d){if(!d)return;const o=x=>x&&typeof x==="object"&&!Array.isAr
 try{const l=JSON.parse(localStorage.getItem("dv-est")||"null");if(l)adoptEst(l);}catch(e){}
 
 /* ===== arranque ===== */
-restorePrefs();setPW(S.pw);$("app").classList.toggle("collapsed",S.collapsed);if(isMobile())setSnap(1);
+restorePrefs();setPW(S.pw);$("app").classList.toggle("collapsed",S.collapsed);
 for(const n of new Set([...TYPE_ICON.map(x=>x[1]),...LAYERS.map(l=>l.i),"caravan","tent","square-parking","route","heart"]))iconImg(n);
 applyStyle();render();
 (async()=>{
@@ -432,7 +469,7 @@ applyStyle();render();
     const seen=new Set();
     S.pts=(raw.items||raw).filter(p=>p&&p.id&&!seen.has(p.id)&&seen.add(p.id)&&typeof p.lat==="number"&&typeof p.lng==="number"&&LAYERS.some(l=>l.k===p.capa))
       .map(p=>{const q={...p,tipos:Array.isArray(p.tipos)?p.tipos:[]};q._min=driveMin(q);q._h=norm([q.nombre,q.municipio,q.zona,q.tipos.join(" "),q.descripcion,(q.paradas||[]).map(s=>s.nombre).join(" ")].join(" "));return q;});
-    S.byId=new Map(S.pts.map(p=>[p.id,p]));S.updated=raw.actualizado||null;listKey="";refresh();renderRail();
+    S.byId=new Map(S.pts.map(p=>[p.id,p]));S.updated=raw.actualizado||null;listKey="";refresh();renderRail();if(isMobile())setSnap(1,true);
     const hid=decodeURIComponent((location.hash||"").slice(1));if(hid&&S.byId.has(hid))openDetail(hid,{fly:true});
   }catch(e){body.innerHTML=`<div class="empty"><b>No se pudieron cargar los sitios</b><span>Comprueba la conexión y recarga la página.</span></div>`;}
 })();

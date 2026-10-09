@@ -1042,5 +1042,338 @@
   "agenda_url": null,
   "notas": "Juego de pistas 'Balaguer en família', llave de murallas",
   "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Maresme",
+  "nombre": "Visit Mataró",
+  "url": "https://visitmataro.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://visitmataro.cat/ca/agenda-2",
+  "notas": "Museos, Torre Llauder, fortins, agenda municipal",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Maresme",
+  "nombre": "Calella Barcelona",
+  "url": "https://www.calellabarcelona.com/",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://www.calellabarcelona.com/planifica/que-fer/agenda-mensual-d-activitats-culturals/",
+  "notas": "Agenda mensual cultural, filtro 'En família'",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Maresme",
+  "nombre": "Turisme Canet de Mar",
+  "url": "https://www.canetdemar.cat/turisme",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://www.canetdemar.cat/agenda.php",
+  "notas": "Patrimoni modernista, Castell de Santa Florentina, Casa museu Domènech",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Maresme",
+  "nombre": "Caldes d'Estrac turisme",
+  "url": "https://www.caldetes.cat/turisme",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://caldetes.cat/agenda.php",
+  "notas": "Fundació Palau, balneario, playas",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Maresme",
+  "nombre": "Museu del Càntir d'Argentona",
+  "url": "https://www.museucantir.org/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Festa del Càntir 4 agosto; feria de cerámica Argillà",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Maresme",
+  "nombre": "Gaudeix Cabrera (Ajuntament de Cabrera de Mar)",
+  "url": "https://gaudeixcabrera.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Termes de Ca l'Arnau, Burriac; no se pudo leer (permiso)",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Llobregat",
+  "nombre": "Turisme Baix Llobregat – Àrees de pícnic",
+  "url": "https://www.turismebaixllobregat.com/ca/arees-de-picnic-i-barbacoa",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "15 áreas de picnic/barbacoa con ficha propia",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Osona",
+  "nombre": "Osona Turisme",
+  "url": "https://osonaturisme.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://www.agendaosona.cat/",
+  "notas": "Secciones què fer/natura/cultura; museos y monumentos; propuestas camper",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Osona",
+  "nombre": "Osona Territori Camper",
+  "url": "https://osonaturisme.cat/territori-camper",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "13 áreas municipales con coordenadas, plazas, servicios y precios; revisar cada temporada (Masies de Voltregà fuera de servicio en 2026)",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Osona",
+  "nombre": "Activitum – actividades familiares Osona",
+  "url": "https://activitum.cat/cerca-osona-familiar",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Buscador de actividades para familias enlazado desde Osona Turisme",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Vallès Occidental",
+  "nombre": "Visit Vallès (Consell Comarcal del Vallès Occidental)",
+  "url": "https://visitvalles.com/ca/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://visitvalles.com/esdeveniments/lista/",
+  "notas": "Web oficial actual (turismevallesoccidental.cat no accesible); museos (30), áreas de picnic, rutas culturales, Camí del riu Ripoll",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Vallès Occidental",
+  "nombre": "Visita Terrassa",
+  "url": "https://visitaterrassa.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://visitaterrassa.cat/agenda-events/",
+  "notas": "Masia Freixa, Seu d'Ègara, MNACTEC, Vallparadís",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Vallès Occidental",
+  "nombre": "Visit Sant Cugat",
+  "url": "https://visit.santcugat.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://visit.santcugat.cat/novetats/",
+  "notas": "Sección En família, Famílies Exploradores, parques y miradores",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Vallès Occidental",
+  "nombre": "Parc Natural de Sant Llorenç del Munt i l'Obac (Diba)",
+  "url": "https://parcs.diba.cat/ca/web/santllorenc",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://parcs.diba.cat/web/agenda/sant-llorenc-obac",
+  "notas": "Agenda de paseos guiados; itinerarios en goolTracking/Wikiloc",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Província de Barcelona",
+  "nombre": "Barcelona és molt més (Diputació de Barcelona)",
+  "url": "https://www.barcelonaesmoltmes.cat/ca/inici",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://www.barcelonaesmoltmes.cat/ca/agenda",
+  "notas": "Secciones En família, Natura, Museus i monuments; páginas por comarca (/ca/maresme, /ca/valles-occidental, /ca/osona, /ca/baix-llobregat); listados paginados, difícil de recorrer con fetch",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Penedès",
+  "nombre": "Diari de Tarragona – red de áreas AC del Baix Penedès (abr. 2026)",
+  "url": "https://www.diaridetarragona.com/costa/256342/baix-penedes-impulsa-red-autocaravanas-cuatro-municipios.html",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Obras adjudicadas (54.000 €) para 4 áreas de 5 plazas, máx. 3 días: Albinyana (zona deportiva), Cunit (pavelló/instituto), La Bisbal (Av. Baix Penedès, junto a la escuela; YA OPERATIVA, 2 plazas grandes) y Sant Jaume dels Domenys (polígono, c/ Mar). El Vendrell y Calafell renunciaron. Albinyana y Sant Jaume sin confirmar en 2026-10.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Penedès",
+  "nombre": "OpenVan – destrozos en el área de Cunit (ago. 2026)",
+  "url": "https://openvan.camp/es/news/incident/destrozan-la-zona-para-autocaravanas-de-cunit",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Área de Cunit junto al pabellón, dañada días antes de abrir (1 ago 2026). Pendiente confirmar apertura y ubicación exacta en cunit.cat.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Penedès",
+  "nombre": "Ajuntament de Cunit",
+  "url": "https://www.cunit.cat/",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://www.cunit.cat/",
+  "notas": "Sin información del área AC en la portada (oct. 2026). bisbalpenedes.com y albinyana.cat bloquean el fetch automático.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Garraf",
+  "nombre": "Pitchup – campings del Garraf (Sitges, Vilanova)",
+  "url": "https://www.pitchup.com/en-gb/tourers/spain/cataluna/barcelona/sitges/",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas, fechas de apertura y tamaño de parcelas para AC (HolaCamp Sitges Garrofer, HolaCamp Sitges Relax, Vilanova Park). Las webs oficiales de los campings bloquean el fetch.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Garraf",
+  "nombre": "Visit Sitges – Sitges con niños",
+  "url": "https://www.visitsitges.com/sitges-con-ninos/",
+  "tipo": "planes-ninos",
+  "agenda_url": "https://www.visitsitges.com/agenda-de-eventos-en-sitges/",
+  "notas": "Sobre todo agenda y talleres; no es una lista de sitios. No existe área AC municipal en Sitges ni Vilanova; Stop&Go Cubelles no aparece en park4night (probablemente cerrado).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Anoia",
+  "nombre": "Anoia Turisme – Guia dormir",
+  "url": "https://anoiaturisme.cat/guia-dormir/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://anoiaturisme.cat/",
+  "notas": "Único camping listado: Vilademàger (La Llacuna). Sin áreas AC en la guía. La portada bloquea el fetch; las fichas /guia/ sí se leen. Áreas AC conocidas (OSM): Igualada (Guixeres), Calaf, Capellades.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Alt Camp",
+  "nombre": "Alt Camp (Consell Comarcal) – turismo",
+  "url": "https://www.altcamp.cat/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": null,
+  "notas": "Bloquea el fetch automático. Áreas AC verificadas vía park4night: Nulles (gratis, 4 plazas), Alcover (servicios 5 €). Valls no tiene área oficial (solo 4 plazas de parking en Camí del Bosc); Santes Creus solo parking municipal sin servicios.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Selva",
+  "nombre": "Ajuntament de Maçanet de la Selva",
+  "url": "https://www.massanetdelaselva.cat/",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Área municipal Av. Torderola 12 confirmada por 317 opiniones (gratis, 16 plazas, 72 h). Verificar normas/ordenanza en la web municipal.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Todas",
+  "nombre": "park4night – API de lugares cercanos",
+  "url": "https://park4night.com/api/places/around?lat=41.98&lng=2.82&radius=5",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Truco: la API responde (JSON en base64) a WebFetch con lat/lng/radius; devuelve ~20 lugares más cercanos con tipo (ACC_G gratis, ACC_P pago, ACC_PR privada, C camping). Las fichas /es/place/ID dan precio, plazas, apertura y opiniones recientes.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Todas",
+  "nombre": "Pitchup.com – fichas de camping",
+  "url": "https://www.pitchup.com/campsites/spain/cataluna/",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Fichas legibles con coordenadas, fechas de apertura del año, medidas de parcela y precio desde; buena alternativa cuando la web del camping bloquea.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Todas",
+  "nombre": "stellplatz.info – listados por ciudad",
+  "url": "https://stellplatz.info/en/rv-campsite/girona",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Solo funciona para ciudades grandes (girona, blanes, sitges); da coordenadas aproximadas en el nombre del mapa.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Terres de l'Ebre",
+  "nombre": "Terres de l'Ebre Travel (campings)",
+  "url": "https://terresdelebre.travel/en/where-to-sleep/campsites",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://terresdelebre.travel/en/agenda",
+  "notas": "Lista los 14 campings registrados; fichas sin coordenadas ni temporada. Límite de peticiones: ir despacio.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Terres de l'Ebre",
+  "nombre": "Registre de Turisme de Catalunya (dades obertes)",
+  "url": "https://analisi.transparenciacatalunya.cat/resource/t2h3-cgys.json?$where=tipus_establiment%3D%27C%C3%A0mpings%27%20AND%20comarca%20in(%27Baix%20Ebre%27,%27Montsi%C3%A0%27,%27Ribera%20d%27%27Ebre%27,%27Terra%20Alta%27)&$limit=100",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "API Socrata: campings y áreas registradas por comarca (nombre, dirección, categoría, plazas). Sin coordenadas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Ribera d'Ebre",
+  "nombre": "Turisme Ribera d'Ebre",
+  "url": "https://www.turismeriberaebre.org/",
+  "tipo": "turismo-comarcal",
+  "agenda_url": "https://www.turismeriberaebre.org/agenda/",
+  "notas": "Solo 2 campings; no tiene sección de áreas de autocaravanas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Ebre",
+  "nombre": "Tortosa Turisme – àrea de caravàning",
+  "url": "https://www.tortosaturisme.cat/allotjament-a-tortosa/area-de-caravaning/",
+  "tipo": "areas-ac",
+  "agenda_url": "https://www.tortosaturisme.cat/agenda/",
+  "notas": "Ficha oficial del área del Passeig de Ribera (32 vehículos, agua).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Ebre",
+  "nombre": "Ajuntament de Camarles – ordenanza del área AC",
+  "url": "https://camarles.cat/wp-content/uploads/2022/07/AUTOCARAVANAS.pdf",
+  "tipo": "areas-ac",
+  "agenda_url": null,
+  "notas": "Ordenanza con ubicación (UTM), 26 plazas, 6 €/día, máx. 2 días.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Ebre",
+  "nombre": "L'Ampolla Turisme",
+  "url": "https://ampollaturisme.com/",
+  "tipo": "turismo-municipal",
+  "agenda_url": "https://ampollaturisme.com/activitats-ampolla/",
+  "notas": "Bassa de les Olles, playas, birdwatching. No menciona área de autocaravanas.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Baix Ebre",
+  "nombre": "Ebre Digital (noticias)",
+  "url": "https://ebredigital.cat/",
+  "tipo": "agenda",
+  "agenda_url": null,
+  "notas": "Noticias locales: aperturas de áreas (El Perelló 2025, etc.).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Ribera d'Ebre",
+  "nombre": "Ajuntament de Flix (buscador)",
+  "url": "https://www.flix.cat/?s=autocaravanes",
+  "tipo": "turismo-municipal",
+  "agenda_url": null,
+  "notas": "Noticias del área de autocaravanes de la C-12 y del punto de información.",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Montsià",
+  "nombre": "MónNatura Delta de l'Ebre",
+  "url": "https://www.monnaturadelta.com/ca/visites-i-activitats/",
+  "tipo": "planes-ninos",
+  "agenda_url": "https://www.monnaturadelta.com/ca/visites-i-activitats/",
+  "notas": "Horarios y actividades familiares (Visita dels menuts).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Terres de l'Ebre",
+  "nombre": "Surt de casa – Ebre (família)",
+  "url": "https://surtdecasa.cat/ebre/familia/sis-sortides-fer-amb-xiquets",
+  "tipo": "planes-ninos",
+  "agenda_url": "https://surtdecasa.cat/ebre/agenda",
+  "notas": "Planes con niños y agenda de las Terres de l'Ebre (llagut de Benifallet, etc.).",
+  "ultima_revision": "2026-10-09"
+ },
+ {
+  "comarca": "Terres de l'Ebre",
+  "nombre": "Escapada amb nens – Terres de l'Ebre",
+  "url": "https://www.escapadaambnens.com/activitat/116/la-bassa-de-les-olles/",
+  "tipo": "planes-ninos",
+  "agenda_url": null,
+  "notas": "Fichas con coordenadas GPS (enlace 'Generar ruta'). Útil para afinar coordenadas.",
+  "ultima_revision": "2026-10-09"
  }
 ]
