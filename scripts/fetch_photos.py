@@ -37,6 +37,8 @@ META_RE = [
 BAD = re.compile(r"logo|favicon|icon|sprite|placeholder|default|blank|avatar|cookie|banner|pixel|loading|spacer|\.svg|\.gif", re.I)
 BAD_TITLE = re.compile(r"map|mapa|plano|logo|escut|escudo|bandera|flag|coat|senyal|señal|cartell|plànol|diagram|esquema", re.I)
 TODAY = time.strftime("%Y-%m-%d")
+STATS = Counter()
+ERRS = []
 
 
 def safe_url(u):
@@ -110,9 +112,13 @@ def wikipedia_image(p):
         return None
     for lang in ("ca", "es", "fr"):
         try:
+            STATS["wiki_req"] += 1
             r = wiki_api(lang, {"action": "query", "generator": "search", "gsrsearch": q, "gsrlimit": 3,
                                 "prop": "pageimages|coordinates", "piprop": "original|thumbnail", "pithumbsize": 1000})
-        except Exception:  # noqa: BLE001
+        except Exception as e:  # noqa: BLE001
+            STATS["wiki_err"] += 1
+            if len(ERRS) < 5:
+                ERRS.append(f"wiki {lang} {q!r}: {e}")
             continue
         for pg in (r.get("query", {}).get("pages") or []):
             co = (pg.get("coordinates") or [{}])[0]
@@ -122,6 +128,7 @@ def wikipedia_image(p):
                 continue
             img = (pg.get("original") or pg.get("thumbnail") or {}).get("source")
             if img and not BAD_TITLE.search(img.rsplit("/", 1)[-1]) and re.search(r"\.(jpe?g|png|webp)$", img, re.I):
+                STATS["wiki_hit"] += 1
                 return {"img": img, "src": f"https://{lang}.wikipedia.org/wiki/{quote(pg['title'].replace(' ', '_'))}", "site": "Wikipedia", "fecha": TODAY}
         time.sleep(0.2)
     return None
@@ -176,7 +183,7 @@ def work(args):
 def _work(args):
     p, generic = args
     url = p.get("url")
-    cands, site = ([], "") if not url or "openstreetmap.org" in url else page_candidates(url)
+    cands, site = ([], "") if not url or "openstreetmap.org" in url or generic is None else page_candidates(url)
     if cands is None:
         cands, site = [], ""
     for u in cands:
@@ -236,11 +243,15 @@ def main():
             if res.get("img"):
                 ok += 1
             photos[pid] = res
-    # una misma imagen en 3+ sitios no representa a ninguno
+    # una misma imagen en 3+ sitios no representa a ninguno: segunda pasada solo con Wikipedia/Commons
     uses = Counter(v["img"] for v in photos.values() if v.get("img"))
-    for pid, v in photos.items():
-        if v.get("img") and uses[v["img"]] >= 3:
-            photos[pid] = {"error": "generica", "fecha": TODAY}
+    again = [p for p in items if photos.get(p["id"], {}).get("img") and uses[photos[p["id"]]["img"]] >= 3]
+    print(f"Genéricas: {len(again)}; probando Wikipedia/Commons…", flush=True)
+    with ThreadPoolExecutor(6) as ex:
+        for pid, res in ex.map(work, [(p, None) for p in again]):
+            photos[pid] = res if res.get("img") else {"error": "generica", "fecha": TODAY}
+            ok += 1 if res.get("img") else 0
+    print("Wikipedia:", dict(STATS), *ERRS, sep="\n")
     with open(PHOTOS, "w", encoding="utf-8") as f:
         json.dump(dict(sorted(photos.items())), f, ensure_ascii=False, indent=0)
         f.write("\n")
