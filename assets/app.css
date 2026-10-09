@@ -266,10 +266,14 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
 
 /* ===== móvil ===== */
 @media (max-width:820px){
+  /* Margen inferior seguro: en el navegador se limita (la barra de Safari ya deja hueco); en la app instalada
+     basta con la mitad del indicador de inicio. --tabh es la altura total de la barra de pestañas. */
+  :root{--safeb:min(env(safe-area-inset-bottom,0px),16px);--tabh:calc(44px + var(--safeb))}
+  @media (display-mode:standalone){:root{--safeb:max(0px,calc(env(safe-area-inset-bottom,0px) - 16px));--tabh:calc(44px + var(--safeb))}}
   .app,.app.collapsed{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
   .mapwrap{grid-row:1;grid-column:1}
   /* barra de pestañas */
-  .rail{grid-row:2;grid-column:1;flex-direction:row;justify-content:space-around;padding:2px 6px env(safe-area-inset-bottom,0px);border-right:0;border-top:0;box-shadow:0 -1px 0 var(--line);z-index:560;height:calc(44px + env(safe-area-inset-bottom,0px));box-sizing:border-box;position:relative;gap:0}
+  .rail{grid-row:2;grid-column:1;flex-direction:row;justify-content:space-around;padding:2px 6px var(--safeb);border-right:0;border-top:0;box-shadow:0 -1px 0 var(--line);z-index:560;height:var(--tabh);box-sizing:border-box;position:relative;gap:0}
   .rail .logo,.rail .sp,.rail .tog{display:none}
   .rail button{width:auto;flex:1;padding:2px 0 1px;border-radius:12px;min-height:40px;justify-content:center;gap:0;font-size:9.5px;line-height:1.1}
   .rail button svg.i{width:21px;height:21px}
@@ -294,7 +298,7 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   .mrow .chip[aria-pressed="true"]{background:var(--c)}
   .mrow .sep{width:1px;flex:none;background:var(--line2);margin:8px 2px}
   /* hoja inferior (lista) */
-  .panel{position:absolute;left:0;right:0;bottom:calc(24px + env(safe-area-inset-bottom,0px));height:var(--sh,50%);border-right:0;border-radius:22px 22px 0 0;box-shadow:0 -4px 10px rgba(0,0,0,.06),0 -14px 40px rgba(0,0,0,.16);transition:height .28s cubic-bezier(.2,.8,.2,1);z-index:510;touch-action:none;overflow:hidden}
+  .panel{position:absolute;left:0;right:0;bottom:calc(var(--tabh) - 20px);height:var(--sh,50%);border-right:0;border-radius:22px 22px 0 0;box-shadow:0 -4px 10px rgba(0,0,0,.06),0 -14px 40px rgba(0,0,0,.16);transition:height .28s cubic-bezier(.2,.8,.2,1);z-index:510;touch-action:none;overflow:hidden}
   .panel.dragging{transition:none}
   .panel.locked .p-body{overflow:hidden}
   .panel:not(.locked) .p-body{touch-action:pan-y}
@@ -314,7 +318,7 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   .tile{width:62px;height:62px}
   .heartbtn{width:44px;height:44px}
   /* ficha como hoja */
-  .card{top:auto;right:0;left:0;bottom:0;width:auto;max-width:none;height:var(--ch,58vh);max-height:none;border-radius:22px 22px 0 0;padding:0 16px calc(20px + env(safe-area-inset-bottom,0px));transition:height .28s cubic-bezier(.2,.8,.2,1);z-index:620;box-shadow:0 -4px 10px rgba(0,0,0,.08),0 -16px 48px rgba(0,0,0,.25);touch-action:none}
+  .card{top:auto;right:0;left:0;bottom:0;width:auto;max-width:none;height:var(--ch,58vh);max-height:none;border-radius:22px 22px 0 0;padding:0 16px calc(16px + var(--safeb));transition:height .28s cubic-bezier(.2,.8,.2,1);z-index:620;box-shadow:0 -4px 10px rgba(0,0,0,.08),0 -16px 48px rgba(0,0,0,.25);touch-action:none}
   .card.dragging{transition:none}
   .card.locked{overflow:hidden}
   .card:not(.locked){touch-action:pan-y}
@@ -329,7 +333,7 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   .act{padding:11px 4px 9px;border-radius:14px}
   .app.detail .panel,.app.detail .mtop,.app.detail .mhint,.app.detail .focusbar{display:none}
   /* controles del mapa: al alcance del pulgar */
-  .mapctl{top:auto;bottom:calc(var(--peek,120px) + 44px + env(safe-area-inset-bottom,0px) + 8px);right:10px}
+  .mapctl{top:auto;bottom:calc(var(--peek,120px) + var(--tabh) + 8px);right:10px}
   .app.detail .mapctl{bottom:calc(var(--ch,58vh) + 12px)}
   .mapctl .zoomgrp{display:none}
   .app.sheetfull .mapctl,.app.sheetfull .mhint,.app.sheetfull .leaflet-control-attribution{opacity:0;pointer-events:none}
@@ -337,12 +341,12 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   .ctlgrp button{width:44px;height:44px}
   .stylepop{width:232px}
   .legend{display:none}
-  .mhint{left:10px;bottom:calc(var(--peek,120px) + 44px + env(safe-area-inset-bottom,0px) + 8px)}
+  .mhint{left:10px;bottom:calc(var(--peek,120px) + var(--tabh) + 8px)}
   .focusbar{top:calc(var(--mtoph,108px) + 6px)}
   .symtip{display:none}
-  .leaflet-control-attribution{position:absolute;right:0;bottom:calc(var(--peek,120px) + 44px + env(safe-area-inset-bottom,0px));transition:bottom .28s cubic-bezier(.2,.8,.2,1);border-radius:8px 0 0 0;white-space:nowrap;font-size:10px!important;padding:1px 5px!important}
+  .leaflet-control-attribution{position:absolute;right:0;bottom:calc(var(--peek,120px) + var(--tabh));transition:bottom .28s cubic-bezier(.2,.8,.2,1);border-radius:8px 0 0 0;white-space:nowrap;font-size:10px!important;padding:1px 5px!important}
   .app.detail .leaflet-control-attribution{bottom:var(--ch,58vh)}
-  .toast{bottom:calc(56px + env(safe-area-inset-bottom,0px))}
+  .toast{bottom:calc(var(--tabh) + 12px)}
   /* filtros como hoja modal */
   .scrim{position:fixed;inset:0;z-index:2690;background:rgba(10,20,25,.42)}
   .fsheet{position:fixed;z-index:2700;left:0;right:0;bottom:0;max-height:86vh;max-height:86dvh;display:flex;flex-direction:column;background:var(--panel);border-radius:22px 22px 0 0;box-shadow:0 -16px 48px rgba(0,0,0,.25);animation:fs-up .26s cubic-bezier(.2,.8,.2,1)}
@@ -355,7 +359,7 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   .fsheet .fpanel{background:transparent;padding:0;gap:18px}
   .fsheet .fpanel .foot{display:none}
   .fsheet .opt{padding:9px 13px 8px;font-size:14px}
-  .fsheet>.foot{flex:none;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--panel)}
+  .fsheet>.foot{flex:none;border-top:1px solid var(--line);padding:10px 16px calc(10px + var(--safeb));background:var(--panel)}
   .fsheet>.foot .btn{min-height:44px;padding-inline:22px}
 }
 @media (min-width:821px){.handle,.mtop,.scrim,.fsheet,.card .chandle{display:none!important}}
