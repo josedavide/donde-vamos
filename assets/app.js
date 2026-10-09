@@ -80,11 +80,18 @@ function sorter(mode){
 function filterCount(){return S.types.size+S.dur.size+(S.ninos?1:0)+(S.ac?1:0)+(S.gratis?1:0)+(S.hideSeen?1:0)+(S.top?1:0)+(S.dmode!=="todo"?1:0)+(S.maxmin<300?1:0);}
 
 /* ===== mapa base ===== */
-const map=L.map("map",{zoomControl:false,attributionControl:true,minZoom:5,maxZoom:18,maxBounds:L.latLngBounds([[34,-12],[50,14]]),zoomSnap:0,zoomDelta:.5,scrollWheelZoom:false,zoomAnimation:true}).setView([42.0,1.4],7);
+const map=L.map("map",{zoomControl:false,attributionControl:true,minZoom:5,maxZoom:18,maxBounds:L.latLngBounds([[34,-12],[50,14]]),zoomSnap:.25,zoomDelta:.5,scrollWheelZoom:false,zoomAnimation:true,zoomAnimationThreshold:4}).setView([42.0,1.4],7);
 map.attributionControl.setPrefix(false);
-/* Zoom con rueda continuo y proporcional al gesto (Magic Mouse y trackpad envían muchos eventos pequeños con inercia). */
-(function(){let acc=0,pt=null,raf=0;map.getContainer().addEventListener("wheel",e=>{e.preventDefault();let d=e.deltaY;if(e.deltaMode===1)d*=16;else if(e.deltaMode===2)d*=innerHeight;if(e.ctrlKey)d*=5;else if(Math.abs(d)>=90)d=Math.sign(d)*260;/* rueda clásica: medio nivel por muesca */acc+=d;pt=map.mouseEventToContainerPoint(e);
-  if(!raf)raf=requestAnimationFrame(()=>{raf=0;const dz=Math.max(-.4,Math.min(.4,-acc/520));acc=0;if(!dz)return;const z=Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+dz));map.setZoomAround(pt,z,{animate:false});});},{passive:false});})();
+/* Zoom con rueda: se acumula el gesto (Magic Mouse y trackpad envían muchos eventos pequeños con inercia)
+   y se aplica UN zoom animado por gesto, proporcional a su tamaño. Mientras anima, se sigue acumulando. */
+(function(){let acc=0,pt=null,t=0;const PX=380;
+  let decay=0;
+  function go(){t=0;if(map._animatingZoom){t=setTimeout(go,60);return;}let dz=Math.max(-1.5,Math.min(1.5,-acc/PX));dz=Math.round(dz*4)/4;
+    if(!dz){clearTimeout(decay);decay=setTimeout(()=>acc=0,400);return;}/* gesto aún pequeño: se guarda por si sigue */
+    acc=0;const z=Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+dz));if(z===map.getZoom())return;map.setZoomAround(pt,z,{animate:true});}
+  map.getContainer().addEventListener("wheel",e=>{e.preventDefault();let d=e.deltaY;if(e.deltaMode===1)d*=16;else if(e.deltaMode===2)d*=innerHeight;
+    if(e.ctrlKey)d*=5;else if(Math.abs(d)>=90)d=Math.sign(d)*PX/2;/* rueda clásica: medio nivel por muesca */
+    acc+=d;pt=map.mouseEventToContainerPoint(e);clearTimeout(t);clearTimeout(decay);t=setTimeout(go,map._animatingZoom?60:70);},{passive:false});})();
 const baseR=L.canvas({padding:.5});
 const BASES={
   mapa:{l:"Mapa",th:"https://tile.openstreetmap.org/7/64/47.png",mk:()=>[L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'})]},
@@ -308,7 +315,10 @@ function fpanelHTML(){
     <div class="grp"><label class="sw">Solo destacados<input type="checkbox" data-sw="top" ${S.top?"checked":""}></label><label class="sw">Buenos para ir con niños<input type="checkbox" data-sw="ninos" ${S.ninos?"checked":""}></label><label class="sw">Se llega con 7 m<input type="checkbox" data-sw="ac" ${S.ac?"checked":""}></label><label class="sw">Solo gratis<input type="checkbox" data-sw="gratis" ${S.gratis?"checked":""}></label><label class="sw">Ocultar los que ya he mirado<input type="checkbox" data-sw="hideSeen" ${S.hideSeen?"checked":""}></label></div>
     <div class="foot"><button class="linkbtn" data-fclear="more">Borrar</button><button class="btn primary" data-fclose="1">Listo</button></div></div>`;
   return "";}
-function renderFSheet(){const fs=$("fsheet"),sc=$("scrim");const on=isMobile()&&!!S.fopen&&S.section==="explore";fs.hidden=sc.hidden=!on;fs.innerHTML=on?fpanelHTML():"";}
+function renderFSheet(){const fs=$("fsheet"),sc=$("scrim");const on=isMobile()&&!!S.fopen&&S.section==="explore";if(!on){fs.hidden=sc.hidden=true;fs.innerHTML="";return;}
+  const title=S.fopen==="date"?"Fechas":S.fopen==="dist"?"Distancia desde casa":"Filtros";const was=!fs.hidden&&fs.dataset.open===S.fopen;const st=was?fs.querySelector(".fs-b")?.scrollTop||0:0;
+  fs.innerHTML=`<div class="fs-h"><span class="fs-handle"></span><b>${title}</b><button class="ibtn" data-fclose="1" aria-label="Cerrar">${ic("x")}</button></div><div class="fs-b">${fpanelHTML()}</div>`;
+  const foot=fs.querySelector(".foot");if(foot)fs.appendChild(foot);fs.dataset.open=S.fopen;fs.hidden=sc.hidden=false;if(was)fs.querySelector(".fs-b").scrollTop=st;}
 function tileHTML(p){if(p.capa==="evento"&&p.fecha_inicio){const d=new Date(p.fecha_inicio+"T12:00:00");return `<span class="tile" style="--c:${colorVar(p)}"><span class="dt"><b>${d.getDate()}</b><span>${MES[d.getMonth()]}</span></span></span>`;}
   const ph=S.photos&&S.photos[p.id];if(ph&&ph.img)return `<span class="tile ph" style="--c:${colorVar(p)};background-image:url(&quot;${esc(ph.img)}&quot;)"><i>${ic(iconOf(p))}</i></span>`;
   return `<span class="tile" style="--c:${colorVar(p)}">${ic(iconOf(p))}</span>`;}
@@ -337,7 +347,7 @@ function onBodyClick(e){const t=e.target;
   const ty=t.closest("[data-ty]");if(ty){const k=ty.dataset.ty;S.types.has(k)?S.types.delete(k):S.types.add(k);savePrefs();refresh();renderHead();renderList();return;}
   const du=t.closest("[data-du]");if(du){const k=du.dataset.du;S.dur.has(k)?S.dur.delete(k):S.dur.add(k);refresh();renderList();return;}
   const fc=t.closest("[data-fclear]");if(fc){if(fc.dataset.fclear==="date"){S.dmode="todo";S.from=S.to=null;}else Object.assign(S,{types:new Set(),dur:new Set(),ninos:false,ac:false,gratis:false,hideSeen:false,top:false});savePrefs();refresh();renderHead();renderList();return;}
-  if(t.closest("[data-fclose]")){S.fopen=null;renderList();return;}
+  if(t.closest("[data-fclose]")){S.fopen=null;renderHead();renderList();return;}
   if(t.closest("#more")){S.limit+=40;renderList(true);return;}
   if(t.closest("#fitall")){fitPts(S.filtered,10);return;}
   const card=t.closest("[data-card]");if(card){openDetail(card.dataset.card,{fly:true});return;}
