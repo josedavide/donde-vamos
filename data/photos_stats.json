@@ -1,0 +1,16 @@
+{
+ "fecha": "2026-10-09",
+ "consultados": 373,
+ "genericas": 367,
+ "wiki": {
+  "wiki_req": 903,
+  "wiki_err": 754
+ },
+ "errores": [
+  "wiki ca 'Étang de Canet-Saint-Nazaire': HTTP Error 429: Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)",
+  "wiki fr 'Étang de Lers': HTTP Error 429: Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)",
+  "wiki es 'Étang de Canet-Saint-Nazaire': HTTP Error 429: Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)",
+  "wiki fr 'Étang de Canet-Saint-Nazaire': HTTP Error 429: Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)",
+  "wiki ca 'Lac de Vinça': HTTP Error 429: Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)"
+ ]
+}

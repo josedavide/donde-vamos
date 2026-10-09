@@ -1050,7 +1050,9 @@
 "fecha": "2026-10-06"
 },
 "ev-fr-foire-saint-martin-perpignan": {
-"error": "generica",
+"img": "https://www.perpignantourisme.com/assets/uploads/sites/7/2024/02/perpignan-hotelpamsmarcnouss-1-scaled-e1711462798120-800x375.jpg",
+"src": "https://www.perpignantourisme.com/en/agenda/foire-saint-martin",
+"site": "Perpignan",
 "fecha": "2026-10-09"
 },
 "ev-fr-halloween-aquasud": {
@@ -1154,7 +1156,9 @@
 "fecha": "2026-10-06"
 },
 "ev-fr-trobades-medievales-perpignan": {
-"error": "generica",
+"img": "https://www.perpignantourisme.com/assets/uploads/sites/7/2024/02/perpignan-hotelpamsmarcnouss-1-scaled-e1711462798120-800x375.jpg",
+"src": "https://www.perpignantourisme.com/agenda/trobades-medievales/",
+"site": "Perpignan",
 "fecha": "2026-10-09"
 },
 "ev-fr-vendanges-banyuls": {
@@ -2960,7 +2964,9 @@
 "fecha": "2026-10-09"
 },
 "na-la-molina-nieve": {
-"error": "generica",
+"img": "https://pirineu365.cat/wp-content/uploads/2025/09/generalitat.png",
+"src": "https://pirineu365.cat/lamolina/inici/",
+"site": "Pirineu365",
 "fecha": "2026-10-09"
 },
 "na-la-pleta-parc-garraf": {
@@ -7164,7 +7170,9 @@
 "fecha": "2026-10-09"
 },
 "osm-w190520085": {
-"error": "generica",
+"img": "https://pirineu365.cat/wp-content/uploads/2025/09/generalitat.png",
+"src": "https://www.lamolina.cat/hivern/preguntes-frequents/",
+"site": "Pirineu365",
 "fecha": "2026-10-09"
 },
 "osm-w190909222": {
@@ -12986,7 +12994,9 @@
 "fecha": "2026-10-09"
 },
 "vi-camon": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Arriv%C3%A9e_dans_le_village_de_Camon%2C_un_des_-_beaux_villages_de_France_-_panoramio.jpg/1280px-Arriv%C3%A9e_dans_le_village_de_Camon%2C_un_des_-_beaux_villages_de_France_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Arriv%C3%A9e_dans_le_village_de_Camon,_un_des_-_beaux_villages_de_France_-_panoramio.jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "vi-camp-aviacio-senia": {
@@ -13838,7 +13848,9 @@
 "fecha": "2026-10-09"
 },
 "vi-escornalbou": {
-"error": "generica",
+"img": "https://patrimoni.gencat.cat/sites/all/themes/patrimoni/images/mapa-nav.jpg",
+"src": "https://patrimoni.gencat.cat/",
+"site": "patrimoni.gencat.cat",
 "fecha": "2026-10-09"
 },
 "vi-escultures-fusta-esterri": {
@@ -14512,7 +14524,9 @@
 "fecha": "2026-10-09"
 },
 "vi-mirepoix": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Mirepoix_Cath%C3%A9drale_Saint-Maurice_-_50309740957.jpg/1280px-Mirepoix_Cath%C3%A9drale_Saint-Maurice_-_50309740957.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Mirepoix_Cath%C3%A9drale_Saint-Maurice_-_50309740957.jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "vi-mnactec": {
@@ -14666,7 +14680,9 @@
 "fecha": "2026-10-09"
 },
 "vi-mosset": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Four_a_pain_Mosset.jpg/1280px-Four_a_pain_Mosset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Four_a_pain_Mosset.jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "vi-muntanya-sal": {
@@ -14870,7 +14886,9 @@
 "fecha": "2026-10-09"
 },
 "vi-museu-diocesa-solsona": {
-"error": "generica",
+"img": "https://patrimoni.gencat.cat/sites/all/themes/patrimoni/images/mapa-nav.jpg",
+"src": "https://patrimoni.gencat.cat/en/collection/diocesan-and-regional-museum-solsona",
+"site": "patrimoni.gencat.cat",
 "fecha": "2026-10-09"
 },
 "vi-museu-estampacio-premia": {
