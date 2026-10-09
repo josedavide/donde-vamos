@@ -1721,6 +1721,9 @@
 "na-baga-bastareny": {
 "error": "HTTPError"
 },
+"na-balco-collbato": {
+"error": "sin-imagen"
+},
 "na-balco-priorat-coll-solans": {
 "error": "sin-imagen"
 },
@@ -1740,6 +1743,12 @@
 "img": "https://www.escapadaambnens.com/fotografies/petites/84888gausac-bassa-oles-shutterstock1844322598.jpg",
 "src": "https://www.escapadaambnens.com/activitat/730/la-bassa-doles-i-el-bosc-de-varicauba-a-gausac/",
 "site": "escapadaambnens.com",
+"fecha": "2026-10-09"
+},
+"na-bassa-olles-ampolla": {
+"img": "https://ampollaturisme.com/wp-content/uploads/2018/10/destactat_6.jpg",
+"src": "https://ampollaturisme.com/bassa-olles",
+"site": "l'Ampolla, porta del Delta",
 "fecha": "2026-10-09"
 },
 "na-basses-gallissa": {
@@ -1828,6 +1837,9 @@
 },
 "na-cadira-bisbe": {
 "error": "generica"
+},
+"na-cadires-gegants-sant-esteve": {
+"error": "sin-imagen"
 },
 "na-cala-aiguablava": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/29454cala-aiguablava-begur-costa-brava-shutterstock435621151.jpg",
@@ -2072,6 +2084,15 @@
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
 },
+"na-castell-voltrera-abrera": {
+"error": "sin-imagen"
+},
+"na-castellar-vell": {
+"img": "https://visitvalles.com/wp-content/uploads/2017/03/banner_on_menjar11.jpg",
+"src": "https://visitvalles.com/ca/portfolio_page/area-desbarjo-de-castellar-vell/",
+"site": "visitvalles.com",
+"fecha": "2026-10-09"
+},
 "na-castellfollit-roca": {
 "error": "HTTPError"
 },
@@ -2086,6 +2107,9 @@
 "src": "https://es.wikipedia.org/wiki/Chulilla",
 "site": "es.wikipedia.org",
 "fecha": "2026-10-06"
+},
+"na-circuit-orientacio-prats": {
+"error": "HTTPError"
 },
 "na-cirerers-sant-climent": {
 "error": "generica"
@@ -2448,6 +2472,12 @@
 "img": "https://www.escapadaambnens.com/fotografies/petites/12642capafonts2-font-lludriga-escapadaambnens.jpg",
 "src": "https://www.escapadaambnens.com/es/actividad/81/font-de-la-lludriga-una-excursion-magica-al-nacimiento-del-rio-brugent/",
 "site": "escapadaambnens.com",
+"fecha": "2026-10-09"
+},
+"na-font-picant-argentona": {
+"img": "https://argentona.cat/ARXIUS/Turisme/foto_senders_3.1.JPG",
+"src": "https://argentona.cat/natura",
+"site": "argentona.cat",
 "fecha": "2026-10-09"
 },
 "na-fontanera-guils": {
@@ -3194,6 +3224,9 @@
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
 },
+"na-pi-den-xandri-sant-cugat": {
+"error": "URLError"
+},
 "na-pi-gros-senia": {
 "error": "generica"
 },
@@ -3204,10 +3237,7 @@
 "fecha": "2026-10-09"
 },
 "na-pitarque-te": {
-"img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOHSPNpJ5sPALO4m5IY1IMhIx5gWsDrXoB4BM2SjmOqhBfN6iOc4EBicUf8Wmvcw2W4MVctAVGc2BrbjZzBnOgxMOo2UMJKHmP7hJgH_0HUSfSjlsjZWCQex2yeqXgB4ngxVT3QAWu7vw/w1200-h630-p-k-no-nu/DSC_0019.JPG",
-"src": "https://conryluisviajandoenautocaravana.blogspot.com/2015/06/el-maestrazgo-teruel-del-17-al-20-de.html",
-"site": "conryluisviajandoenautocaravana.blogspot.com",
-"fecha": "2026-10-09"
+"error": "generica"
 },
 "na-plan-batalher": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/64842xumets.jpg",
@@ -3318,7 +3348,7 @@
 "fecha": "2026-10-09"
 },
 "na-pozo-salto-molinos-te": {
-"error": "HTTPError"
+"error": "generica"
 },
 "na-puda-estunes-porqueres": {
 "img": "https://turisme.plaestany.cat/wp-content/uploads/2018/07/Cartells-per-instagram-del-Butlleti-15.jpg",
@@ -3584,6 +3614,12 @@
 "na-sant-miquel-del-fai": {
 "error": "sin-imagen"
 },
+"na-sant-ramon-sant-boi": {
+"error": "sin-imagen"
+},
+"na-santa-creu-olorda-collserola": {
+"error": "sin-imagen"
+},
 "na-santa-fe-montseny": {
 "error": "sin-imagen"
 },
@@ -3604,6 +3640,12 @@
 "src": "https://www.gavarres.cat",
 "site": "Consorci de les Gavarres",
 "fecha": "2026-10-06"
+},
+"na-santuari-bellmunt": {
+"img": "https://santuaridebellmunt.com/wp-content/uploads/2024/10/Bellmunt_3100.jpg",
+"src": "https://santuaridebellmunt.com/",
+"site": "Santuari de Bellmunt",
+"fecha": "2026-10-09"
 },
 "na-santuari-corredor": {
 "error": "sin-imagen"
@@ -3764,6 +3806,18 @@
 "na-tristaina": {
 "error": "sin-imagen"
 },
+"na-turo-del-mar-montgat": {
+"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/097_Templet_mirador_del_tur%C3%B3_del_Mar_%28Montgat%29.JPG/1920px-097_Templet_mirador_del_tur%C3%B3_del_Mar_%28Montgat%29.JPG",
+"src": "https://mapcarta.com/es/Tur%C3%B3_del_Mar",
+"site": "Mapcarta",
+"fecha": "2026-10-09"
+},
+"na-turo-del-rector-ullastrell": {
+"img": "https://visitvalles.com/wp-content/uploads/2017/05/TuroRector_Ullastrell.jpg",
+"src": "https://visitvalles.com/ca/portfolio_page/turo-del-rector/",
+"site": "visitvalles.com",
+"fecha": "2026-10-09"
+},
 "na-ullals-baltasar": {
 "error": "generica"
 },
@@ -3896,6 +3950,12 @@
 "pe-albi-area-ac": {
 "error": "HTTPError"
 },
+"pe-alcover-area": {
+"img": "https://cdn3.park4night.com/lieu/38101_38200/38156_gd.jpg",
+"src": "https://park4night.com/es/place/18269",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-alenya-ccp": {
 "img": "https://cdn3.park4night.com/lieu/639101_639200/639148_gd.jpg",
 "src": "https://park4night.com/en/place/125481",
@@ -3922,6 +3982,12 @@
 "src": "https://park4night.com/en/place/13620",
 "site": "park4night.com",
 "fecha": "2026-10-06"
+},
+"pe-amposta-espai-autocaravanes": {
+"img": "https://cdn3.park4night.com/lieu/1746301_1746400/1746316_gd.jpg",
+"src": "https://park4night.com/en/place/565489",
+"site": "park4night.com",
+"fecha": "2026-10-09"
 },
 "pe-andorra-camping-valira": {
 "img": "https://cdn3.park4night.com/lieu/94501_94600/94506_gd.jpg",
@@ -4085,6 +4151,12 @@
 "pe-bellpuig-parc-convent": {
 "error": "generica"
 },
+"pe-bellvei-area-les-plans": {
+"img": "https://cdn3.park4night.com/lieu/282601_282700/282607_gd.jpg",
+"src": "https://park4night.com/es/place/13205",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-berga-queralt": {
 "img": "https://cdn3.park4night.com/lieu/662201_662300/662280_gd.jpg",
 "src": "https://park4night.com/es/place/29024",
@@ -4103,6 +4175,12 @@
 "site": "park4night.com",
 "fecha": "2026-10-06"
 },
+"pe-bisbal-penedes-area": {
+"img": "https://cdn3.park4night.com/lieu/1829801_1829900/1829879_gd.jpg",
+"src": "https://park4night.com/es/place/590237",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-borges-blanques-area-ac": {
 "img": "https://cdn3.park4night.com/lieu/874501_874600/874516_gd.jpg",
 "src": "https://park4night.com/en/place/232209",
@@ -4115,11 +4193,26 @@
 "site": "park4night.com",
 "fecha": "2026-10-09"
 },
+"pe-breda-area": {
+"img": "https://cdn3.park4night.com/lieu/659901_660000/659920_gd.jpg",
+"src": "https://park4night.com/es/place/185247",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-cadaques-wecamp": {
 "img": "https://cdn3.park4night.com/lieu/1592201_1592300/1592244_gd.jpg",
 "src": "https://park4night.com/en/place/431982",
 "site": "park4night.com",
 "fecha": "2026-10-06"
+},
+"pe-calafell-area-passeig": {
+"img": "https://cdn3.park4night.com/lieu/301301_301400/301348_gd.jpg",
+"src": "https://park4night.com/es/place/114293",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
+"pe-camarles-area-arrossaires": {
+"error": "sin-imagen"
 },
 "pe-cambrils-corralet": {
 "img": "https://imagenes.diaridetarragona.com/files/og_thumbnail/files/fp/uploads/2025/07/25/6883bac9db437.r_d.266-164-0.jpeg",
@@ -4142,6 +4235,12 @@
 "pe-camping-albera-capmany": {
 "error": "HTTPError"
 },
+"pe-camping-alfacs-alcanar": {
+"img": "https://img.yellohvillage.fr/var/plain_site/storage/images/_aliases/spapi_xlarge/site_marchand/camping/alfacs/3802937-85-fre-FR/alfacs.jpg",
+"src": "https://www.alfacs.com/es/parcelas",
+"site": "alfacs.com",
+"fecha": "2026-10-09"
+},
 "pe-camping-altes-emporda-garriguella": {
 "error": "HTTPError"
 },
@@ -4153,6 +4252,12 @@
 },
 "pe-camping-barcelona-mataro": {
 "error": "sin-imagen"
+},
+"pe-camping-bella-terra-blanes": {
+"img": "https://cdn3.park4night.com/lieu/1420701_1420800/1420794_gd.jpg",
+"src": "https://park4night.com/es/place/79299",
+"site": "park4night.com",
+"fecha": "2026-10-09"
 },
 "pe-camping-bon-repos": {
 "error": "sin-imagen"
@@ -4202,6 +4307,15 @@
 "site": "campingesponella.com",
 "fecha": "2026-10-09"
 },
+"pe-camping-estanyet-alcanar": {
+"error": "sin-imagen"
+},
+"pe-camping-eucaliptus-amposta": {
+"img": "https://campingeucaliptus.com/wp-content/uploads/2024/10/Bungalows-13-min.jpg",
+"src": "https://campingeucaliptus.com/parcelas/",
+"site": "Camping Eucaliptus",
+"fecha": "2026-10-09"
+},
 "pe-camping-illa-sant-quirze": {
 "img": "https://www.campinglilla.com/wp-content/uploads/campinglilla-entorn-1600x600.jpg",
 "src": "https://www.campinglilla.com/",
@@ -4217,13 +4331,31 @@
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
 },
+"pe-camping-la-rueda-cubelles": {
+"img": "https://cdn3.park4night.com/lieu/972101_972200/972152_gd.jpg",
+"src": "https://park4night.com/es/place/335963",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-camping-la-vall-taradell": {
 "error": "sin-imagen"
+},
+"pe-camping-laube-deltebre": {
+"img": "https://www.capfun.com/photo/AUBE/Web/moyennes/02.jpg",
+"src": "https://www.campinglaube.com/",
+"site": "campinglaube.com",
+"fecha": "2026-10-09"
 },
 "pe-camping-les-tries-olot": {
 "img": "https://ohgarrotxa.com/wp-content/uploads/2023/01/7637886998-46b9bd9107-o_002.jpg",
 "src": "https://ohgarrotxa.com/en/allotjament/camping-les-tries/",
 "site": "OH! Garrotxa",
+"fecha": "2026-10-09"
+},
+"pe-camping-lloret-blau": {
+"img": "https://cdn3.park4night.com/lieu/158101_158200/158175_gd.jpg",
+"src": "https://park4night.com/es/place/66807",
+"site": "park4night.com",
 "fecha": "2026-10-09"
 },
 "pe-camping-macanet-cabrenys": {
@@ -4250,6 +4382,24 @@
 "site": "campingmontagut.com",
 "fecha": "2026-10-09"
 },
+"pe-camping-nautic-ametlla": {
+"img": "https://www.campingnautic.com/wp-content/uploads/2023/07/parcela1-400x284.jpg",
+"src": "https://www.campingnautic.com/alojamientos/parcelas/",
+"site": "Camping Nàutic l'Ametlla de Mar Costa Da",
+"fecha": "2026-10-09"
+},
+"pe-camping-osor-nature": {
+"img": "https://cdn3.park4night.com/lieu/2171701_2171800/2171785_gd.jpg",
+"src": "https://park4night.com/es/place/703331",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
+"pe-camping-platja-vilanova": {
+"img": "https://cdn3.park4night.com/lieu/1037301_1037400/1037325_gd.jpg",
+"src": "https://park4night.com/es/place/77527",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-camping-prades-park": {
 "img": "https://www.campingprades.com/wp-content/uploads/camping-prades-imatge-millors-bungalows-portada-1024x576-1.jpg",
 "src": "http://www.campingprades.com",
@@ -4268,6 +4418,12 @@
 "site": "Turisme de la Ribera d'Ebre",
 "fecha": "2026-10-09"
 },
+"pe-camping-ridaura-llagostera": {
+"img": "https://cdn3.park4night.com/lieu/532801_532900/532816_gd.jpg",
+"src": "https://park4night.com/es/place/59549",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-camping-riera-merles": {
 "img": "http://www.campingrieramerles.net/imatges/entrada1.jpg",
 "src": "http://www.campingrieramerles.net/",
@@ -4277,11 +4433,17 @@
 "pe-camping-riu-sant-pere-pescador": {
 "error": "UnicodeEncodeError"
 },
+"pe-camping-sant-salvador-coma-ruga": {
+"error": "HTTPError"
+},
 "pe-camping-serra-prades": {
 "img": "https://www.capfun.com/photo/PRADES/Web/moyennes/02.jpg",
 "src": "http://www.serradeprades.com",
 "site": "serradeprades.com",
 "fecha": "2026-10-09"
+},
+"pe-camping-sitges-garrofer": {
+"error": "HTTPError"
 },
 "pe-camping-solana-segre": {
 "img": "https://images.squarespace-cdn.com/content/v1/660c1ff8ed1a075f8ce8b7cb/96954df7-62a8-4f4b-af9d-8f9d15c77462/dji_fly_20240905_173910_176_1725550767339_photo_optimized.JPG",
@@ -4307,6 +4469,12 @@
 "site": "fr.camping-and-co.com",
 "fecha": "2026-10-09"
 },
+"pe-camping-turismar-tossa": {
+"img": "https://cdn3.park4night.com/lieu/1838101_1838200/1838194_gd.jpg",
+"src": "https://park4night.com/es/place/435515",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-camping-vall-bianya": {
 "img": "https://ohgarrotxa.com/wp-content/uploads/2023/01/camping-2-010-108_001.jpg",
 "src": "https://ohgarrotxa.com/fr/allotjament/camping-vall-de-bianya/",
@@ -4324,6 +4492,21 @@
 "src": "https://campingvalldhostoles.es/",
 "site": "càmping Vall d",
 "fecha": "2026-10-09"
+},
+"pe-camping-vendrell-platja": {
+"img": "https://cdn3.park4night.com/lieu/184601_184700/184654_gd.jpg",
+"src": "https://park4night.com/es/place/77283",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
+"pe-camping-vilademager": {
+"img": "https://anoiaturisme.cat/wp-content/uploads/vilademager2.jpg",
+"src": "https://anoiaturisme.cat/guia/camping-vilademager/",
+"site": "Anoia Turisme",
+"fecha": "2026-10-09"
+},
+"pe-camping-vilanova-park": {
+"error": "HTTPError"
 },
 "pe-camprodon-vall": {
 "img": "https://cdn3.park4night.com/lieu/878601_878700/878679_gd.jpg",
@@ -4345,6 +4528,12 @@
 },
 "pe-cantavieja-te": {
 "error": "sin-imagen"
+},
+"pe-capellades-area": {
+"img": "https://cdn3.park4night.com/lieu/1154801_1154900/1154816_gd.jpg",
+"src": "https://park4night.com/es/place/390627",
+"site": "park4night.com",
+"fecha": "2026-10-09"
 },
 "pe-caravaning-park-valles": {
 "img": "https://cdn3.park4night.com/lieu/33801_33900/33839_gd.jpg",
@@ -4418,6 +4607,12 @@
 "pe-culla-ccp-va": {
 "error": "sin-imagen"
 },
+"pe-cunit-area": {
+"img": "https://openvan.camp/storage/og-images/stories/destrozan-la-zona-para-autocaravanas-de-cunit-es.png",
+"src": "https://openvan.camp/es/news/incident/destrozan-la-zona-para-autocaravanas-de-cunit",
+"site": "OpenVan.camp",
+"fecha": "2026-10-09"
+},
 "pe-delta-taiga": {
 "img": "https://cdn3.park4night.com/lieu/1151701_1151800/1151735_gd.jpg",
 "src": "https://plus.park4night.com/en/place/35776",
@@ -4429,6 +4624,12 @@
 "src": "https://park4night.com/en/place/217586",
 "site": "park4night.com",
 "fecha": "2026-10-06"
+},
+"pe-deltebre-riumar-camper": {
+"img": "https://cdn3.park4night.com/lieu/2164301_2164400/2164332_gd.jpg",
+"src": "https://park4night.com/en/place/700824",
+"site": "park4night.com",
+"fecha": "2026-10-09"
 },
 "pe-devesa-gardens-va": {
 "error": "generica"
@@ -4451,6 +4652,21 @@
 "site": "park4night.com",
 "fecha": "2026-10-06"
 },
+"pe-flaca-aparcament-ac": {
+"img": "https://cdn3.park4night.com/img_cache/streets-v2/13/42.049246/2.959940/red/350x250.jpg",
+"src": "https://park4night.com/es/place/705478",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
+"pe-flix-area-c12": {
+"img": "https://www.flix.cat/wp-content/uploads/autocaravanes_01.jpg",
+"src": "https://www.flix.cat/2019/09/06/iniciades-les-obres-de-construccio-de-larea-daparcament-dautocaravanes/",
+"site": "Ajuntament de Flix",
+"fecha": "2026-10-09"
+},
+"pe-folgueroles": {
+"error": "generica"
+},
 "pe-fulleda-area-ac": {
 "img": "https://cdn3.park4night.com/lieu/174001_174100/174060_gd.jpg",
 "src": "https://park4night.com/en/place/63330",
@@ -4460,6 +4676,12 @@
 "pe-gimenells-area-ac": {
 "img": "https://cdn3.park4night.com/lieu/652401_652500/652458_gd.jpg",
 "src": "https://park4night.com/en/place/55286",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
+"pe-girona-domeny": {
+"img": "https://cdn3.park4night.com/lieu/1468501_1468600/1468591_gd.jpg",
+"src": "https://park4night.com/es/place/154745",
 "site": "park4night.com",
 "fecha": "2026-10-09"
 },
@@ -4494,6 +4716,12 @@
 "img": "https://femturisme.cat/_fotos/pobles/main/guissona.jpg",
 "src": "https://femturisme.cat/pobles/guissona",
 "site": "femturisme.cat",
+"fecha": "2026-10-09"
+},
+"pe-horta-sant-joan-area": {
+"img": "https://cdn3.park4night.com/lieu/873601_873700/873628_gd.jpg",
+"src": "https://park4night.com/en/place/69460",
+"site": "park4night.com",
 "fecha": "2026-10-09"
 },
 "pe-hospitalet-infant-area": {
@@ -4550,6 +4778,9 @@
 "site": "AreasCamper",
 "fecha": "2026-10-06"
 },
+"pe-lesquirol-cantonigros": {
+"error": "generica"
+},
 "pe-lestartit-costa-brava-area": {
 "img": "https://www.area13.cat/wp-content/uploads/2020/03/Equipaments-Dades-Interés-2-2.jpg",
 "src": "https://www.area13.cat/areas/area-de-lestartit/?lang=es",
@@ -4571,6 +4802,12 @@
 "pe-lleida-camping-car-park-sanui": {
 "error": "sin-imagen"
 },
+"pe-macanet-selva-area": {
+"img": "https://cdn3.park4night.com/lieu/1107101_1107200/1107109_gd.jpg",
+"src": "https://park4night.com/es/place/375395",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-malda": {
 "error": "generica"
 },
@@ -4582,6 +4819,12 @@
 },
 "pe-mirambel-te": {
 "error": "sin-imagen"
+},
+"pe-miravet-parquing-autocaravanes": {
+"img": "https://images.campercontact.com/media/photos/location/4273c7cd-496e-4dad-b957-8b537f79631a/cffe561d-d992-4ab7-b363-9396563edcad.jpg?width=1250",
+"src": "https://www.campercontact.com/en/spain/catalonia/miravet/104539/parquing-autocaravanes-miravet",
+"site": "Campercontact",
+"fecha": "2026-10-09"
 },
 "pe-monistrol-montserrat": {
 "img": "https://www.monistroldemontserrat.cat/themes/monistroldemontserrat/images/logos/header.png",
@@ -4601,6 +4844,12 @@
 "pe-montclus-ccp-oce": {
 "error": "sin-imagen"
 },
+"pe-montesquiu": {
+"img": "https://www.montesquiu.cat/themes/montesquiu/images/logos/header.png",
+"src": "https://www.montesquiu.cat/serveis-i-tramits/cataleg-de-serveis/10670-area-dautocaravanes-de-montesquiu.html",
+"site": "Ajuntament de Montesquiu",
+"fecha": "2026-10-09"
+},
 "pe-montroig-playa-y-fiesta": {
 "error": "sin-imagen"
 },
@@ -4609,6 +4858,12 @@
 "src": "https://park4night.com/en/place/22617",
 "site": "park4night.com",
 "fecha": "2026-10-06"
+},
+"pe-mora-debre-cami-hortes": {
+"img": "https://cdn3.park4night.com/lieu/320101_320200/320120_gd.jpg",
+"src": "https://park4night.com/en/place/121749",
+"site": "park4night.com",
+"fecha": "2026-10-09"
 },
 "pe-morella-ccp-va": {
 "error": "sin-imagen"
@@ -4645,6 +4900,12 @@
 "src": "https://park4night.com/en/place/218837",
 "site": "park4night.com",
 "fecha": "2026-10-06"
+},
+"pe-nulles-area": {
+"img": "https://cdn3.park4night.com/lieu/1719801_1719900/1719889_gd.jpg",
+"src": "https://park4night.com/es/place/557838",
+"site": "park4night.com",
+"fecha": "2026-10-09"
 },
 "pe-oasis-montseny": {
 "error": "sin-imagen"
@@ -4790,6 +5051,12 @@
 "site": "park4night.com",
 "fecha": "2026-10-06"
 },
+"pe-perello-area-municipal": {
+"img": "https://ebredigital.cat/wp-content/uploads/2025/02/DSC_7956.jpg",
+"src": "https://ebredigital.cat/?p=291664",
+"site": "EbreDigital.cat",
+"fecha": "2026-10-09"
+},
 "pe-pla-ermita-taull": {
 "error": "sin-imagen"
 },
@@ -4811,6 +5078,9 @@
 "pe-port-de-la-selva-ac": {
 "error": "sin-imagen"
 },
+"pe-prats-de-llucanes": {
+"error": "generica"
+},
 "pe-prats-llucanes": {
 "error": "sin-imagen"
 },
@@ -4820,8 +5090,20 @@
 "pe-puertomingalvo-te": {
 "error": "sin-imagen"
 },
+"pe-rapita-area-municipal": {
+"img": "https://cdn3.park4night.com/lieu/1369001_1369100/1369024_gd.jpg",
+"src": "https://park4night.com/en/place/108749",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-remoulins-ccp-oce": {
 "error": "sin-imagen"
+},
+"pe-renau-athipika": {
+"img": "https://cdn3.park4night.com/lieu/2059701_2059800/2059733_gd.jpg",
+"src": "https://park4night.com/es/place/665504",
+"site": "park4night.com",
+"fecha": "2026-10-09"
 },
 "pe-reus-bonarea": {
 "img": "https://cdn3.park4night.com/lieu/1760301_1760400/1760308_gd.jpg",
@@ -4943,6 +5225,9 @@
 "pe-sampzon-ccp-pr": {
 "error": "sin-imagen"
 },
+"pe-sant-boi-llucanes": {
+"error": "generica"
+},
 "pe-sant-feliu-guixols-area": {
 "img": "https://cdn3.park4night.com/lieu/61101_61200/61136_gd.jpg",
 "src": "https://park4night.com/en/place/7472",
@@ -5051,6 +5336,9 @@
 "pe-teruel-planos-te": {
 "error": "sin-imagen"
 },
+"pe-torello": {
+"error": "generica"
+},
 "pe-tornabous": {
 "error": "generica"
 },
@@ -5062,6 +5350,18 @@
 "src": "https://park4night.com/en/place/94408",
 "site": "park4night.com",
 "fecha": "2026-10-06"
+},
+"pe-tortosa-passeig-ribera": {
+"img": "https://www.tortosaturisme.cat/wp-content/uploads/2018/01/IMG_20230530_160358-scaled-e1685617267884-400x300.jpg",
+"src": "https://www.tortosaturisme.cat/allotjament-a-tortosa/area-de-caravaning/",
+"site": "tortosaturisme",
+"fecha": "2026-10-09"
+},
+"pe-tossa-parking-ac": {
+"img": "https://cdn3.park4night.com/lieu/1479201_1479300/1479299_gd.jpg",
+"src": "https://park4night.com/es/place/292993",
+"site": "park4night.com",
+"fecha": "2026-10-09"
 },
 "pe-ultramort-camperfarm": {
 "error": "sin-imagen"
@@ -5096,6 +5396,12 @@
 "site": "park4night.com",
 "fecha": "2026-10-06"
 },
+"pe-vidreres-area": {
+"img": "https://cdn3.park4night.com/lieu/1177101_1177200/1177166_gd.jpg",
+"src": "https://park4night.com/es/place/70731",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-vila-seca-portaventura": {
 "img": "https://cdn3.park4night.com/lieu/1057701_1057800/1057740_gd.jpg",
 "src": "https://park4night.com/es/place/118237",
@@ -5111,6 +5417,12 @@
 "pe-vilanova-sau": {
 "error": "sin-imagen"
 },
+"pe-vilobi-mas-bes": {
+"img": "https://cdn3.park4night.com/lieu/936101_936200/936148_gd.jpg",
+"src": "https://park4night.com/es/place/43223",
+"site": "park4night.com",
+"fecha": "2026-10-09"
+},
 "pe-vinaixa-area-ac": {
 "img": "https://cdn3.park4night.com/lieu/1189301_1189400/1189324_gd.jpg",
 "src": "https://park4night.com/en/place/224613",
@@ -5125,6 +5437,9 @@
 },
 "pe-xativa-alto-va": {
 "error": "generica"
+},
+"pe-xerta-parking-riu": {
+"error": "sin-imagen"
 },
 "pe-xirivella-va": {
 "img": "https://cdn3.park4night.com/lieu/1592301_1592400/1592368_gd.jpg",
@@ -5756,6 +6071,12 @@
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
 },
+"vi-can-coll-collserola-cerdanyola": {
+"img": "https://visitvalles.com/wp-content/uploads/2017/05/0f46db1feaf8cbe802d84da9648f26a9_crop.jpg",
+"src": "https://visitvalles.com/ca/portfolio_page/masia-de-can-coll-centre-deducacio-ambiental-del-parc-de-collserola/",
+"site": "visitvalles.com",
+"fecha": "2026-10-09"
+},
 "vi-can-jalpi-arenys-de-munt": {
 "error": "generica"
 },
@@ -5775,10 +6096,7 @@
 "fecha": "2026-10-09"
 },
 "vi-cantavieja-te": {
-"img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOHSPNpJ5sPALO4m5IY1IMhIx5gWsDrXoB4BM2SjmOqhBfN6iOc4EBicUf8Wmvcw2W4MVctAVGc2BrbjZzBnOgxMOo2UMJKHmP7hJgH_0HUSfSjlsjZWCQex2yeqXgB4ngxVT3QAWu7vw/w1200-h630-p-k-no-nu/DSC_0019.JPG",
-"src": "https://conryluisviajandoenautocaravana.blogspot.com/2015/06/el-maestrazgo-teruel-del-17-al-20-de.html",
-"site": "conryluisviajandoenautocaravana.blogspot.com",
-"fecha": "2026-10-06"
+"error": "generica"
 },
 "vi-carcassonne-cite": {
 "img": "https://www.tourisme-carcassonne.fr/assets/uploads/2026/05/parking-carcassonne-scaled.jpg",
@@ -5804,6 +6122,12 @@
 "vi-cartoixa-escaladei": {
 "error": "generica"
 },
+"vi-casa-aigues-montcada": {
+"img": "https://visitvalles.com/wp-content/uploads/2026/07/Riu_Ripoll_Barbera_enhanced-1-scaled-750x500.jpg",
+"src": "https://visitvalles.com/ca/riu/",
+"site": "visitvalles.com",
+"fecha": "2026-10-09"
+},
 "vi-casa-dels-angels-castellsera": {
 "img": "https://cdnebasnet.com/data/cache/opt_png/cms/turismeurgell2/images/pages/324-3449597465-1400x1400.png",
 "src": "https://turismeurgell.cat/ca/p/museus-i-espais-visitables/la-casa-dels-angels-maglari-17-324",
@@ -5820,6 +6144,12 @@
 "img": "https://femturisme.cat/_fotos/pobles/main/moia.jpg",
 "src": "https://femturisme.cat/pobles/moia",
 "site": "femturisme.cat",
+"fecha": "2026-10-09"
+},
+"vi-casa-museu-domenech-canet": {
+"img": "https://www.canetdemar.cat/ARXIUS/turisme/2024/00_baner.1.jpg",
+"src": "https://www.canetdemar.cat/patrimoni",
+"site": "canetdemar.cat",
 "fecha": "2026-10-09"
 },
 "vi-casa-natal-dali-figueres": {
@@ -5972,6 +6302,12 @@
 "vi-castell-peralada": {
 "error": "URLError"
 },
+"vi-castell-plegamans": {
+"img": "https://visitvalles.com/wp-content/uploads/2017/04/4_fundacio-Folch.jpg",
+"src": "https://visitvalles.com/ca/portfolio_page/museu-arxiu-fundacio-folch-i-torres-castell-de-plegamans/",
+"site": "visitvalles.com",
+"fecha": "2026-10-09"
+},
 "vi-castell-sant-ferran": {
 "img": "https://cdn.tsunamipanel.com/100663/media/items/1080/442ce1cd-36a3-49c5-8b1e-e50e908b1538.jpg",
 "src": "https://ticketing.cat/castell-de-sant-ferran",
@@ -5995,6 +6331,9 @@
 "src": "https://www.escapadaambnens.com/activitat/266/castell-medieval-de-santa-creu/",
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
+},
+"vi-castell-santa-florentina-canet": {
+"error": "sin-imagen"
 },
 "vi-castell-solivella": {
 "img": "https://concadebarberaturisme.cat/wp-content/uploads/2021/12/monestir-de-poblet-9-1024x683.jpg",
@@ -6074,11 +6413,26 @@
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
 },
+"vi-cella-vinaria-teia": {
+"img": "https://cellavinaria.cat/wp-content/uploads/2020/09/CVfp2w.jpg",
+"src": "https://cellavinaria.cat/",
+"site": "cellavinaria.cat",
+"fecha": "2026-10-09"
+},
+"vi-celler-pinell-brai": {
+"img": "https://surtdecasa.cat/sites/default/files//imatges-pujades/2019T1/llocs/el-pinell-de-brai-catedral-vi-dins.jpg",
+"src": "https://surtdecasa.cat/ebre/llocs-interes/el-pinell-de-brai/el-pinell-de-brai",
+"site": "Surtdecasa.cat",
+"fecha": "2026-10-09"
+},
 "vi-central-talarn": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/89712la-centralactivitat-familiar-2.jpg",
 "src": "https://www.escapadaambnens.com/activitat/776/central-hidroelectrica-de-talarn/",
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
+},
+"vi-centre-aeronautic-prat": {
+"error": "sin-imagen"
 },
 "vi-centre-arros-camarles": {
 "error": "generica"
@@ -6225,7 +6579,10 @@
 "fecha": "2026-10-06"
 },
 "vi-coll-balaguer-hospitalet": {
-"error": "sin-imagen"
+"img": "https://culturaalabast.cat/wp-content/uploads/2017/02/visitesguiades.jpg",
+"src": "https://culturaalabast.cat",
+"site": "culturaalabast.cat",
+"fecha": "2026-10-09"
 },
 "vi-coll-del-moro-gandesa": {
 "error": "generica"
@@ -6239,11 +6596,20 @@
 "site": "Collioure Tourisme",
 "fecha": "2026-10-06"
 },
+"vi-colonia-borgonya": {
+"img": "https://osonaturisme.cat/wp-content/uploads/2022/02/TORELLÓ-0492-2-JORDI-CABANES-scaled.jpg",
+"src": "https://osonaturisme.cat/que-fer/cultura/turisme-industrial/",
+"site": "osonaturisme.cat",
+"fecha": "2026-10-09"
+},
 "vi-colonia-rusinol-manlleu": {
 "img": "https://www.museudelter.cat/wp-content/uploads/2023/01/MuseudelTer_VisitMusuem_1.jpg",
 "src": "https://www.museudelter.cat/",
 "site": "Museu del Ter",
 "fecha": "2026-10-09"
+},
+"vi-colonia-sedo-esparreguera": {
+"error": "sin-imagen"
 },
 "vi-comadoca": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/14782buho-shutterstock379547776.jpg",
@@ -6603,7 +6969,10 @@
 "fecha": "2026-10-06"
 },
 "vi-gnomo-park-lloret": {
-"error": "HTTPError"
+"img": "https://thapcamtv.cab/wp-content/uploads/2025/07/thapcamtv-phat-song-chat-luong-cao.jpg",
+"src": "https://gnomo-park.com",
+"site": "ThapCamTV - Trực tiếp bóng đá HD - Xem T",
+"fecha": "2026-10-09"
 },
 "vi-gouffre-cabrespine": {
 "img": "https://cdt34.media.tourinsoft.eu/upload/La-salle-rouge---Photographie-pour-SETSN.JPG?width=1200&height=630&crop=1",
@@ -6628,6 +6997,9 @@
 "src": "https://granjacalrei.com/",
 "site": "Vavada Casino",
 "fecha": "2026-10-09"
+},
+"vi-granja-can-castellvi-molins": {
+"error": "sin-imagen"
 },
 "vi-granja-can-gel-dosrius": {
 "error": "generica"
@@ -6860,6 +7232,12 @@
 "site": "femturisme.cat",
 "fecha": "2026-10-09"
 },
+"vi-llagut-benifallet": {
+"img": "https://surtdecasa.cat/sites/default/files//imatges-pujades/2019T1/imatges/benifallet-llagut-1-400.jpg",
+"src": "https://surtdecasa.cat/ebre/agenda/2024/sortida-amb-lo-llagut-benifallet/233989",
+"site": "Surtdecasa.cat",
+"fecha": "2026-10-09"
+},
 "vi-lleida-seu-vella": {
 "img": "https://www.turoseuvella.cat/++resource++plonetheme.turoseuvella.images/brand-footer.jpg",
 "src": "https://www.turoseuvella.cat",
@@ -6932,6 +7310,12 @@
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
 },
+"vi-masia-freixa-terrassa": {
+"img": "https://visitaterrassa.cat/wp-content/uploads/2026/08/Masia_Freixa_Terrassa©BadiaCasanova_TerrassaTurisme-1024x768.jpg",
+"src": "https://visitaterrassa.cat/masiafreixa/",
+"site": "Turisme Terrassa - Patrimoni industrial,",
+"fecha": "2026-10-09"
+},
 "vi-mataro-centre": {
 "error": "generica"
 },
@@ -6958,6 +7342,9 @@
 "src": "https://www.escapadaambnens.com/meranges/",
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
+},
+"vi-mercantic-sant-cugat": {
+"error": "URLError"
 },
 "vi-mev-vic": {
 "img": "https://museuartmedieval.cat/mev/wp-content/uploads/2025/05/imatge-1-640x465.jpeg",
@@ -7007,6 +7394,9 @@
 "site": "55slot pg สนุกลุ้นโบนัสทุกวินาที เล่นง่า",
 "fecha": "2026-10-09"
 },
+"vi-mirador-avions-prat": {
+"error": "sin-imagen"
+},
 "vi-mirador-bassot-vilalba": {
 "error": "generica"
 },
@@ -7050,6 +7440,12 @@
 "img": "https://www.escapadaambnens.com/fotografies/petites/64617molidelafontmonral.jpg",
 "src": "https://www.escapadaambnens.com/activitat/21/visita-guiada-al-moli-del-fort/",
 "site": "escapadaambnens.com",
+"fecha": "2026-10-09"
+},
+"vi-moli-den-rata-ripollet": {
+"img": "https://visitvalles.com/wp-content/uploads/2020/06/moli-den-rata.jpg",
+"src": "https://visitvalles.com/ca/portfolio_page/centre-dinterpretacio-del-patrimoni-moli-den-rata/",
+"site": "visitvalles.com",
 "fecha": "2026-10-09"
 },
 "vi-moli-llavina-centelles": {
@@ -7108,6 +7504,9 @@
 },
 "vi-monestir-sant-cugat": {
 "error": "generica"
+},
+"vi-monnatura-delta-amposta": {
+"error": "URLError"
 },
 "vi-monnatura-pirineus": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/67813mon-natura-pirineus-2.jpg",
@@ -7196,6 +7595,12 @@
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
 },
+"vi-museu-aeronautic-sabadell": {
+"img": "https://visitvalles.com/wp-content/uploads/2023/05/Parc_aeronautic_Sabadell_exterior.jpg",
+"src": "https://visitvalles.com/ca/portfolio_page/museu-aeronautic-de-catalunya/",
+"site": "visitvalles.com",
+"fecha": "2026-10-09"
+},
 "vi-museu-aigua-lleida": {
 "img": "https://www.lleidaturisme.cat/ca/visitar/museus/museu-de-laigua/@@images/image/large",
 "src": "https://www.lleidaturisme.cat/ca/visitar/museus/museu-de-laigua",
@@ -7268,6 +7673,12 @@
 "site": "Turisme Urgell",
 "fecha": "2026-10-09"
 },
+"vi-museu-cantir-argentona": {
+"img": "https://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg",
+"src": "https://www.museucantir.org/",
+"site": "museucantir.org",
+"fecha": "2026-10-09"
+},
 "vi-museu-casteller-valls": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/36716museu-casteller-valls-2.jpg",
 "src": "https://www.escapadaambnens.com/activitat/1225/el-museu-casteller-de-catalunya-a-valls-una-experiencia-familiar-unica-sobre-els-castells/",
@@ -7336,6 +7747,9 @@
 },
 "vi-museu-diocesa-solsona": {
 "error": "generica"
+},
+"vi-museu-estampacio-premia": {
+"error": "URLError"
 },
 "vi-museu-etnografic-ripoll": {
 "img": "https://femturisme.cat/_fotos/establiments/main/museu-etnografic-ripoll.jpg",
@@ -7439,6 +7853,18 @@
 "site": "femturisme.cat",
 "fecha": "2026-10-09"
 },
+"vi-museu-titelles-palau": {
+"img": "https://www.museudetitelles.com/wp-content/uploads/2026/08/MIT_RankMath_1200x630_corporatiu.webp",
+"src": "https://www.museudetitelles.com/",
+"site": "MIT Museu Internacional dels Titelles a ",
+"fecha": "2026-10-09"
+},
+"vi-museu-torneria-torello": {
+"img": "https://osonaturisme.cat/wp-content/uploads/2022/02/TORELLÓ-0323-1-scaled-1600x600.jpg",
+"src": "https://osonaturisme.cat/que-fer/cultura/museus-i-centres-dinterpretacio/",
+"site": "osonaturisme.cat",
+"fecha": "2026-10-09"
+},
 "vi-museu-torro-agramunt": {
 "img": "https://cdnebasnet.com/data/cache/opt_jpg/cms/turismeurgell2/images/pages/175-2663853455-1400x1400.jpg",
 "src": "https://turismeurgell.cat/ca/p/museus-i-espais-visitables/museu-del-torro-i-la-xocolata-17-175",
@@ -7447,6 +7873,9 @@
 },
 "vi-museu-tortosa": {
 "error": "generica"
+},
+"vi-museu-tractor-castellbisbal": {
+"error": "sin-imagen"
 },
 "vi-museu-trementinaires": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/31662flors-shutterstock205454473.jpg",
@@ -8270,6 +8699,12 @@
 "site": "scq.cat",
 "fecha": "2026-10-09"
 },
+"vi-santa-maria-lluca": {
+"img": "https://osonaturisme.cat/wp-content/uploads/2021/12/ORP5265-copia-1747x800.jpg",
+"src": "https://osonaturisme.cat/que-fer/cultura/monuments-dinteres-visitables/",
+"site": "osonaturisme.cat",
+"fecha": "2026-10-09"
+},
 "vi-santa-pau-poble": {
 "error": "HTTPError"
 },
@@ -8387,6 +8822,12 @@
 "site": "escapadaambnens.com",
 "fecha": "2026-10-09"
 },
+"vi-termes-ca-larnau-cabrera": {
+"img": "https://gaudeixcabrera.cat/media/CACHE/images/imagen/FOTO_10_SENDERISME_cx3c2tA/a0200076eaa2514cf61988817af8c8cb.jpg",
+"src": "https://gaudeixcabrera.cat/",
+"site": "gaudeixcabrera.cat",
+"fecha": "2026-10-09"
+},
 "vi-termes-romanes-caldes-malavella": {
 "img": "https://www.visitcaldes.cat/wp-content/uploads/2022/05/Salut-i-benestar_H_P.jpg",
 "src": "https://www.visitcaldes.cat/es/que-hacer/termas-romanas/",
@@ -8427,6 +8868,12 @@
 "img": "https://femturisme.cat/_fotos/ofertes/main/proposta-femturisme-3061.jpg",
 "src": "https://femturisme.cat/establiments/solsona-experience-descobreix-el-solsones/ofertes/visita-guiada-a-la-torre-de-vallferosa-solsones",
 "site": "femturisme.cat",
+"fecha": "2026-10-09"
+},
+"vi-torre-llauder-mataro": {
+"img": "https://cdn.gestioweb.pro/medias/portal-visitmataro-front/2021/c_crop,x_62,y_34,w_1824,h_954|c_fit,w_600,h_314|c_auto/4204636487f9d9dcfcfb46a640a5e323.jpeg",
+"src": "https://visitmataro.cat/ca/descobreix/museus-i-espais-dinteres-cultural-1/clos-arqueologic-de-torre-llauder",
+"site": "visitmataro.cat",
 "fecha": "2026-10-09"
 },
 "vi-torre-sant-joan-amposta": {
@@ -8578,6 +9025,9 @@
 },
 "vi-veus-del-front-pinell": {
 "error": "generica"
+},
+"vi-via-metrica-fgc-martorell": {
+"error": "sin-imagen"
 },
 "vi-viatge-infant-hospitalet": {
 "error": "sin-imagen"
