@@ -39,6 +39,13 @@ const norm = s => String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/
 const layerOf = p => LAYERS.find(l=>l.k===p.capa)||LAYERS[2];
 const colorVar = p => "var("+layerOf(p).c+")";
 const isMobile = () => matchMedia("(max-width:820px)").matches;
+/* App instalada (iOS/Android): altura = pantalla real. En iOS con barra de estado translúcida
+   innerHeight y 100vh no coinciden con la pantalla; screen.* sí (en orientación vertical). */
+const isStandalone=()=>navigator.standalone===true||matchMedia("(display-mode: standalone)").matches;
+function fitViewport(){const de=document.documentElement;const sa=isStandalone();de.classList.toggle("standalone",sa);if(!sa)return;
+  const portrait=matchMedia("(orientation: portrait)").matches;const sh=portrait?Math.max(screen.width,screen.height):Math.min(screen.width,screen.height);
+  const h=Math.max(innerHeight,Math.min(sh,innerHeight+80));de.style.setProperty("--apph",h+"px");}
+fitViewport();addEventListener("resize",fitViewport);addEventListener("orientationchange",()=>setTimeout(fitViewport,300));
 function iconOf(p){ if(p.capa==="ruta")return "route"; if(p.capa==="pernocta"){const t=p.tipos||[];return t.includes("camping")?"tent":t.includes("parking")?"square-parking":"caravan";}
   for(const [t,i] of TYPE_ICON) if((p.tipos||[]).includes(t)) return i; return layerOf(p).i; }
 function hav(a,b,c,d){const R=6371,r=x=>x*Math.PI/180;const x=Math.sin(r(c-a)/2)**2+Math.cos(r(a))*Math.cos(r(c))*Math.sin(r(d-b)/2)**2;return 2*R*Math.asin(Math.sqrt(x));}
