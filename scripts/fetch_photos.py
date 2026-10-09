@@ -15,11 +15,11 @@ Uso:  python scripts/fetch_photos.py [--all] [--limit N]
   --all    vuelve a comprobar también los puntos que ya tienen foto
 No descarga imágenes: guarda la URL original y el enlace a la fuente.
 """
-import json, re, sys, time, argparse, html, math
+import json, re, sys, time, argparse, html, math, threading
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urljoin, urlparse, quote, urlencode
-import urllib.request
+import urllib.request, urllib.error
 
 ROOT = __file__.rsplit("/scripts/", 1)[0]
 PLACES = f"{ROOT}/data/places.json"
@@ -39,6 +39,8 @@ BAD_TITLE = re.compile(r"map|mapa|plano|logo|escut|escudo|bandera|flag|coat|seny
 TODAY = time.strftime("%Y-%m-%d")
 STATS = Counter()
 ERRS = []
+WIKI_LOCK = threading.Lock()   # Wikimedia pide ≤ ~1 petición/s por bot
+WIKI_LAST = [0.0]
 
 
 def safe_url(u):
@@ -94,10 +96,26 @@ def page_candidates(url):
     return cands, site
 
 
+def wiki_get(url):
+    """Petición a la API de Wikimedia: serializada, 0,6 s entre llamadas, reintento si 429."""
+    for attempt in range(3):
+        with WIKI_LOCK:
+            wait = WIKI_LAST[0] + 0.6 - time.time()
+            if wait > 0:
+                time.sleep(wait)
+            try:
+                data, _, _ = get(url, headers={"User-Agent": WIKI_UA})
+                WIKI_LAST[0] = time.time()
+                return json.loads(data)
+            except urllib.error.HTTPError as e:
+                WIKI_LAST[0] = time.time() + (8 if e.code == 429 else 0)
+                if e.code != 429 or attempt == 2:
+                    raise
+    return {}
+
+
 def wiki_api(lang, params):
-    url = f"https://{lang}.wikipedia.org/w/api.php?" + urlencode({"format": "json", "formatversion": 2, **params})
-    data, _, _ = get(url, headers={"User-Agent": WIKI_UA})
-    return json.loads(data)
+    return wiki_get(f"https://{lang}.wikipedia.org/w/api.php?" + urlencode({"format": "json", "formatversion": 2, **params}))
 
 
 def clean_name(name):
@@ -126,11 +144,10 @@ def wikipedia_image(p):
                 continue
             if km(p["lat"], p["lng"], co["lat"], co["lon"]) > 3:
                 continue
-            img = (pg.get("original") or pg.get("thumbnail") or {}).get("source")
+            img = ((pg.get("original") or pg.get("thumbnail") or {}).get("source") or "").split("?")[0]
             if img and not BAD_TITLE.search(img.rsplit("/", 1)[-1]) and re.search(r"\.(jpe?g|png|webp)$", img, re.I):
                 STATS["wiki_hit"] += 1
                 return {"img": img, "src": f"https://{lang}.wikipedia.org/wiki/{quote(pg['title'].replace(' ', '_'))}", "site": "Wikipedia", "fecha": TODAY}
-        time.sleep(0.2)
     return None
 
 
@@ -140,8 +157,7 @@ def commons_image(p):
             "action": "query", "format": "json", "formatversion": 2, "generator": "geosearch",
             "ggscoord": f"{p['lat']}|{p['lng']}", "ggsradius": 250, "ggsnamespace": 6, "ggslimit": 12,
             "prop": "imageinfo", "iiprop": "url|size|mime", "iiurlwidth": 1000})
-        data, _, _ = get(url, headers={"User-Agent": WIKI_UA})
-        pages = json.loads(data).get("query", {}).get("pages") or []
+        pages = wiki_get(url).get("query", {}).get("pages") or []
     except Exception:  # noqa: BLE001
         return None
     best = None
@@ -152,7 +168,7 @@ def commons_image(p):
         if BAD_TITLE.search(pg.get("title", "")) or ii.get("width", 0) < 600:
             continue
         if not best or ii.get("width", 0) > best[0]:
-            best = (ii.get("width", 0), ii.get("thumburl") or ii.get("url"), ii.get("descriptionurl"))
+            best = (ii.get("width", 0), (ii.get("thumburl") or ii.get("url") or "").split("?")[0], ii.get("descriptionurl"))
     if best:
         return {"img": best[1], "src": best[2], "site": "Wikimedia Commons", "fecha": TODAY}
     return None
@@ -199,7 +215,7 @@ def _work(args):
         c = commons_image(p)
         if c and image_ok(c["img"]):
             return p["id"], c
-    return p["id"], {"error": "sin-imagen", "fecha": TODAY}
+    return p["id"], {"error": "sin-imagen", "fecha": TODAY, "wiki": 1}
 
 
 def main():
@@ -232,7 +248,7 @@ def main():
             return True
         if v.get("img"):
             return False
-        return v.get("error") == "generica" or (v.get("fecha") or "") < cutoff
+        return v.get("error") == "generica" or (v.get("fecha") or "") < cutoff or (v.get("error") == "sin-imagen" and not v.get("wiki"))
     todo = [p for p in items if pending(p)]
     if a.limit:
         todo = todo[: a.limit]
@@ -245,11 +261,15 @@ def main():
             photos[pid] = res
     # una misma imagen en 3+ sitios no representa a ninguno: segunda pasada solo con Wikipedia/Commons
     uses = Counter(v["img"] for v in photos.values() if v.get("img"))
-    again = [p for p in items if photos.get(p["id"], {}).get("img") and uses[photos[p["id"]]["img"]] >= 3]
-    print(f"Genéricas: {len(again)}; probando Wikipedia/Commons…", flush=True)
+    gen_ids = {p["id"] for p in items if photos.get(p["id"], {}).get("img") and uses[photos[p["id"]]["img"]] >= 3}
+    prev = json.load(open(PHOTOS, encoding="utf-8")) if True else {}
+    again = [p for p in items if p["id"] in gen_ids and not (prev.get(p["id"], {}).get("wiki") and (prev[p["id"]].get("fecha") or "") >= cutoff)]
+    for pid in gen_ids:
+        photos[pid] = {"error": "generica", "fecha": prev.get(pid, {}).get("fecha", TODAY), "wiki": prev.get(pid, {}).get("wiki", 0)}
+    print(f"Genéricas: {len(gen_ids)}; probando Wikipedia/Commons en {len(again)}…", flush=True)
     with ThreadPoolExecutor(6) as ex:
         for pid, res in ex.map(work, [(p, None) for p in again]):
-            photos[pid] = res if res.get("img") else {"error": "generica", "fecha": TODAY}
+            photos[pid] = res if res.get("img") else {"error": "generica", "fecha": TODAY, "wiki": 1}
             ok += 1 if res.get("img") else 0
     print("Wikipedia:", dict(STATS), *ERRS, sep="\n")
     with open(f"{ROOT}/data/photos_stats.json", "w", encoding="utf-8") as f:
