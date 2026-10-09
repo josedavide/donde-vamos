@@ -2470,7 +2470,9 @@
 "fecha": "2026-10-06"
 },
 "na-engolasters": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Lac_d%27Engolasters_01.JPG/1280px-Lac_d%27Engolasters_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Lac_d%27Engolasters_01.JPG",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "na-ermita-abellera-prades": {
@@ -3742,7 +3744,9 @@
 "fecha": "2026-10-09"
 },
 "na-roc-del-quer": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Roc_del_Quer_lookout_%283%29.jpg/1280px-Roc_del_Quer_lookout_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Roc_del_Quer_lookout_(3).jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "na-rodeno-te": {
@@ -4188,7 +4192,9 @@
 "fecha": "2026-10-06"
 },
 "na-vall-de-nuria": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Queralbs_-_51585118719.jpg/1280px-Queralbs_-_51585118719.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Queralbs_-_51585118719.jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "na-vall-fuirosos": {
@@ -4196,7 +4202,9 @@
 "fecha": "2026-10-09"
 },
 "na-vall-incles": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Pyrenees_in_Andorra_%2821%29.jpg/1280px-Pyrenees_in_Andorra_%2821%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Pyrenees_in_Andorra_(21).jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "na-vall-sant-daniel": {
@@ -4212,7 +4220,9 @@
 "fecha": "2026-10-09"
 },
 "na-vallter-2000": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Galeopsis_pyrenaica_410151634.jpg/1280px-Galeopsis_pyrenaica_410151634.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Galeopsis_pyrenaica_410151634.jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "na-via-nicolau-pont-penjant": {
@@ -5309,22 +5319,6 @@
 "site": "estivalgroup.com",
 "fecha": "2026-10-09"
 },
-"osm-r14503095": {
-"error": "sin-imagen",
-"fecha": "2026-10-09"
-},
-"osm-r14511856": {
-"img": "https://img.yellohvillage.fr/var/plain_site/storage/images/_aliases/spapi_xlarge/site_marchand/camping/alfacs/3802937-85-fre-FR/alfacs.jpg",
-"src": "https://www.alfacs.com/",
-"site": "alfacs.com",
-"fecha": "2026-10-09"
-},
-"osm-r14637921": {
-"img": "https://www.la-rueda.com/wp-content/uploads/Camping-LaRueda-006-1800x700.jpg",
-"src": "https://www.la-rueda.com/",
-"site": "La rueda",
-"fecha": "2026-10-09"
-},
 "osm-r15448619": {
 "error": "sin-imagen",
 "fecha": "2026-10-09"
@@ -5577,10 +5571,6 @@
 "site": "Office de Tourisme des Hauts Tolosans",
 "fecha": "2026-10-09"
 },
-"osm-w1067516649": {
-"error": "sin-imagen",
-"fecha": "2026-10-09"
-},
 "osm-w1067516650": {
 "img": "https://mas-llinas.com/wp-content/themes/cypres85/assets/img/lang-es.png",
 "src": "https://www.mas-llinas.com",
@@ -5805,10 +5795,6 @@
 "img": "https://www.lescriques.fr/wp-content/uploads/2024/01/les-criques-de-porteils-presentation-header-background.jpeg",
 "src": "https://www.lescriques.fr/",
 "site": "Les Criques de Porteils",
-"fecha": "2026-10-09"
-},
-"osm-w1167114579": {
-"error": "sin-imagen",
 "fecha": "2026-10-09"
 },
 "osm-w1167190943": {
@@ -6598,7 +6584,7 @@
 "fecha": "2026-10-09"
 },
 "osm-w1328004777": {
-"error": "generica",
+"error": "sin-imagen",
 "fecha": "2026-10-09"
 },
 "osm-w1328204919": {
@@ -7223,12 +7209,6 @@
 "site": "La Siesta Salou Resort & Camping",
 "fecha": "2026-10-09"
 },
-"osm-w194769229": {
-"img": "https://lh3.googleusercontent.com/-aSLhmISw0Ws/AAAAAAAAAAI/AAAAAAAAAAA/wgQe0XkwkrY/s160-c-k-mo/photo.jpg",
-"src": "https://campingeucaliptus.com/",
-"site": "Camping Eucaliptus",
-"fecha": "2026-10-09"
-},
 "osm-w196017229": {
 "error": "sin-imagen",
 "fecha": "2026-10-09"
@@ -7379,10 +7359,6 @@
 "img": "https://www.campingpeguere.com/uploads/basecamp/theme/camping-le-peguere.png",
 "src": "https://www.campingpeguere.com/",
 "site": "CAMPING LE PEGUERE à Cauterets dans les ",
-"fecha": "2026-10-09"
-},
-"osm-w214677466": {
-"error": "sin-imagen",
 "fecha": "2026-10-09"
 },
 "osm-w214677468": {
@@ -8875,12 +8851,6 @@
 "site": "Tourisme Pyrénées-Orientales",
 "fecha": "2026-10-09"
 },
-"osm-w476623643": {
-"img": "https://www.bagesturisme.cat/wp-content/uploads/2017/11/area_autocaravanes-1280x853.jpg",
-"src": "https://bagesturisme.cat/es/allotjament/zona-autocaravanes/",
-"site": "Bages Turisme",
-"fecha": "2026-10-09"
-},
 "osm-w476903598": {
 "error": "sin-imagen",
 "fecha": "2026-10-09"
@@ -9737,12 +9707,6 @@
 "site": "Camping Jobel à Tarnos",
 "fecha": "2026-10-09"
 },
-"osm-w702208965": {
-"img": "https://cdn.tsunamipanel.com/100537/media/galleries/182a4-camping-blanes-costa-brava--1-.jpg",
-"src": "https://www.campingblanes.com",
-"site": "campingblanes.com",
-"fecha": "2026-10-09"
-},
 "osm-w705037204": {
 "error": "sin-imagen",
 "fecha": "2026-10-09"
@@ -10448,11 +10412,11 @@
 "fecha": "2026-10-09"
 },
 "osm-w899170111": {
-"error": "generica",
+"error": "sin-imagen",
 "fecha": "2026-10-09"
 },
 "osm-w899178320": {
-"error": "generica",
+"error": "sin-imagen",
 "fecha": "2026-10-09"
 },
 "osm-w899187953": {
@@ -10466,7 +10430,7 @@
 "fecha": "2026-10-09"
 },
 "osm-w901996971": {
-"error": "generica",
+"error": "sin-imagen",
 "fecha": "2026-10-09"
 },
 "osm-w902266274": {
@@ -11352,7 +11316,7 @@
 "fecha": "2026-10-06"
 },
 "pe-castello-de-farfanya": {
-"error": "generica",
+"error": "sin-imagen",
 "fecha": "2026-10-09"
 },
 "pe-castellsera": {
@@ -12630,7 +12594,9 @@
 "fecha": "2026-10-09"
 },
 "vi-andorra-barri-antic": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/7_poetes.jpg/1280px-7_poetes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:7_poetes.jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "vi-anigami-esquirol": {
@@ -15562,7 +15528,9 @@
 "fecha": "2026-10-09"
 },
 "vi-perpignan-palais-rois": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Perpignan_Rue_des_Archers_34-42_seen_from_the_Citadel.jpg/1280px-Perpignan_Rue_des_Archers_34-42_seen_from_the_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Perpignan_Rue_des_Archers_34-42_seen_from_the_Citadel.jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "vi-petit-mon-axa-tarrada": {
@@ -15928,7 +15896,9 @@
 "fecha": "2026-10-09"
 },
 "vi-sant-pere-rodes": {
-"error": "generica",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Esglesia_Sant_Pere_de_Rodes_Exterior_2026_Landscape.jpg/1280px-Esglesia_Sant_Pere_de_Rodes_Exterior_2026_Landscape.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+"src": "https://commons.wikimedia.org/wiki/File:Esglesia_Sant_Pere_de_Rodes_Exterior_2026_Landscape.jpg",
+"site": "Wikimedia Commons",
 "fecha": "2026-10-09"
 },
 "vi-sant-pere-vilamajor": {
