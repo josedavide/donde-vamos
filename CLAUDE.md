@@ -17,6 +17,7 @@ Ideas de salidas en autocaravana (7 m, familia con niños) desde Mataró, radio 
   `ultima_revision`. Sirve para actualizar de forma incremental (ver abajo).
 - GitHub Action `enriquecer.yml` (lunes y tras cada cambio de places.json): áreas OSM →
   `scripts/geocode_aprox.py` (afina coordenadas `aprox`) → fotos → commit + publicar.
+- `sw.js` — service worker (PWA instalable; red primero, caché sin cobertura; teselas en caché).
 - Datos del usuario (favoritos, vistos, salidas) viven en `localStorage` del navegador
   (`dv-est`, `dv-ui`); hay exportar/importar JSON en Guardados.
 
