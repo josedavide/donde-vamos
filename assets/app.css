@@ -270,7 +270,8 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
      basta con la mitad del indicador de inicio. --tabh es la altura total de la barra de pestañas. */
   :root{--safeb:min(env(safe-area-inset-bottom,0px),16px);--tabh:calc(44px + var(--safeb))}
   @media (display-mode:standalone){:root{--safeb:max(0px,calc(env(safe-area-inset-bottom,0px) - 16px));--tabh:calc(44px + var(--safeb))}}
-  .app,.app.collapsed{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+  /* En móvil la app se ancla a los cuatro bordes del viewport (cubre también las áreas seguras en modo app). */
+  .app,.app.collapsed{position:fixed;inset:0;height:auto;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
   .mapwrap{grid-row:1;grid-column:1}
   /* barra de pestañas */
   .rail{grid-row:2;grid-column:1;flex-direction:row;justify-content:space-around;padding:2px 6px var(--safeb);border-right:0;border-top:0;box-shadow:0 -1px 0 var(--line);z-index:560;height:var(--tabh);box-sizing:border-box;position:relative;gap:0}
@@ -333,7 +334,7 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   .act{padding:11px 4px 9px;border-radius:14px}
   .app.detail .panel,.app.detail .mtop,.app.detail .mhint,.app.detail .focusbar{display:none}
   /* controles del mapa: al alcance del pulgar */
-  .mapctl{top:auto;bottom:calc(var(--peek,120px) + var(--tabh) + 8px);right:10px}
+  .mapctl{top:auto;bottom:calc(var(--peek,120px) + 8px);right:10px}
   .app.detail .mapctl{bottom:calc(var(--ch,58vh) + 12px)}
   .mapctl .zoomgrp{display:none}
   .app.sheetfull .mapctl,.app.sheetfull .mhint,.app.sheetfull .leaflet-control-attribution{opacity:0;pointer-events:none}
@@ -341,10 +342,10 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   .ctlgrp button{width:44px;height:44px}
   .stylepop{width:232px}
   .legend{display:none}
-  .mhint{left:10px;bottom:calc(var(--peek,120px) + var(--tabh) + 8px)}
+  .mhint{left:10px;bottom:calc(var(--peek,120px) + 8px)}
   .focusbar{top:calc(var(--mtoph,108px) + 6px)}
   .symtip{display:none}
-  .leaflet-control-attribution{position:absolute;right:0;bottom:calc(var(--peek,120px) + var(--tabh));transition:bottom .28s cubic-bezier(.2,.8,.2,1);border-radius:8px 0 0 0;white-space:nowrap;font-size:10px!important;padding:1px 5px!important}
+  .leaflet-control-attribution{position:absolute;right:0;bottom:var(--peek,120px);transition:bottom .28s cubic-bezier(.2,.8,.2,1);border-radius:8px 0 0 0;white-space:nowrap;font-size:10px!important;padding:1px 5px!important}
   .app.detail .leaflet-control-attribution{bottom:var(--ch,58vh)}
   .toast{bottom:calc(var(--tabh) + 12px)}
   /* filtros como hoja modal */

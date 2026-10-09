@@ -215,8 +215,10 @@ function avail(){return innerHeight-$("rail").offsetHeight;}
 function peekH(){return $("handle").offsetHeight+$("phead").offsetHeight+4;}
 function snapPx(i){const top=(parseInt(getComputedStyle($("mtop")).height)||0)+12;return i===0?peekH():i===1?Math.round(avail()*.5):avail()-top;}
 function setSnap(i,silent){snap=Math.max(0,Math.min(2,i));const p=$("panel");p.style.setProperty("--sh",(snapPx(snap)+20)+"px");p.classList.toggle("locked",snap<2);$("app").classList.toggle("sheetfull",snap===2);
-  document.querySelector(".mapwrap").style.setProperty("--peek",snapPx(Math.min(snap,1))+"px");if(!silent)setTimeout(()=>map.invalidateSize({pan:false}),300);}
+  if(!("ResizeObserver" in window))document.querySelector(".mapwrap").style.setProperty("--peek",snapPx(Math.min(snap,1))+"px");if(!silent)setTimeout(()=>map.invalidateSize({pan:false}),300);}
 function setCSnap(i){csnap=Math.max(0,Math.min(1,i));const c=$("card");c.style.setProperty("--ch",Math.round(innerHeight*CSNAPS[csnap])+"px");c.classList.toggle("locked",csnap<1);}
+/* --peek sigue la altura REAL de la hoja (también durante el arrastre), para que los controles del mapa queden pegados a ella. */
+if("ResizeObserver" in window){const mw=document.querySelector(".mapwrap");new ResizeObserver(()=>{if(!isMobile())return;const h=$("panel").offsetHeight-20;if(h>0&&snap<2)mw.style.setProperty("--peek",h+"px");}).observe($("panel"));}
 let swallowClick=false;document.addEventListener("click",e=>{if(swallowClick){e.stopPropagation();e.preventDefault();swallowClick=false;}},true);
 function makeSheet(el,opts){let y0,h0,on=false,moved=false,touch=false;
   const start=(y,isTouch,e)=>{if(!isMobile()||!opts.canStart(e))return;on=true;moved=false;touch=isTouch;y0=y;h0=el.getBoundingClientRect().height;};
