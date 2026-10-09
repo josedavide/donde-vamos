@@ -252,6 +252,8 @@ def main():
             photos[pid] = res if res.get("img") else {"error": "generica", "fecha": TODAY}
             ok += 1 if res.get("img") else 0
     print("Wikipedia:", dict(STATS), *ERRS, sep="\n")
+    with open(f"{ROOT}/data/photos_stats.json", "w", encoding="utf-8") as f:
+        json.dump({"fecha": TODAY, "consultados": len(todo), "genericas": len(again), "wiki": dict(STATS), "errores": ERRS}, f, ensure_ascii=False, indent=1)
     with open(PHOTOS, "w", encoding="utf-8") as f:
         json.dump(dict(sorted(photos.items())), f, ensure_ascii=False, indent=0)
         f.write("\n")
