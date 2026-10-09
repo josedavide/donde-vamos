@@ -23,6 +23,7 @@ jobs:
           mkdir _site
           cp -r index.html manifest.webmanifest sw.js assets data _site/
           touch _site/.nojekyll
+          v="${GITHUB_SHA::7}"; sed -i "s#assets/app.css#assets/app.css?v=$v#; s#assets/app.js#assets/app.js?v=$v#; s#assets/icons.js#assets/icons.js?v=$v#" _site/index.html
       - uses: actions/configure-pages@v5
         with:
           enablement: true
