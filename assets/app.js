@@ -80,8 +80,11 @@ function sorter(mode){
 function filterCount(){return S.types.size+S.dur.size+(S.ninos?1:0)+(S.ac?1:0)+(S.gratis?1:0)+(S.hideSeen?1:0)+(S.top?1:0)+(S.dmode!=="todo"?1:0)+(S.maxmin<300?1:0);}
 
 /* ===== mapa base ===== */
-const map=L.map("map",{zoomControl:false,attributionControl:true,minZoom:5,maxZoom:18,maxBounds:L.latLngBounds([[34,-12],[50,14]]),zoomSnap:.25,zoomDelta:.5,wheelPxPerZoomLevel:220,wheelDebounce:40,zoomAnimation:true}).setView([42.0,1.4],7);
+const map=L.map("map",{zoomControl:false,attributionControl:true,minZoom:5,maxZoom:18,maxBounds:L.latLngBounds([[34,-12],[50,14]]),zoomSnap:0,zoomDelta:.5,scrollWheelZoom:false,zoomAnimation:true}).setView([42.0,1.4],7);
 map.attributionControl.setPrefix(false);
+/* Zoom con rueda continuo y proporcional al gesto (Magic Mouse y trackpad envían muchos eventos pequeños con inercia). */
+(function(){let acc=0,pt=null,raf=0;map.getContainer().addEventListener("wheel",e=>{e.preventDefault();let d=e.deltaY;if(e.deltaMode===1)d*=16;else if(e.deltaMode===2)d*=innerHeight;if(e.ctrlKey)d*=5;else if(Math.abs(d)>=90)d=Math.sign(d)*260;/* rueda clásica: medio nivel por muesca */acc+=d;pt=map.mouseEventToContainerPoint(e);
+  if(!raf)raf=requestAnimationFrame(()=>{raf=0;const dz=Math.max(-.4,Math.min(.4,-acc/520));acc=0;if(!dz)return;const z=Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+dz));map.setZoomAround(pt,z,{animate:false});});},{passive:false});})();
 const baseR=L.canvas({padding:.5});
 const BASES={
   mapa:{l:"Mapa",th:"https://tile.openstreetmap.org/7/64/47.png",mk:()=>[L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'})]},
@@ -165,7 +168,7 @@ function refresh(){S.filtered=S.pts.filter(matches).sort(sorter(S.sort));sym.red
 
 /* encuadre teniendo en cuenta el panel */
 function padL(){return isMobile()?0:0;}
-function sheetH(){const el=S.detail?$("card"):$("panel");return el&&!el.hidden&&isMobile()?el.getBoundingClientRect().height+(S.detail?0:38):0;}
+function sheetH(){const el=S.detail?$("card"):$("panel");return el&&!el.hidden&&isMobile()?el.getBoundingClientRect().height+(S.detail?0:$("rail").offsetHeight-20):0;}
 function fitPts(pts,maxZoom){if(!pts.length)return;const pad=isMobile()?{paddingTopLeft:[20,(parseInt(getComputedStyle($("mtop")).height)||0)+24],paddingBottomRight:[20,sheetH()+24]}:{paddingTopLeft:[40,60],paddingBottomRight:[S.detail?480:70,40]};
   map.flyToBounds(L.latLngBounds(pts.map(p=>[p.lat,p.lng])),{...pad,maxZoom:maxZoom||11,duration:.5});}
 function centerOn(lat,lng,zoom){const z=zoom||Math.max(Z(),10.5);let ox=0,oy=0;if(isMobile()){const h=S.detail?Math.round(innerHeight*CSNAPS[0]):sheetH();oy=Math.round(h/2)-20;}else if(S.detail)ox=210;const pt=map.project([lat,lng],z).add([ox,oy]);map.flyTo(map.unproject(pt,z),z,{duration:.5});}
@@ -201,7 +204,7 @@ function setPW(w){w=Math.max(320,Math.min(Math.round(w),Math.min(620,innerWidth-
   r.addEventListener("dblclick",()=>{setPW(400);savePrefs();map.invalidateSize();});})();
 /* hoja móvil */
 const CSNAPS=[.58,.94];let snap=1,csnap=0;
-function avail(){return innerHeight-58;}
+function avail(){return innerHeight-$("rail").offsetHeight;}
 function peekH(){return $("handle").offsetHeight+$("phead").offsetHeight+4;}
 function snapPx(i){const top=(parseInt(getComputedStyle($("mtop")).height)||0)+12;return i===0?peekH():i===1?Math.round(avail()*.5):avail()-top;}
 function setSnap(i,silent){snap=Math.max(0,Math.min(2,i));const p=$("panel");p.style.setProperty("--sh",(snapPx(snap)+20)+"px");p.classList.toggle("locked",snap<2);$("app").classList.toggle("sheetfull",snap===2);
