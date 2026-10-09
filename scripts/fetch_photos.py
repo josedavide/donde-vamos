@@ -144,7 +144,7 @@ def wikipedia_image(p):
                 continue
             if km(p["lat"], p["lng"], co["lat"], co["lon"]) > 3:
                 continue
-            img = ((pg.get("original") or pg.get("thumbnail") or {}).get("source") or "").split("?")[0]
+            img = ((pg.get("thumbnail") or pg.get("original") or {}).get("source") or "").split("?")[0]  # miniatura de 1000 px: carga rápida
             if img and not BAD_TITLE.search(img.rsplit("/", 1)[-1]) and re.search(r"\.(jpe?g|png|webp)$", img, re.I):
                 STATS["wiki_hit"] += 1
                 return {"img": img, "src": f"https://{lang}.wikipedia.org/wiki/{quote(pg['title'].replace(' ', '_'))}", "site": "Wikipedia", "fecha": TODAY}
