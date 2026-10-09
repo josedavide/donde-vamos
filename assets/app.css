@@ -272,6 +272,7 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   @media (display-mode:standalone){:root{--safeb:max(0px,calc(env(safe-area-inset-bottom,0px) - 16px));--tabh:calc(44px + var(--safeb))}}
   /* En móvil la app se ancla a los cuatro bordes del viewport (cubre también las áreas seguras en modo app). */
   .app,.app.collapsed{position:fixed;inset:0;height:auto;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+  :root[style*="--apph"] .app{bottom:auto;height:var(--apph)}
   .mapwrap{grid-row:1;grid-column:1}
   /* barra de pestañas */
   .rail{grid-row:2;grid-column:1;flex-direction:row;justify-content:space-around;padding:2px 6px var(--safeb);border-right:0;border-top:0;box-shadow:0 -1px 0 var(--line);z-index:560;height:var(--tabh);box-sizing:border-box;position:relative;gap:0}

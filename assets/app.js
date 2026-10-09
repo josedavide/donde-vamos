@@ -178,7 +178,7 @@ function padL(){return isMobile()?0:0;}
 function sheetH(){const el=S.detail?$("card"):$("panel");return el&&!el.hidden&&isMobile()?el.getBoundingClientRect().height+(S.detail?0:$("rail").offsetHeight-20):0;}
 function fitPts(pts,maxZoom){if(!pts.length)return;const pad=isMobile()?{paddingTopLeft:[20,(parseInt(getComputedStyle($("mtop")).height)||0)+24],paddingBottomRight:[20,sheetH()+24]}:{paddingTopLeft:[40,60],paddingBottomRight:[S.detail?480:70,40]};
   map.flyToBounds(L.latLngBounds(pts.map(p=>[p.lat,p.lng])),{...pad,maxZoom:maxZoom||11,duration:.5});}
-function centerOn(lat,lng,zoom){const z=zoom||Math.max(Z(),10.5);let ox=0,oy=0;if(isMobile()){const h=S.detail?Math.round(innerHeight*CSNAPS[0]):sheetH();oy=Math.round(h/2)-20;}else if(S.detail)ox=210;const pt=map.project([lat,lng],z).add([ox,oy]);map.flyTo(map.unproject(pt,z),z,{duration:.5});}
+function centerOn(lat,lng,zoom){const z=zoom||Math.max(Z(),10.5);let ox=0,oy=0;if(isMobile()){const h=S.detail?Math.round(VH()*CSNAPS[0]):sheetH();oy=Math.round(h/2)-20;}else if(S.detail)ox=210;const pt=map.project([lat,lng],z).add([ox,oy]);map.flyTo(map.unproject(pt,z),z,{duration:.5});}
 const LVL2_Z=9;
 let pulseT0=0;function pulse(){pulseT0=performance.now();const tick=()=>{if(performance.now()-pulseT0<1700){sym.redraw();requestAnimationFrame(tick);}else sym.redraw();};requestAnimationFrame(tick);}
 function shown(p){return (S.hl&&S.hl.ids.has(p.id))||p.nivel!==2||Z()>=LVL2_Z||!!S.q||S.sel===p.id||isFav(p.id)||!!S.focus;}
@@ -211,12 +211,22 @@ function setPW(w){w=Math.max(320,Math.min(Math.round(w),Math.min(620,innerWidth-
   r.addEventListener("dblclick",()=>{setPW(400);savePrefs();map.invalidateSize();});})();
 /* hoja móvil */
 const CSNAPS=[.58,.94];let snap=1,csnap=0;
-function avail(){return innerHeight-$("rail").offsetHeight;}
+/* iOS (app instalada): el viewport de diseño puede quedarse corto en la altura de la zona segura superior
+   y dejar una franja del fondo abajo. Si la app ocupa la pantalla entera, se fija su altura a la de la pantalla. */
+function standalone(){return navigator.standalone===true||matchMedia("(display-mode: standalone)").matches;}
+function fitScreen(){const r=document.documentElement;if(!standalone()||!isMobile()){r.style.removeProperty("--apph");return;}
+  const land=innerWidth>innerHeight,sw=land?Math.max(screen.width,screen.height):Math.min(screen.width,screen.height),
+    sh=land?Math.min(screen.width,screen.height):Math.max(screen.width,screen.height);
+  if(Math.abs(innerWidth-sw)>2){r.style.removeProperty("--apph");return;}
+  r.style.setProperty("--apph",sh+"px");}
+fitScreen();
+function VH(){return $("app").clientHeight||innerHeight;}
+function avail(){return VH()-$("rail").offsetHeight;}
 function peekH(){return $("handle").offsetHeight+$("phead").offsetHeight+4;}
 function snapPx(i){const top=(parseInt(getComputedStyle($("mtop")).height)||0)+12;return i===0?peekH():i===1?Math.round(avail()*.5):avail()-top;}
 function setSnap(i,silent){snap=Math.max(0,Math.min(2,i));const p=$("panel");p.style.setProperty("--sh",(snapPx(snap)+20)+"px");p.classList.toggle("locked",snap<2);$("app").classList.toggle("sheetfull",snap===2);
   if(!("ResizeObserver" in window))document.querySelector(".mapwrap").style.setProperty("--peek",snapPx(Math.min(snap,1))+"px");if(!silent)setTimeout(()=>map.invalidateSize({pan:false}),300);}
-function setCSnap(i){csnap=Math.max(0,Math.min(1,i));const c=$("card");c.style.setProperty("--ch",Math.round(innerHeight*CSNAPS[csnap])+"px");c.classList.toggle("locked",csnap<1);}
+function setCSnap(i){csnap=Math.max(0,Math.min(1,i));const c=$("card");c.style.setProperty("--ch",Math.round(VH()*CSNAPS[csnap])+"px");c.classList.toggle("locked",csnap<1);}
 /* --peek sigue la altura REAL de la hoja (también durante el arrastre), para que los controles del mapa queden pegados a ella. */
 if("ResizeObserver" in window){const mw=document.querySelector(".mapwrap");new ResizeObserver(()=>{if(!isMobile())return;const h=$("panel").offsetHeight-20;if(h>0&&snap<2)mw.style.setProperty("--peek",h+"px");}).observe($("panel"));}
 let swallowClick=false;document.addEventListener("click",e=>{if(swallowClick){e.stopPropagation();e.preventDefault();swallowClick=false;}},true);
@@ -236,11 +246,11 @@ makeSheet($("panel"),{v:"--sh",min:()=>peekH(),max:()=>avail()-20,atMax:()=>snap
   canStart:e=>{if(e.target.closest("select,input,textarea,.sugg"))return false;const inBody=e.target.closest(".p-body");return !(inBody&&snap===2&&$("pbody").scrollTop>0);},
   settle:(h,dy)=>{h-=20;const sn=[peekH(),avail()*.5,avail()];let best=0;sn.forEach((v,i)=>{if(Math.abs(v-h)<Math.abs(sn[best]-h))best=i;});if(Math.abs(dy)>60&&best===snap)best=dy>0?Math.min(2,snap+1):Math.max(0,snap-1);setSnap(best);},
   tap:e=>{if(e.target.closest("#handle,.reshead b"))setSnap(snap===2?0:snap+1);}});
-makeSheet($("card"),{v:"--ch",min:()=>innerHeight*.2,max:()=>innerHeight*.96,atMax:()=>csnap===1,
+makeSheet($("card"),{v:"--ch",min:()=>VH()*.2,max:()=>VH()*.96,atMax:()=>csnap===1,
   canStart:e=>{if(e.target.closest("select,input,button,a"))return false;return !(csnap===1&&$("card").scrollTop>0);},
-  settle:(h,dy)=>{const fr=h/innerHeight;if(fr<.4&&dy<-40){closeDetail();return;}setCSnap(dy>0?1:fr>.8?1:0);},
+  settle:(h,dy)=>{const fr=h/VH();if(fr<.4&&dy<-40){closeDetail();return;}setCSnap(dy>0?1:fr>.8?1:0);},
   tap:e=>{if(e.target.closest(".chandle"))setCSnap(csnap?0:1);}});
-let wasMob=isMobile();addEventListener("resize",()=>{const m=isMobile();if(m!==wasMob){wasMob=m;render();if(S.detail)renderDetail(true);}if(m){setSnap(snap,true);if(S.detail)setCSnap(csnap);}else setPW(S.pw);map.invalidateSize();});
+let wasMob=isMobile();addEventListener("resize",()=>{fitScreen();const m=isMobile();if(m!==wasMob){wasMob=m;render();if(S.detail)renderDetail(true);}if(m){setSnap(snap,true);if(S.detail)setCSnap(csnap);}else setPW(S.pw);map.invalidateSize();});
 
 /* ===== cabecera del panel ===== */
 function render(){renderRail();renderHead();renderBody();}
