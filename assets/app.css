@@ -271,7 +271,12 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   :root{--safeb:min(env(safe-area-inset-bottom,0px),16px);--tabh:calc(44px + var(--safeb))}
   @media (display-mode:standalone){:root{--safeb:max(0px,calc(env(safe-area-inset-bottom,0px) - 16px));--tabh:calc(44px + var(--safeb))}}
   /* En móvil la app se ancla a los cuatro bordes del viewport (cubre también las áreas seguras en modo app). */
+  html,body{background:var(--panel)}
   .app,.app.collapsed{position:fixed;inset:0;height:auto;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+  /* App instalada en iOS: con la barra de estado translúcida el viewport queda recortado por abajo
+     exactamente la altura de la barra de estado; 100vh sí mide la pantalla entera. */
+  @media (display-mode:standalone){.app,.app.collapsed{inset:auto;top:0;left:0;right:0;height:100vh;height:100svh}}
+  .app.sheethigh .mapctl,.app.sheethigh .mhint,.app.sheethigh .leaflet-control-attribution{opacity:0;pointer-events:none}
   :root[style*="--apph"] .app{bottom:auto;height:var(--apph)}
   .mapwrap{grid-row:1;grid-column:1}
   /* barra de pestañas */
