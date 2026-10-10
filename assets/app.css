@@ -383,3 +383,8 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
 .tile.ph{background-size:cover;background-position:center;color:#fff}
 .tile.ph i{position:absolute;right:-4px;bottom:-4px;width:22px;height:22px;border-radius:50%;background:var(--c);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px var(--panel)}
 .tile.ph i svg.i{width:13px;height:13px;stroke-width:2.5}
+.me{width:18px;height:18px;border-radius:50%;background:#2F7DF6;border:3px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15),0 2px 6px rgba(0,0,0,.3);box-sizing:border-box;animation:me-p 2s infinite}
+@keyframes me-p{0%{box-shadow:0 0 0 0 rgba(47,125,246,.45),0 2px 6px rgba(0,0,0,.3)}70%{box-shadow:0 0 0 14px rgba(47,125,246,0),0 2px 6px rgba(0,0,0,.3)}100%{box-shadow:0 0 0 0 rgba(47,125,246,0),0 2px 6px rgba(0,0,0,.3)}}
+#m-home.on{color:#2F7DF6}
+#m-home.busy svg{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}

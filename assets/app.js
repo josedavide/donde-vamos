@@ -195,8 +195,8 @@ function inView(){const b=map.getBounds();return S.filtered.filter(p=>shown(p)&&
 
 /* ===== controles ===== */
 $("m-style").innerHTML=ic("layers");$("m-in").innerHTML=ic("plus");$("m-out").innerHTML='<svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/></svg>';$("m-home").innerHTML=ic("locate-fixed");$("m-fit").innerHTML=ic("map");
-$("m-in").onclick=()=>map.zoomIn();$("m-out").onclick=()=>map.zoomOut();$("m-home").onclick=()=>centerOn(HOME.lat,HOME.lng,9);$("m-fit").onclick=()=>fitPts(S.filtered,10);
-$("m-style").title="Tipo de mapa";$("m-home").title="Volver a casa";$("m-fit").title="Encuadrar todos los resultados";
+$("m-in").onclick=()=>map.zoomIn();$("m-out").onclick=()=>map.zoomOut();$("m-home").onclick=locateMe;$("m-fit").onclick=()=>fitPts(S.filtered,10);
+$("m-style").title="Tipo de mapa";$("m-home").title="Dónde estoy";$("m-home").setAttribute("aria-label","Dónde estoy");$("m-fit").title="Encuadrar todos los resultados";
 function renderStylePop(){$("stylepop").innerHTML=`<span class="lbl">Tipo de mapa</span>`+Object.entries(BASES).map(([k,b])=>`<button data-st="${k}" aria-pressed="${S.style===k}"><span class="th" style="background-image:url(${b.th})"></span>${b.l}</button>`).join("");}
 function closeStylePop(){$("stylepop").hidden=true;}
 $("m-style").onclick=e=>{e.stopPropagation();$("stylepop").hidden=!$("stylepop").hidden;};
@@ -483,6 +483,19 @@ function focusTrip(id,noFit){const t=S.est.salidas.find(x=>x.id===id);if(!t)retu
   $("focusbar").innerHTML=`<span>${esc(t.nombre)}</span><button id="unfocus">Ver todo</button>`;$("focusbar").hidden=false;$("unfocus").onclick=unfocus;if(!noFit)fitPts(pts,11);}
 function unfocus(){S.focus=null;$("focusbar").hidden=true;routeLayer.clearLayers();refresh();}
 
+/* Mi ubicación: punto azul con círculo de precisión; se actualiza mientras la app está abierta. */
+let meMk=null,meAcc=null,meWatch=null;
+function showMe(pos,fly){const ll=[pos.coords.latitude,pos.coords.longitude],acc=Math.min(pos.coords.accuracy||0,3000);
+  if(!meMk){meAcc=L.circle(ll,{radius:acc,color:"#2F7DF6",weight:1,opacity:.5,fillColor:"#2F7DF6",fillOpacity:.12,interactive:false}).addTo(map);
+    meMk=L.marker(ll,{keyboard:false,interactive:false,zIndexOffset:1000,icon:L.divIcon({className:"",html:'<div class="me"></div>',iconSize:[18,18],iconAnchor:[9,9]})}).addTo(map);}
+  else{meMk.setLatLng(ll);meAcc.setLatLng(ll).setRadius(acc);}
+  if(fly)centerOn(ll[0],ll[1],Math.max(Z(),12));}
+function locateMe(){if(!navigator.geolocation){toast("Este navegador no da la ubicación");centerOn(HOME.lat,HOME.lng,9);return;}
+  $("m-home").classList.add("busy");
+  navigator.geolocation.getCurrentPosition(pos=>{$("m-home").classList.remove("busy");$("m-home").classList.add("on");showMe(pos,true);
+      if(meWatch===null)meWatch=navigator.geolocation.watchPosition(p=>showMe(p,false),()=>{},{enableHighAccuracy:true,maximumAge:15000});},
+    err=>{$("m-home").classList.remove("busy");toast(err.code===1?"Sin permiso de ubicación: actívalo en Ajustes › Safari/Privacidad":"No se ha podido obtener tu ubicación");},
+    {enableHighAccuracy:true,timeout:12000,maximumAge:30000});}
 function toast(msg,undo){const t=$("toast");t.innerHTML=`<span>${esc(msg)}</span>`+(undo?'<button id="undo">Deshacer</button>':"");t.hidden=false;clearTimeout(t._h);t._h=setTimeout(()=>t.hidden=true,3000);if(undo)$("undo").onclick=()=>{undo();t.hidden=true;};}
 function toggleFav(id){const on=isFav(id);if(on)delete S.est.favs[id];else S.est.favs[id]=iso(today());saveEst();afterFav(id);toast(on?"Quitado de favoritos":"Guardado en favoritos",()=>{if(on)S.est.favs[id]=iso(today());else delete S.est.favs[id];saveEst();afterFav(id);});}
 function afterFav(id){sym.redraw();renderRail();if(S.detail===id)renderDetail(true);body.querySelectorAll(`[data-fav="${CSS.escape(id)}"]`).forEach(b=>{b.classList.toggle("on",isFav(id));});if(S.section==="saved")renderSaved();}
