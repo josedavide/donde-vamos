@@ -303,6 +303,7 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   .mrow::-webkit-scrollbar{display:none}
   .mrow .chip,.mrow .fbtn{flex:none;height:36px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.08);border-color:transparent;background:var(--panel);font-size:13px;padding:0 13px 0 10px}
   .mrow .fbtn{padding:0 13px}
+  .mrow .fbtn.on{background:var(--ink);color:var(--panel)}
   .mrow .chip[aria-pressed="true"]{background:var(--c)}
   .mrow .sep{width:1px;flex:none;background:var(--line2);margin:8px 2px}
   /* hoja inferior (lista) */

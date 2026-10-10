@@ -42,10 +42,12 @@ const isMobile = () => matchMedia("(max-width:820px)").matches;
 /* App instalada (iOS/Android): altura = pantalla real. En iOS con barra de estado translúcida
    innerHeight y 100vh no coinciden con la pantalla; screen.* sí (en orientación vertical). */
 const isStandalone=()=>navigator.standalone===true||matchMedia("(display-mode: standalone)").matches;
-function fitViewport(){const de=document.documentElement;const sa=isStandalone();de.classList.toggle("standalone",sa);if(!sa)return;
-  const portrait=matchMedia("(orientation: portrait)").matches;const sh=portrait?Math.max(screen.width,screen.height):Math.min(screen.width,screen.height);
-  const h=Math.max(innerHeight,Math.min(sh,innerHeight+80));de.style.setProperty("--apph",h+"px");}
-fitViewport();addEventListener("resize",fitViewport);addEventListener("orientationchange",()=>setTimeout(fitViewport,300));
+function fitViewport(){const de=document.documentElement;const sa=isStandalone();de.classList.toggle("standalone",sa);
+  const vv=window.visualViewport;const h=Math.round(vv?vv.height:innerHeight);if(sa)de.style.setProperty("--apph",h+"px");
+  if(/[?&]debug/.test(location.search)){let d=document.getElementById("vpdbg");if(!d){d=document.createElement("div");d.id="vpdbg";d.style.cssText="position:fixed;z-index:99999;left:8px;top:120px;background:#000c;color:#fff;font:12px/1.4 monospace;padding:8px;border-radius:8px;pointer-events:none;white-space:pre";document.body.appendChild(d);}
+    const pr=document.createElement("div");pr.style.cssText="position:fixed;left:0;top:0;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);visibility:hidden";document.body.appendChild(pr);const cs=getComputedStyle(pr);
+    d.textContent=`standalone ${sa}\ninnerH ${innerHeight}  vv ${vv?Math.round(vv.height):"-"}\nclientH ${de.clientHeight}  screen ${screen.width}x${screen.height}\nsafe top ${cs.paddingTop} bottom ${cs.paddingBottom}\napp ${document.getElementById("app")?.getBoundingClientRect().height|0}  rail.bottom ${document.getElementById("rail")?.getBoundingClientRect().bottom|0}`;pr.remove();}}
+fitViewport();addEventListener("resize",fitViewport);addEventListener("load",()=>setTimeout(fitViewport,500));if(window.visualViewport)visualViewport.addEventListener("resize",fitViewport);addEventListener("orientationchange",()=>setTimeout(fitViewport,300));
 function iconOf(p){ if(p.capa==="ruta")return "route"; if(p.capa==="pernocta"){const t=p.tipos||[];return t.includes("camping")?"tent":t.includes("parking")?"square-parking":"caravan";}
   for(const [t,i] of TYPE_ICON) if((p.tipos||[]).includes(t)) return i; return layerOf(p).i; }
 function hav(a,b,c,d){const R=6371,r=x=>x*Math.PI/180;const x=Math.sin(r(c-a)/2)**2+Math.cos(r(a))*Math.cos(r(c))*Math.sin(r(d-b)/2)**2;return 2*R*Math.asin(Math.sqrt(x));}
