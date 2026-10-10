@@ -273,11 +273,12 @@ textarea{width:100%;min-height:92px;resize:vertical;line-height:1.5}
   /* En móvil la app se ancla a los cuatro bordes del viewport (cubre también las áreas seguras en modo app). */
   html,body{background:var(--panel)}
   .app,.app.collapsed{position:fixed;inset:0;height:auto;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
-  /* App instalada en iOS: el viewport que da el sistema no cuadra con la pantalla; JS mide la pantalla
-     real y la deja en --apph (ver fitViewport en app.js). */
-  html.standalone .app,html.standalone .app.collapsed{inset:auto;top:0;left:0;right:0;height:var(--apph,100%)}
+  /* App instalada en iOS con barra de estado translúcida: el 100 % de alto que da iOS se queda corto
+     exactamente la barra de estado; se suma env(safe-area-inset-top) al documento y la app lo llena. */
+  html.standalone{height:calc(100% + env(safe-area-inset-top,0px));overflow:hidden}
+  html.standalone body{height:100%;overflow:hidden;position:relative}
+  html.standalone .app,html.standalone .app.collapsed{position:absolute;inset:0;height:auto}
   .app.sheethigh .mapctl,.app.sheethigh .mhint,.app.sheethigh .leaflet-control-attribution{opacity:0;pointer-events:none}
-  :root[style*="--apph"] .app{bottom:auto;height:var(--apph)}
   .mapwrap{grid-row:1;grid-column:1}
   /* barra de pestañas */
   .rail{grid-row:2;grid-column:1;flex-direction:row;justify-content:space-around;padding:2px 6px var(--safeb);border-right:0;border-top:0;box-shadow:0 -1px 0 var(--line);z-index:560;height:var(--tabh);box-sizing:border-box;position:relative;gap:0}

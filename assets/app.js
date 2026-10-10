@@ -43,7 +43,7 @@ const isMobile = () => matchMedia("(max-width:820px)").matches;
    innerHeight y 100vh no coinciden con la pantalla; screen.* sí (en orientación vertical). */
 const isStandalone=()=>navigator.standalone===true||matchMedia("(display-mode: standalone)").matches;
 function fitViewport(){const de=document.documentElement;const sa=isStandalone();de.classList.toggle("standalone",sa);
-  const vv=window.visualViewport;const h=Math.round(vv?vv.height:innerHeight);if(sa)de.style.setProperty("--apph",h+"px");
+  const vv=window.visualViewport;const h=Math.round(vv?vv.height:innerHeight);
   if(/[?&]debug/.test(location.search)){let d=document.getElementById("vpdbg");if(!d){d=document.createElement("div");d.id="vpdbg";d.style.cssText="position:fixed;z-index:99999;left:8px;top:120px;background:#000c;color:#fff;font:12px/1.4 monospace;padding:8px;border-radius:8px;pointer-events:none;white-space:pre";document.body.appendChild(d);}
     const pr=document.createElement("div");pr.style.cssText="position:fixed;left:0;top:0;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);visibility:hidden";document.body.appendChild(pr);const cs=getComputedStyle(pr);
     d.textContent=`standalone ${sa}\ninnerH ${innerHeight}  vv ${vv?Math.round(vv.height):"-"}\nclientH ${de.clientHeight}  screen ${screen.width}x${screen.height}\nsafe top ${cs.paddingTop} bottom ${cs.paddingBottom}\napp ${document.getElementById("app")?.getBoundingClientRect().height|0}  rail.bottom ${document.getElementById("rail")?.getBoundingClientRect().bottom|0}`;pr.remove();}}
@@ -220,15 +220,7 @@ function setPW(w){w=Math.max(320,Math.min(Math.round(w),Math.min(620,innerWidth-
   r.addEventListener("dblclick",()=>{setPW(400);savePrefs();map.invalidateSize();});})();
 /* hoja móvil */
 const CSNAPS=[.58,.94];let snap=1,csnap=0;
-/* iOS (app instalada): el viewport de diseño puede quedarse corto en la altura de la zona segura superior
-   y dejar una franja del fondo abajo. Si la app ocupa la pantalla entera, se fija su altura a la de la pantalla. */
-function standalone(){return navigator.standalone===true||matchMedia("(display-mode: standalone)").matches;}
-function fitScreen(){const r=document.documentElement;if(!standalone()||!isMobile()){r.style.removeProperty("--apph");return;}
-  const land=innerWidth>innerHeight,sw=land?Math.max(screen.width,screen.height):Math.min(screen.width,screen.height),
-    sh=land?Math.min(screen.width,screen.height):Math.max(screen.width,screen.height);
-  if(Math.abs(innerWidth-sw)>2){r.style.removeProperty("--apph");return;}
-  r.style.setProperty("--apph",sh+"px");}
-fitScreen();
+
 function VH(){return $("app").clientHeight||innerHeight;}
 function avail(){return VH()-$("rail").offsetHeight;}
 function peekH(){return $("handle").offsetHeight+$("phead").offsetHeight+10;}
@@ -260,7 +252,7 @@ makeSheet($("card"),{v:"--ch",min:()=>VH()*.2,max:()=>VH()*.96,atMax:()=>csnap==
   canStart:e=>{if(e.target.closest("select,input,button,a"))return false;return !(csnap===1&&$("card").scrollTop>0);},
   settle:(h,dy)=>{const fr=h/VH();if(fr<.4&&dy<-40){closeDetail();return;}setCSnap(dy>0?1:fr>.8?1:0);},
   tap:e=>{if(e.target.closest(".chandle"))setCSnap(csnap?0:1);}});
-let wasMob=isMobile();addEventListener("resize",()=>{fitScreen();const m=isMobile();if(m!==wasMob){wasMob=m;render();if(S.detail)renderDetail(true);}if(m){setSnap(snap,true);if(S.detail)setCSnap(csnap);}else setPW(S.pw);map.invalidateSize();});
+let wasMob=isMobile();addEventListener("resize",()=>{const m=isMobile();if(m!==wasMob){wasMob=m;render();if(S.detail)renderDetail(true);}if(m){setSnap(snap,true);if(S.detail)setCSnap(csnap);}else setPW(S.pw);map.invalidateSize();});
 
 /* ===== cabecera del panel ===== */
 function render(){renderRail();renderHead();renderBody();}
