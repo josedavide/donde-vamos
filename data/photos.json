@@ -5140,6 +5140,32 @@
 "fecha": "2026-10-12",
 "wiki": 1
 },
+"osm-n14277549946": {
+"error": "sin-imagen",
+"fecha": "2026-10-19",
+"wiki": 1
+},
+"osm-n14280285805": {
+"error": "sin-imagen",
+"fecha": "2026-10-19",
+"wiki": 1
+},
+"osm-n14281929283": {
+"error": "sin-imagen",
+"fecha": "2026-10-19",
+"wiki": 1
+},
+"osm-n14285049504": {
+"error": "sin-imagen",
+"fecha": "2026-10-19",
+"wiki": 1
+},
+"osm-n14297065895": {
+"img": "https://cdn3.park4night.com/lieu/787701_787800/787793_gd.jpg",
+"src": "https://plus.park4night.com/fr/place/276468",
+"site": "plus.park4night.com",
+"fecha": "2026-10-19"
+},
 "osm-n1469621685": {
 "img": "https://www.camping-municipal-cos09.fr/assets/images/cos/entree.webp",
 "src": "http://camping-municipal-cos09.fr/",
@@ -5521,9 +5547,10 @@
 "wiki": 1
 },
 "osm-n8222878357": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://www.tourisme64.com/wp-content/uploads/2024/01/Vallon-de-Bious-rando-avec-enfants-001-©Gaillard-Munsch-1-300x200.jpg.webp",
+"src": "https://www.tourisme64.com/hebergements/aire-de-camping-car/sauveterre-de-bearn/ACCAMAQU0640000R-aire-de-stationnement-de-sauveterre-de-bearn/",
+"site": "Tourisme 64",
+"fecha": "2026-10-19"
 },
 "osm-n8329837087": {
 "img": "https://www.tourisme-gers.com/app/uploads/2026/03/cdt32-0195154hd.webp",
@@ -5752,6 +5779,12 @@
 "error": "sin-imagen",
 "fecha": "2026-10-09",
 "wiki": 1
+},
+"osm-r21653405": {
+"img": "https://campingvalldor.es/wp-content/uploads/2021/04/4992946-e1617956243261.jpg",
+"src": "https://campingvalldor.es/",
+"site": "campingvalldor.es",
+"fecha": "2026-10-19"
 },
 "osm-r2340861": {
 "error": "sin-imagen",
@@ -6817,9 +6850,10 @@
 "wiki": 1
 },
 "osm-w1306429010": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://www.tourisme64.com/wp-content/uploads/2024/01/Vallon-de-Bious-rando-avec-enfants-001-©Gaillard-Munsch-1-300x200.jpg",
+"src": "https://www.tourisme64.com/hebergements/aire-de-camping-car/lecumberry/ACCAMAQU064V5BTLVR-aire-naturelle-de-camping-cars-etxola/",
+"site": "Tourisme 64",
+"fecha": "2026-10-19"
 },
 "osm-w1306434916": {
 "error": "generica",
@@ -6827,9 +6861,10 @@
 "wiki": 1
 },
 "osm-w1306440351": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://www.tourisme64.com/wp-content/uploads/2024/01/Vallon-de-Bious-rando-avec-enfants-001-©Gaillard-Munsch-1-300x200.jpg",
+"src": "https://www.tourisme64.com/hebergements/aire-de-camping-car/lescar/ACCAMAQU0640000G-aire-de-stationnement-de-lescar-beneharnum/",
+"site": "Tourisme 64",
+"fecha": "2026-10-19"
 },
 "osm-w1306878482": {
 "error": "sin-imagen",
@@ -6999,9 +7034,10 @@
 "wiki": 1
 },
 "osm-w1318914355": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://www.tourisme64.com/wp-content/uploads/2024/01/Vallon-de-Bious-rando-avec-enfants-001-©Gaillard-Munsch-1.jpg.webp",
+"src": "https://www.tourisme64.com/en/accommodations/camping-car-parks/uhart-mixe/ACCAMAQU064V508AC1-aire-de-service-et-stationnement-duhart-mixe/",
+"site": "Tourisme 64",
+"fecha": "2026-10-19"
 },
 "osm-w1318918585": {
 "error": "sin-imagen",
@@ -7084,8 +7120,8 @@
 "fecha": "2026-10-09"
 },
 "osm-w1328004777": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-19",
 "wiki": 1
 },
 "osm-w1328204919": {
@@ -7242,6 +7278,11 @@
 "fecha": "2026-10-09",
 "wiki": 1
 },
+"osm-w1432357680": {
+"error": "sin-imagen",
+"fecha": "2026-10-19",
+"wiki": 1
+},
 "osm-w1433992383": {
 "img": "https://campingcarnight.com/images/campingcarnight.jpg",
 "src": "https://campingcarnight.com/",
@@ -7367,6 +7408,16 @@
 "osm-w1567597189": {
 "error": "sin-imagen",
 "fecha": "2026-10-12",
+"wiki": 1
+},
+"osm-w1567704265": {
+"error": "sin-imagen",
+"fecha": "2026-10-19",
+"wiki": 1
+},
+"osm-w1568366960": {
+"error": "sin-imagen",
+"fecha": "2026-10-19",
 "wiki": 1
 },
 "osm-w158760759": {
@@ -7496,12 +7547,6 @@
 "img": "https://dfcb0ea065.clvaw-cdnwnd.com/11decdf80a9fc0141162f8682a2f63df/200000595-943ce943cf/700/P20230808_190508%20%281%29-7.jpeg?ph=dfcb0ea065",
 "src": "https://nori.camp/",
 "site": "Noricamp Camping Arthez-de-Béarn",
-"fecha": "2026-10-09"
-},
-"osm-w169304197": {
-"img": "https://campingvalldor.es/wp-content/uploads/2021/04/4992946-e1617956243261.jpg",
-"src": "https://campingvalldor.es/",
-"site": "campingvalldor.es",
 "fecha": "2026-10-09"
 },
 "osm-w169980125": {
@@ -8143,6 +8188,12 @@
 "site": "Huttopia",
 "fecha": "2026-10-09"
 },
+"osm-w233433673": {
+"img": "https://www.camping-chantemerle.com/img/home/bandeau-fr.jpg",
+"src": "https://www.camping-chantemerle.com/",
+"site": "camping-chantemerle.com",
+"fecha": "2026-10-19"
+},
 "osm-w233959748": {
 "error": "sin-imagen",
 "fecha": "2026-10-09",
@@ -8195,6 +8246,12 @@
 "src": "https://www.campingdeolite.com/",
 "site": "Camping Olite",
 "fecha": "2026-10-09"
+},
+"osm-w238729249": {
+"img": "https://static.wixstatic.com/media/4603c4_5890013f2dde404f9f467ec568207a4f~mv2.png/v1/fill/w_1370,h_458,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Banni%C3%A8re%20ANAS%20Octobre%20Rose%20%26%20Movember.png",
+"src": "https://anas.asso.fr/",
+"site": "ANAS",
+"fecha": "2026-10-19"
 },
 "osm-w239168748": {
 "img": "https://cdn.iris-etourism.io/media/lauragais_tourisme/HPAMID031FS00005/fa0b2b44932eab5d-800x520.webp",
@@ -9315,6 +9372,11 @@
 "osm-w440448645": {
 "error": "sin-imagen",
 "fecha": "2026-10-09",
+"wiki": 1
+},
+"osm-w440448646": {
+"error": "sin-imagen",
+"fecha": "2026-10-19",
 "wiki": 1
 },
 "osm-w440630444": {
@@ -11194,13 +11256,13 @@
 "fecha": "2026-10-09"
 },
 "osm-w899170111": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-19",
 "wiki": 1
 },
 "osm-w899178320": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-19",
 "wiki": 1
 },
 "osm-w899187953": {
@@ -11215,8 +11277,8 @@
 "fecha": "2026-10-09"
 },
 "osm-w901996971": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-19",
 "wiki": 1
 },
 "osm-w902266274": {

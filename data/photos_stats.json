@@ -1,10 +1,7 @@
 {
- "fecha": "2026-10-12",
- "consultados": 282,
+ "fecha": "2026-10-19",
+ "consultados": 206,
  "genericas": 0,
- "wiki": {
-  "wiki_req": 49,
-  "wiki_hit": 10
- },
+ "wiki": {},
  "errores": []
 }
