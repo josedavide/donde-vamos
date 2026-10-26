@@ -2814,9 +2814,10 @@
 "wiki": 1
 },
 "na-etang-lers": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Etang_de_Lers_3_jcb.jpg/1280px-Etang_de_Lers_3_jcb.jpg",
+"src": "https://ca.wikipedia.org/wiki/Estany_de_l%27Hers",
+"site": "Wikipedia",
+"fecha": "2026-10-26"
 },
 "na-excursio-conte-gaia-aiguamurcia": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/33471excursioaiguamurcia2escapadaabnens.jpg",
@@ -2921,9 +2922,10 @@
 "fecha": "2026-10-12"
 },
 "na-fontestorbes": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Belesta_09_pont.JPG/1280px-Belesta_09_pont.JPG",
+"src": "https://fr.wikipedia.org/wiki/B%C3%A9lesta_%28Ari%C3%A8ge%29",
+"site": "Wikipedia",
+"fecha": "2026-10-26"
 },
 "na-fonts-de-lladurs": {
 "img": "https://www.escapadaambnens.com/fotografies/petites/81113picnicgenerica.jpg",
@@ -3123,14 +3125,16 @@
 "fecha": "2026-10-09"
 },
 "na-grotte-labouiche": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Rivi%C3%A8re_souterraine_de_Labouiche_07.jpg/1280px-Rivi%C3%A8re_souterraine_de_Labouiche_07.jpg",
+"src": "https://ca.wikipedia.org/wiki/Riu_subterrani_de_la_Boisha",
+"site": "Wikipedia",
+"fecha": "2026-10-26"
 },
 "na-grotte-lombrives": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/LombrivesEntree.jpg/1280px-LombrivesEntree.jpg",
+"src": "https://ca.wikipedia.org/wiki/Cova_de_Lombrives",
+"site": "Wikipedia",
+"fecha": "2026-10-26"
 },
 "na-grotte-niaux": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Grotte_de_Niaux_4.jpg/1280px-Grotte_de_Niaux_4.jpg",
@@ -4856,8 +4860,8 @@
 "fecha": "2026-10-09"
 },
 "osm-n12099501272": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-26",
 "wiki": 1
 },
 "osm-n12106094407": {
@@ -5065,8 +5069,8 @@
 "fecha": "2026-10-09"
 },
 "osm-n12228151107": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-26",
 "wiki": 1
 },
 "osm-n12230007090": {
@@ -6856,8 +6860,8 @@
 "fecha": "2026-10-19"
 },
 "osm-w1306434916": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-26",
 "wiki": 1
 },
 "osm-w1306440351": {
@@ -7445,8 +7449,8 @@
 "fecha": "2026-10-12"
 },
 "osm-w159677129": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-26",
 "wiki": 1
 },
 "osm-w159837812": {
@@ -8410,11 +8414,6 @@
 "src": "https://www.dragonniere.com",
 "site": "sandaya.fr",
 "fecha": "2026-10-09"
-},
-"osm-w280506817": {
-"error": "sin-imagen",
-"fecha": "2026-10-09",
-"wiki": 1
 },
 "osm-w282397440": {
 "img": "https://www.tilleuls-gavarnie.fr/wp-content/uploads/2020/07/poster.png",
@@ -9954,8 +9953,8 @@
 "wiki": 1
 },
 "osm-w527573111": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-26",
 "wiki": 1
 },
 "osm-w53187371": {
@@ -10421,8 +10420,8 @@
 "fecha": "2026-10-09"
 },
 "osm-w67174963": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-10-26",
 "wiki": 1
 },
 "osm-w673317950": {
