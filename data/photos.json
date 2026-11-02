@@ -517,18 +517,19 @@
 "wiki": 1
 },
 "ev-diba-masia-mariona": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "ev-diba-ruta-inclusiva-emboscada": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/La_Mola%2C_Matadepera.jpg/1280px-La_Mola%2C_Matadepera.jpg",
+"src": "https://ca.wikipedia.org/wiki/Sant_Lloren%C3%A7_del_Munt",
+"site": "Wikipedia",
+"fecha": "2026-11-02"
 },
 "ev-diba-tardor-castanyes-viladrau": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "ev-diba-tines-vall-flequer": {
@@ -538,8 +539,8 @@
 "fecha": "2026-10-09"
 },
 "ev-elfinena-ontinena-ar": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "ev-els-pallaresos-1900": {
@@ -587,9 +588,10 @@
 "fecha": "2026-10-06"
 },
 "ev-feria-artesania-naval-ar": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Naval_01.jpg/1280px-Naval_01.jpg",
+"src": "https://ca.wikipedia.org/wiki/Naval",
+"site": "Wikipedia",
+"fecha": "2026-11-02"
 },
 "ev-feria-dos-aguas-va": {
 "img": "https://www.valenciabonita.es/wp-content/uploads/2026/10/Feria-Gastronomica-y-Artesanal-de-Dos-Aguas-2026.jpg",
@@ -639,13 +641,13 @@
 "fecha": "2026-10-06"
 },
 "ev-feria-san-martin-lascuarre-ar": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "ev-feria-trufa-graus-ar": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "ev-ferias-otono-elizondo-na": {
@@ -654,8 +656,8 @@
 "wiki": 1
 },
 "ev-ferma-barbastro-ar": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "ev-festa-bolet-calella": {
@@ -1078,8 +1080,8 @@
 "wiki": 1
 },
 "ev-follarasca-ainsa-ar": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "ev-fr-barcares-christmas-tour": {
@@ -1354,13 +1356,13 @@
 "fecha": "2026-10-06"
 },
 "ev-la-feria-castejon-sos-ar": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "ev-lapislazuli-fraga-ar": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "ev-lumieres-quai-savoirs-oco": {
@@ -1851,8 +1853,8 @@
 "wiki": 1
 },
 "ev-zagalandia-barbastro-ar": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "na-9-salts-canal-urgell-borges": {
@@ -1927,9 +1929,10 @@
 "fecha": "2026-10-09"
 },
 "na-ar-forau-aigualluts": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://bookingcaravaning.com/wp-content/uploads/2026/06/A_modern_photorealistic_image_16_9_202606051340-1024x572.jpg",
+"src": "https://bookingcaravaning.com/pirineo-aragones-autocaravana-ruta-7-dias-n260/",
+"site": "Booking Caravaning",
+"fecha": "2026-11-02"
 },
 "na-ar-gallocanta": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Eclix_solar_en_Gallocanta.jpg/1280px-Eclix_solar_en_Gallocanta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3458,13 +3461,13 @@
 "fecha": "2026-10-06"
 },
 "na-na-bertiz": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "na-na-cascada-belabarce": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "na-na-foz-arbayun": {
@@ -5684,11 +5687,6 @@
 "site": "Camping Le Vieux Platane",
 "fecha": "2026-10-09"
 },
-"osm-r12928603": {
-"error": "sin-imagen",
-"fecha": "2026-10-09",
-"wiki": 1
-},
 "osm-r13103706": {
 "error": "sin-imagen",
 "fecha": "2026-10-09",
@@ -5733,6 +5731,12 @@
 "src": "https://www.camping-miramar.es/",
 "site": "Camping Miramar",
 "fecha": "2026-10-09"
+},
+"osm-r14488567": {
+"img": "https://www.caladoques.com/wp-content/uploads/2021/09/badge-ES.png",
+"src": "https://www.caladoques.com/",
+"site": "Camping Pensión, L'Hospitalet de l'Infan",
+"fecha": "2026-11-02"
 },
 "osm-r14498826": {
 "img": "https://cdn2.paraty.es/demo6/images/7c97eb661fc44e0.webp",
@@ -7305,6 +7309,12 @@
 "site": "Tourisme Aveyron",
 "fecha": "2026-10-09"
 },
+"osm-w143947227": {
+"img": "https://mldvwi5yf3e6.i.optimole.com/w:355/h:500/q:90/rt:fill/g:ce/https://www.campingamfora.com/wp-content/uploads/2023/02/Camping_Amfora_Infrastructures_046.jpg",
+"src": "https://www.campingamfora.com/",
+"site": "Amfora",
+"fecha": "2026-11-02"
+},
 "osm-w144210367": {
 "error": "sin-imagen",
 "fecha": "2026-10-09",
@@ -7422,6 +7432,11 @@
 "osm-w1568366960": {
 "error": "sin-imagen",
 "fecha": "2026-10-19",
+"wiki": 1
+},
+"osm-w1573779760": {
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "osm-w158760759": {
@@ -11588,18 +11603,19 @@
 "wiki": 1
 },
 "pe-ar-ainsa": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "pe-ar-alquezar-camping": {
-"error": "generica",
-"fecha": "2026-10-09",
-"wiki": 1
+"img": "https://bookingcaravaning.com/wp-content/uploads/2026/06/A_modern_photorealistic_image_16_9_202606051340-1024x572.jpg",
+"src": "https://bookingcaravaning.com/pirineo-aragones-autocaravana-ruta-7-dias-n260/",
+"site": "Booking Caravaning",
+"fecha": "2026-11-02"
 },
 "pe-ar-benasque": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "pe-ar-calatayud": {
@@ -11624,8 +11640,8 @@
 "wiki": 1
 },
 "pe-ar-jaca": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "pe-ar-loarre": {
@@ -12594,13 +12610,13 @@
 "wiki": 1
 },
 "pe-na-isaba": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "pe-na-ochagavia": {
-"error": "generica",
-"fecha": "2026-10-09",
+"error": "sin-imagen",
+"fecha": "2026-11-02",
 "wiki": 1
 },
 "pe-na-olite": {
